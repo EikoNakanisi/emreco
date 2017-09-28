@@ -10,7 +10,57 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170917043009) do
+ActiveRecord::Schema.define(version: 20170926135148) do
+
+  create_table "observations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.date     "config_day"
+    t.integer  "user_id"
+    t.string   "m_bp"
+    t.string   "l_bp"
+    t.string   "d_bp"
+    t.float    "m_kt",         limit: 24
+    t.float    "l_kt",         limit: 24
+    t.float    "d_kt",         limit: 24
+    t.integer  "m_p"
+    t.integer  "l_p"
+    t.integer  "d_p"
+    t.integer  "m_r"
+    t.integer  "l_r"
+    t.integer  "d_r"
+    t.string   "m_o2root"
+    t.string   "l_o2root"
+    t.string   "d_o2root"
+    t.integer  "m_o2rate"
+    t.integer  "l_o2rate"
+    t.integer  "d_o2rate"
+    t.string   "m_meal"
+    t.string   "l_meal"
+    t.string   "d_meal"
+    t.string   "m_snack"
+    t.string   "l_snack"
+    t.string   "d_snack"
+    t.string   "m_pain"
+    t.string   "l_pain"
+    t.string   "d_pain"
+    t.string   "m_numbness"
+    t.string   "l_numbness"
+    t.string   "d_numbness"
+    t.string   "m_drowsiness"
+    t.string   "l_drowsiness"
+    t.string   "d_drowsiness"
+    t.integer  "m_spo2"
+    t.integer  "l_spo2"
+    t.integer  "d_spo2"
+    t.string   "m_bs"
+    t.string   "l_bs"
+    t.string   "d_bs"
+    t.string   "m_insulin"
+    t.string   "l_insulin"
+    t.string   "d_insulin"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.index ["user_id"], name: "index_observations_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -30,4 +80,5 @@ ActiveRecord::Schema.define(version: 20170917043009) do
     t.datetime "updated_at",                             null: false
   end
 
+  add_foreign_key "observations", "users"
 end

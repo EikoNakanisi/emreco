@@ -1,15 +1,139 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@charset "utf-8";
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+header {
+  margin: 0px;
+  height: 150px;
+  background-color: gainsboro;
+}
+
+div#main {
+  float: left;
+  width: 80%;
+  height: 500px;
+  background-color: bisque;
+}
+
+aside {
+  float: right;
+  width: 20%;
+  height: 500px;
+  background-color: gainsboro;
+}
+
+.box{
+  float: left;
+  width: 11%;
+  height: 170px;
+  border: 1px solid orange;
+  background-color: ivory;
+}
+
+.boxContainer{
+  overflow: hidden;
+}
+
+.box1{
+    padding: 2px;
+    margin: 2px;
+    color: #2c2c2f;
+    text-align: center;
+    background: deepskyblue;
+    border-top: solid 1px white;
+    border-left: solid 1px white;
+    border-right: solid 1px lightslategray;
+    border-bottom: solid 1px lightslategray;
+  
+}
+.box1 p {
+    margin: 0; 
+    padding: 0;
+}
+
+.box2{
+    padding: 4px;
+    margin: 2px;
+    color: black;
+    background: whitesmoke;
+    border-top: solid 1px lightslategray;
+    border-left: solid 1px lightslategray;
+    border-right: solid 1px white;
+    border-bottom: solid 1px white;
+  
+}
+.box2 p {
+    margin: 0; 
+    padding: 0;
+}
+
+.box3{
+    padding: 1px;
+    margin: 5px;
+    color: black;
+    text-align: center;
+    background: white;
+    border-top: solid 1px black;
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;
+  
+}
+.box3 p {
+    margin: 0; 
+    padding: 0;
+}
+
+.box4{
+    padding: 4px;
+    margin: 2px;
+    color: black;
+    background: palegreen;
+    border-top: solid 1px lightslategray;
+    border-left: solid 1px lightslategray;
+    border-right: solid 1px white;
+    border-bottom: solid 1px white;
+  
+}
+.box4 p {
+    margin: 0; 
+    padding: 0;
+}
+
+.box5{
+    padding: 2px;
+    margin: 2px;
+    color: #2c2c2f;
+    text-align: center;
+    background: pink;
+    border-top: solid 1px white;
+    border-left: solid 1px white;
+    border-right: solid 1px lightslategray;
+    border-bottom: solid 1px lightslategray;
+  
+}
+.box5 p {
+    margin: 0; 
+    padding: 0;
+}
+
+
+.box6{
+    padding: 2px;
+    margin: 2px;
+    color: #2c2c2f;
+    text-align: center;
+    background: silver;
+    border-top: solid 1px white;
+    border-left: solid 1px white;
+    border-right: solid 1px lightslategray;
+    border-bottom: solid 1px lightslategray;
+  
+}
+.box6 p {
+    margin: 0; 
+    padding: 0;
+}

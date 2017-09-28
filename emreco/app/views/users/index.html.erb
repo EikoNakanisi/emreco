@@ -1,0 +1,31 @@
+  <table class="table">
+  <caption>
+  <strong>患者氏名一覧</strong>
+  </caption>
+  <thead>
+  <tr><th class="text-center">部屋番号</th><th class="text-center">患者名</th><th class="text-center">各種ボタン</th></tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+    <tr>
+    <td><%= user.roomno %></td>
+    <td><%= user.name %></td>
+    <td><%= link_to '詳細表示', user_path(user), class: 'btn btn-info btn-xs' %>
+    <%= link_to 'この患者情報を編集する', edit_user_path(user), class: 'btn btn-primary btn-xs' %>
+    <%= link_to 'この患者情報を削除する', user, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger btn-xs' %>
+    </td></tr>
+  <% end %>
+  </tbody>
+  </table>
+  <div class="media-body">
+    <%= link_to '新規患者登録', new_user_path, class: 'btn btn-success btn-xs' %>
+  </div>
+
+
+
+
+
+
+
+
+

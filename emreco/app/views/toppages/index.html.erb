@@ -1,5 +1,366 @@
-<div class="center jumbotron">
-  <div class="text-center">
-    <h1>ここは研究用のサイトです。</h1>
+
+
+<header class="user-profile">
+  ヘッダー
+</header>
+
+<div id="wrapper" class="clearfix">
+  <div id="main">
+<div class="boxContainer">
+
+<div class="box">
+          <br>
+
+<% @users.each do |user| %>
+  <% if user.roomno == '２' %>
+    <% if user.gender == '男' %>
+      <div class="box1">
+    <% else %>
+      <div class="box5">
+    <% end %>
+        <p>２号室</p>
+      </div>
+
+    <% if user.infection == '有' %>
+      <div class="box4">
+    <% else %>
+      <div class="box2">
+    <% end %>
+    <p><%= user.name %></p>
+      <% if user.aid == '担送' %>
+          <span class="label label-danger">担</span>
+      <% elsif user.aid == '護送' %>
+          <span class="label label-warning">護</span>
+      <% else %>
+          <span class="label label-success">独</span>
+      <% end %>
+      </div>
+    <% elsif user.name == nil %>
+    <div class="box6">
+    <p>２号室</p>
+    </div>
+    <div class="box2">
+    <p>空室</p>
+    <span class="label label-default">空</span>
+    </div>
+  <% end %>
+<% end %>
+
+    <div class="box3">
+    <p>2</p>
+    </div>
   </div>
+  
+<div class="box">
+<% @users.each do |user| %>
+  <% if user.roomno == '３' %>
+    <% if user.gender == '男' %>
+      <div class="box1">
+    <% else %>
+      <div class="box5">
+    <% end %>
+        <p>３号室</p>
+      </div>
+
+    <% if user.infection == '有' %>
+      <div class="box4">
+    <% else %>
+      <div class="box2">
+    <% end %>
+    <p><%= user.name %></p>
+      <% if user.aid == '担送' %>
+          <span class="label label-danger">担</span>
+      <% elsif user.aid == '護送' %>
+          <span class="label label-warning">護</span>
+      <% else %>
+          <span class="label label-success">独</span>
+      <% end %>
+      </div>
+    <% elsif user.name == nil %>
+    <div class="box6">
+    <p>３号室</p>
+    </div>
+    <div class="box2">
+    <p>空室</p>
+    <span class="label label-default">空</span>
+    </div>
+  <% end %>
+<% end %>
+
+    <div class="box3">
+    <p>3</p>
+    </div>
+  </div>
+  
+<div class="box">
+<% @users.each do |user| %>
+  <% if user.roomno == '６' %>
+    <% if user.gender == '男' %>
+      <div class="box1">
+    <% else %>
+      <div class="box5">
+    <% end %>
+        <p>６号室</p>
+      </div>
+
+    <% if user.infection == '有' %>
+      <div class="box4">
+    <% else %>
+      <div class="box2">
+    <% end %>
+    <p><%= user.name %></p>
+      <% if user.aid == '担送' %>
+          <span class="label label-danger">担</span>
+      <% elsif user.aid == '護送' %>
+          <span class="label label-warning">護</span>
+      <% else %>
+          <span class="label label-success">独</span>
+      <% end %>
+      </div>
+    <% elsif user.name == nil %>
+    <div class="box6">
+    <p>６号室</p>
+    </div>
+    <div class="box2">
+    <p>空室</p>
+    <span class="label label-default">空</span>
+    </div>
+  <% end %>
+<% end %>
+
+    <div class="box3">
+    <p>6</p>
+    </div>
+  </div>
+  
+
+
+<div class="box">
+    <div class="box6">
+    <p>７号室</p>
+    </div>
+    <div class="box2">
+    <p>空室</p>
+    <span class="label label-default">空</span>
+    </div>
+    <div class="box3">
+    <p>7</p>
+    </div>
+  </div>
+
+  <div class="box">食堂</div>
+
+<div class="box">
+    <div class="box6">
+    <p>１０号室</p>
+    </div>
+    <div class="box2">
+    <p>空室</p>
+    <span class="label label-default">空</span>
+    </div>
+    <div class="box3">
+    <p>10</p>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="box6">
+    <p>１１号室</p>
+    </div>
+    <div class="box2">
+    <p>空室</p>
+    <span class="label label-default">空</span>
+    </div>
+    <div class="box3">
+    <p>11</p>
+    </div>
+  </div>  
+
+  <div class="box">
+    <div class="box6">
+    <p>１３号室</p>
+    </div>
+    <div class="box2">
+    <p>空室</p>
+    <span class="label label-default">空</span>
+    </div>
+    <div class="box3">
+    <p>13-1</p>
+    </div>
+  </div>
+  
+  <div class="box">
+    <div class="box6">
+    <p>１４号室</p>
+    </div>
+    <div class="box2">
+    <p>空室</p>
+    <span class="label label-default">空</span>
+    </div>
+    <div class="box3">
+    <p>14-1</p>
+    </div>
+  </div>  
+  
+  <div class="box">
+  <div class="list-group">
+    <div class="box6">
+    <p>１号室</p>
+    </div>
+    <button type="button" class="list-group-item">空室
+    <span class="label label-default">空</span>
+    </button>
+    <div class="box3">
+    <p>1-1</p>
+    </div>
+    <a href="#" class="list-group-item list-group-item-success">空室
+    <span class="label label-default">空</span>
+    </a>
+    <div class="box3">
+    <p>1-2</p>
+    </div>
+  </div>
+  </div>
+
+
+  <div class="box">
+    <div class="box6">
+    <p>４号室</p>
+    </div>
+    <div class="box2">
+    <p>空室</p>
+    <span class="label label-default">空</span>
+    </div>
+    <div class="box3">
+    <p>4-1</p>
+    </div>
+    <div class="box2">
+    <p>空室</p>
+    <span class="label label-default">空</span>
+    </div>
+    <div class="box3">
+    <p>4-2</p>
+    </div>
+  </div> 
+  
+  <div class="box">
+    <div class="box6">
+    <p>５号室</p>
+    </div>
+    <div class="box2">
+    <p>空室</p>
+    <span class="label label-default">空</span>
+    </div>
+    <div class="box3">
+    <p>5-1</p>
+    </div>
+    <div class="box2">
+    <p>空室</p>
+    <span class="label label-default">空</span>
+    </div>
+    <div class="box3">
+    <p>5-2</p>
+    </div>
+  </div> 
+  
+  <div class="box">
+    <div class="box6">
+    <p>８号室</p>
+    </div>
+    <div class="box2">
+    <p>空室</p>
+    <span class="label label-default">空</span>
+    </div>
+    <div class="box3">
+    <p>8-1</p>
+    </div>
+    <div class="box2">
+    <p>空室</p>
+    <span class="label label-default">空</span>
+    </div>
+    <div class="box3">
+    <p>8-2</p>
+    </div>
+  </div> 
+  
+  <div class="box"><div class="box3">
+  <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
+  </div></div>
+
+
+
+
+  <div class="box">
+    <div class="box6">
+    <p>９号室</p>
+    </div>
+    <div class="box2">
+    <p>空室</p>
+    <span class="label label-default">空</span>
+    </div>
+    <div class="box3">
+    <p>9</p>
+    </div>
+  </div>
+  
+
+  <div class="box">
+    <br>
+  <div class="list-group">
+    <div class="box6">
+    <p>１２号室</p>
+    </div>
+    <button type="button" class="list-group-item">空室
+    <span class="label label-default">空</span>
+    </button>
+    <div class="box3">
+    <p>12</p>
+    </div>
+  </div>
+  </div>
+
+
+  <div class="box"><br>
+  <div class="list-group">
+  <a href="#" class="list-group-item list-group-item-success">空室
+  <span class="label label-default">空</span>
+  </a>
+    <div class="box3">
+    <p>13-2</p>
+    </div>
+  </div>
+  </div>  
+
+  <div class="box">
+    <br>
+  <div class="list-group">
+  <button type="button" class="list-group-item">空室
+  <span class="label label-default">空</span>
+  </button>
+    <div class="box3">
+    <p>14-2</p>
+    </div>
+  </div>
+  </div>   
+
+
+
+  </div>
+  </div>
+
+
+<%= link_to '新規患者登録', new_user_path %>
+
+
+
+
+  <aside>
+    サイドバー
+  </aside>
 </div>
+
+
+
+
+
+

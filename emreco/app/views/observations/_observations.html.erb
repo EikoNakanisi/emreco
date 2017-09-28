@@ -1,0 +1,28 @@
+<% observations.each do |observation| %>
+
+<div class="col-md-1">
+  <table class="table">
+  <tr><th class="text-left"><%= observation.id %></th></tr>
+  <tr><th class="text-left"><%= observation.config_day %></th></tr>
+  <tr><th class="text-left"><%= observation.m_bp %>・<%= observation.l_bp %>・<%= observation.d_bp %></th></tr>
+  <tr><th class="text-left"><%= observation.m_kt %>・<%= observation.l_kt %>・<%= observation.d_kt %></th></tr>
+  <tr><th class="text-left"><%= observation.m_p %>・<%= observation.l_p %>・<%= observation.d_p %></th></tr>
+  <tr><th class="text-left"><%= observation.m_r %>・<%= observation.l_r %>・<%= observation.d_r %></th></tr>
+  <tr><th class="text-left"><%= observation.m_o2root %>・<%= observation.l_o2root %>・<%= observation.d_o2root %></th></tr>
+  <tr><th class="text-left"><%= observation.m_o2rate %>・<%= observation.l_o2rate %>・<%= observation.d_o2rate %></th></tr>
+  <tr><th class="text-left"><%= observation.m_meal %>・<%= observation.l_meal %>・<%= observation.d_meal %></th></tr>
+  <tr><th class="text-left"><%= observation.m_snack %>・<%= observation.l_snack %>・<%= observation.d_snack %></th></tr>
+  <tr><th class="text-left"><%= observation.m_pain %>・<%= observation.l_pain %>・<%= observation.d_pain %></th></tr>
+  <tr><th class="text-left"><%= observation.m_numbness %>・<%= observation.l_numbness %>・<%= observation.d_numbness %></th></tr>
+  <tr><th class="text-left"><%= observation.m_drowsiness %>・<%= observation.l_drowsiness %>・<%= observation.d_drowsiness %></th></tr>
+  <tr><th class="text-left"><%= observation.m_spo2 %>・<%= observation.l_spo2 %>・<%= observation.d_spo2 %></th></tr>
+  <tr><th class="text-left"><%= observation.m_bs %>・<%= observation.l_bs %>・<%= observation.d_bs %></th></tr>
+  <tr><th class="text-left"><%= observation.m_insulin %>・<%= observation.l_insulin %>・<%= observation.d_insulin %></th></tr>
+
+  <%= hidden_field_tag :follow_id, user.id %>
+  <tr><th class="text-left"><%= link_to '編集', edit_observation_path(observation), class: 'btn btn-info btn-xs' %></th></tr>
+  <tr><th class="text-left"><%= link_to "削除", observation, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %></th></tr>
+  </table>
+</div>
+<% end %>
+  <%= paginate observations %>

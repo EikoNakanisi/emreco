@@ -1,0 +1,36 @@
+<h1>患者観察入力一覧</h1>
+<p><%= @user.name %></p>
+<div class="row">
+<aside class="col-md-4">
+
+<%= form_for(@observation) do |f| %>
+
+    <div class="configday_field">
+      <%= f.label :config_day, '入力設定日' %>
+      <%= f.date_select(:config_day,
+      start_year: 2017,
+      end_year:   (Time.now.year - 18),
+      default:    Date.new(2017, 1, 1)) %>
+    </div>
+<div class="form-group">
+<label>血圧/朝/昼/夕</label><%= f.text_field :m_bp, class: 'form-control input-sm' %><%= f.text_field :l_bp, class: 'form-control input-sm' %><%= f.text_field :d_bp, class: 'form-control input-sm' %>
+<label>体温/朝/昼/夕</label><%= f.text_field :m_kt, class: 'form-control input-sm' %><%= f.text_field :l_kt, class: 'form-control input-sm' %><%= f.text_field :d_kt, class: 'form-control input-sm' %>
+<label>脈拍/朝/昼/夕</label><%= f.text_field :m_p, class: 'form-control input-sm' %><%= f.text_field :l_p, class: 'form-control input-sm' %><%= f.text_field :d_p, class: 'form-control input-sm' %>
+<label>呼吸数/朝/昼/夕</label><%= f.text_field :m_r, class: 'form-control input-sm' %><%= f.text_field :l_r, class: 'form-control input-sm' %><%= f.text_field :d_r, class: 'form-control input-sm' %>
+<label>酸素投与方法</label><%= f.text_field :m_o2root, class: 'form-control input-sm' %> <%= f.text_field :l_o2root, class: 'form-control input-sm' %> <%= f.text_field :d_o2root, class: 'form-control input-sm' %> 
+<label>酸素流量</label><%= f.text_field :m_o2rate, class: 'form-control input-sm' %> <%= f.text_field :l_o2rate, class: 'form-control input-sm' %> <%= f.text_field :d_o2rate, class: 'form-control input-sm' %>
+<label>食事量</label><%= f.text_field :m_meal, class: 'form-control input-sm' %> <%= f.text_field :l_meal, class: 'form-control input-sm' %> <%= f.text_field :d_meal, class: 'form-control input-sm' %> 
+<label>間食</label><%= f.text_field :m_snack, class: 'form-control input-sm' %> <%= f.text_field :l_snack, class: 'form-control input-sm' %> <%= f.text_field :d_snack, class: 'form-control input-sm' %> 
+<label>疼痛</label><%= f.text_field :m_pain, class: 'form-control input-sm' %> <%= f.text_field :l_pain, class: 'form-control input-sm' %> <%= f.text_field :d_pain, class: 'form-control input-sm' %> 
+<label>痺れ</label><%= f.text_field :m_numbness, class: 'form-control input-sm' %> <%= f.text_field :l_numbness, class: 'form-control input-sm' %> <%= f.text_field :d_numbness, class: 'form-control input-sm' %> 
+<label>眠気</label><%= f.text_field :m_drowsiness, class: 'form-control input-sm' %> <%= f.text_field :l_drowsiness, class: 'form-control input-sm' %> <%= f.text_field :d_drowsiness, class: 'form-control input-sm' %> 
+<label>SPO2</label><%= f.text_field :m_spo2, class: 'form-control input-sm' %> <%= f.text_field :l_spo2, class: 'form-control input-sm' %> <%= f.text_field :d_spo2, class: 'form-control input-sm' %> 
+<label>血糖値</label><%= f.text_field :m_bs, class: 'form-control input-sm' %> <%= f.text_field :l_bs, class: 'form-control input-sm' %> <%= f.text_field :d_bs, class: 'form-control input-sm' %> 
+<label>インスリン</label><%= f.text_field :m_insulin, class: 'form-control input-sm' %> <%= f.text_field :l_insulin, class: 'form-control input-sm' %> <%= f.text_field :d_insulin, class: 'form-control input-sm' %> 
+</div>
+        <%= hidden_field_tag :follow_id, @user.id %>
+        <%= f.submit '入力', class: 'btn btn-primary btn-xs' %>
+        <%= link_to '一覧に戻る',users_path, class: 'btn btn-primary btn-xs' %>
+<% end %>
+</aside>
+</div>

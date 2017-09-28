@@ -1,0 +1,48 @@
+<div class="page-header">
+<h1>ＩＤ:<%= @user.id %> 名前:<%= @user.name %>詳細ページ</h1>
+<h5>入院日:<%= @user.hospitalization %>
+部屋番号:<%= @user.roomno %>
+生年月日:<%= @user.birthday %>
+年齢:<%= @user.age %>
+性別:<%= @user.gender %>
+血液型:<%= @user.bloodtype %>
+身長:<%= @user.height %>
+体重:<%= @user.weight %>
+感染症:<%= @user.infection %>
+救護区分:<%= @user.aid %></h5><br>
+<h5>注意事項:<%= @user.attention %> 掲示板:<%= @user.post %></h5><br>
+<%= link_to '一覧に戻る',users_path, class: 'btn btn-primary btn-xs' %>
+<%= link_to 'この患者情報を編集する', edit_user_path(@user), class: 'btn btn-primary btn-xs' %>
+<%= link_to 'この患者情報を削除する', @user, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger btn-xs' %>
+<%= link_to '新規観察入力', new_observation_path(id: @user.id), class: 'btn btn-success btn-xs' %>
+</div>
+
+<div class="row">
+  <div class="col-md-1">
+    <table class="table">
+    <tr><th class="text-center">観察id</th></tr>
+    <tr><th class="text-center">入力設定日</th></tr>
+    <tr><th class="text-center">血圧</th></tr>
+    <tr><th class="text-center">体温</th></tr>
+    <tr><th class="text-center">脈拍</th></tr>
+    <tr><th class="text-center">呼吸数</th></tr>
+    <tr><th class="text-center">酸素投与方法</th></tr>
+    <tr><th class="text-center">酸素流量</th></tr>
+    <tr><th class="text-center">食事量</th></tr>
+    <tr><th class="text-center">間食</th></tr>
+    <tr><th class="text-center">疼痛</th></tr>
+    <tr><th class="text-center">痺れ</th></tr>
+    <tr><th class="text-center">眠気</th></tr>
+    <tr><th class="text-center">SPO2</th></tr>
+    <tr><th class="text-center">血糖値</th></tr>
+    <tr><th class="text-center">インスリン</th></tr>
+    </table>
+  </div>
+    
+    <%= render 'observations/observations', observations: @observations, user: @user %>
+    
+    
+  </div>
+<div>
+
+
