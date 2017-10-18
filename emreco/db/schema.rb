@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170926135148) do
+ActiveRecord::Schema.define(version: 20170928142136) do
+
+  create_table "instructions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.date     "instruct_day"
+    t.integer  "user_id"
+    t.string   "content"
+    t.integer  "execution",    default: 0
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["user_id"], name: "index_instructions_on_user_id", using: :btree
+  end
 
   create_table "observations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.date     "config_day"
@@ -80,5 +90,6 @@ ActiveRecord::Schema.define(version: 20170926135148) do
     t.datetime "updated_at",                             null: false
   end
 
+  add_foreign_key "instructions", "users"
   add_foreign_key "observations", "users"
 end

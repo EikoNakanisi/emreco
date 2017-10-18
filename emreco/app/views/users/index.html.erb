@@ -3,11 +3,12 @@
   <strong>患者氏名一覧</strong>
   </caption>
   <thead>
-  <tr><th class="text-center">部屋番号</th><th class="text-center">患者名</th><th class="text-center">各種ボタン</th></tr>
+  <tr><th class="text-center">id</th><th class="text-center">部屋番号</th><th class="text-center">患者名</th><th class="text-left">各種ボタン</th></tr>
   </thead>
   <tbody>
     <% @users.each do |user| %>
     <tr>
+    <td><%= user.id %></td>
     <td><%= user.roomno %></td>
     <td><%= user.name %></td>
     <td><%= link_to '詳細表示', user_path(user), class: 'btn btn-info btn-xs' %>
@@ -18,6 +19,7 @@
   </tbody>
   </table>
   <div class="media-body">
+    <a href="/">bedmap</a>
     <%= link_to '新規患者登録', new_user_path, class: 'btn btn-success btn-xs' %>
   </div>
 

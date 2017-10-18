@@ -5,41 +5,142 @@
     display: block;
     clear: both;
 }
+
+
+
 header {
   margin: 0px;
-  height: 150px;
-  background-color: gainsboro;
 }
 
-div#main {
+.cover {
+  margin: 0px;
   float: left;
-  width: 80%;
-  height: 500px;
-  background-color: bisque;
+  width: 88%;
+  height: 900px;
+  background-image:url("/bedmap01.png");
+  background-size:100% auto;
 }
 
-aside {
-  float: right;
-  width: 20%;
-  height: 500px;
-  background-color: gainsboro;
-}
 
 .box{
   float: left;
-  width: 11%;
-  height: 170px;
-  border: 1px solid orange;
-  background-color: ivory;
+  padding: 5px;
+  width: 122px;
+  height: 100px;
+  background: cornsilk;
+  border-top: solid 1px #000000;
+  border-left: solid 1px #000000;
 }
 
 .boxContainer{
   overflow: hidden;
 }
 
+.boxs{
+  float: left;
+  padding: 5px;
+  width: 80px;
+  height: 100px;
+  background: bisque;
+  border-left: solid 1px #000000;
+
+}
+
+.boxsContainer{
+  overflow: hidden;
+}
+
+.boxs2{
+  float: left;
+  padding: 5px;
+  width: 80px;
+  height: 85px;
+  background: bisque;
+  border-left: solid 1px #000000;
+
+}
+
+.boxs2Container{
+  overflow: hidden;
+}
+
+.boxs3{
+  float: left;
+  padding: 5px;
+  width: 80px;
+  height: 65px;
+  background: bisque;
+  border-left: solid 1px #000000;
+
+}
+
+.boxs3Container{
+  overflow: hidden;
+}
+
+.boxd{
+  float: left;
+  padding: 5px;
+  width: 122px;
+  height: 150px;
+  background: cornsilk;
+  border: solid 1px #000000;
+  
+}
+
+.boxdContainer{
+  overflow: hidden;
+}
+
+.boxl{
+  float: left;
+  padding: 5px;
+  width: 122px;
+  height: 85px;
+  background: cornsilk;
+  border-top: solid 1px #000000;
+  border-left: solid 1px #000000;
+}
+
+.boxlContainer{
+  overflow: hidden;
+}
+
+.boxl1{
+  float: left;
+  padding: 5px;
+  width: 122px;
+  height: 85px;
+  background: cornsilk;
+  border-left: solid 1px #000000;
+}
+
+.boxl1Container{
+  overflow: hidden;
+}
+
+
+.boxl2{
+  float: left;
+  padding: 5px;
+  width: 122px;
+  height: 65px;
+  background: cornsilk;
+  border-left: solid 1px #000000;
+  border-bottom: solid 1px #000000;
+
+}
+
+.boxl2Container{
+  overflow: hidden;
+}
+
+
 .box1{
     padding: 2px;
-    margin: 2px;
+  margin: 3px 10px;
+    width: 90px;
+    height: 23px;
     color: #2c2c2f;
     text-align: center;
     background: deepskyblue;
@@ -55,9 +156,11 @@ aside {
 }
 
 .box2{
-    padding: 4px;
-    margin: 2px;
-    color: black;
+    padding: 2px;
+    margin: 3px 10px;
+    width: 90px;
+    height: 27px;
+    color: #2c2c2f;
     background: whitesmoke;
     border-top: solid 1px lightslategray;
     border-left: solid 1px lightslategray;
@@ -71,8 +174,10 @@ aside {
 }
 
 .box3{
-    padding: 1px;
-    margin: 5px;
+    padding: 0px;
+    margin: 3px 30px;
+    height: 18px;
+    width: 50px;
     color: black;
     text-align: center;
     background: white;
@@ -88,10 +193,12 @@ aside {
 }
 
 .box4{
-    padding: 4px;
-    margin: 2px;
+    padding: 2px;
+    margin: 3px 10px;
+    width: 90px;
+    height: 27px;
     color: black;
-    background: palegreen;
+    background: #CCFF99;
     border-top: solid 1px lightslategray;
     border-left: solid 1px lightslategray;
     border-right: solid 1px white;
@@ -105,7 +212,9 @@ aside {
 
 .box5{
     padding: 2px;
-    margin: 2px;
+    margin: 3px 10px;
+    width: 90px;
+    height: 23px;
     color: #2c2c2f;
     text-align: center;
     background: pink;
@@ -113,7 +222,6 @@ aside {
     border-left: solid 1px white;
     border-right: solid 1px lightslategray;
     border-bottom: solid 1px lightslategray;
-  
 }
 .box5 p {
     margin: 0; 
@@ -123,7 +231,9 @@ aside {
 
 .box6{
     padding: 2px;
-    margin: 2px;
+    margin: 3px 10px;
+    width: 90px;
+    height: 23px;
     color: #2c2c2f;
     text-align: center;
     background: silver;
@@ -131,9 +241,18 @@ aside {
     border-left: solid 1px white;
     border-right: solid 1px lightslategray;
     border-bottom: solid 1px lightslategray;
-  
 }
 .box6 p {
     margin: 0; 
     padding: 0;
 }
+
+
+#sidebar {
+    width: 12%;
+    height: 900px;
+    background-image:url("/sidebar01.png");
+    background-size:100% auto;
+    float: right;
+}
+

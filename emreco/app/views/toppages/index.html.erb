@@ -1,366 +1,657 @@
 
 
-<header class="user-profile">
-  ヘッダー
-</header>
 
-<div id="wrapper" class="clearfix">
-  <div id="main">
-<div class="boxContainer">
-
-<div class="box">
-          <br>
-
-<% @users.each do |user| %>
-  <% if user.roomno == '２' %>
-    <% if user.gender == '男' %>
-      <div class="box1">
-    <% else %>
-      <div class="box5">
-    <% end %>
-        <p>２号室</p>
-      </div>
-
-    <% if user.infection == '有' %>
-      <div class="box4">
-    <% else %>
-      <div class="box2">
-    <% end %>
-    <p><%= user.name %></p>
-      <% if user.aid == '担送' %>
-          <span class="label label-danger">担</span>
-      <% elsif user.aid == '護送' %>
-          <span class="label label-warning">護</span>
-      <% else %>
-          <span class="label label-success">独</span>
-      <% end %>
-      </div>
-    <% elsif user.name == nil %>
-    <div class="box6">
-    <p>２号室</p>
-    </div>
-    <div class="box2">
-    <p>空室</p>
-    <span class="label label-default">空</span>
-    </div>
-  <% end %>
+<div class="cover">
+<% (1..14).each do |number| %>
+  <h6><%= number %></h6>
 <% end %>
 
-    <div class="box3">
-    <p>2</p>
-    </div>
-  </div>
-  
-<div class="box">
+
 <% @users.each do |user| %>
-  <% if user.roomno == '３' %>
-    <% if user.gender == '男' %>
-      <div class="box1">
-    <% else %>
-      <div class="box5">
-    <% end %>
-        <p>３号室</p>
-      </div>
+      <% if user.roomno == '２' %>
+        <% if user.name== '空室' %>
+          <div class="box"><font size="2">
+          <div class="box6"><p>２号室</p></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">2</font></div>
+          </div>
+        <% else %>
+      <div class="box"><font size="2">
+        <% if user.gender == '男' %>
+        <div class="box1"><p>２号室</p></div>
+        <% else %>
+        <div class="box5"><p>２号室</p></div>
+        <% end %>
 
     <% if user.infection == '有' %>
-      <div class="box4">
+      <div class="box4"><font size="2">
     <% else %>
-      <div class="box2">
+      <div class="box2"><font size="2">
     <% end %>
-    <p><%= user.name %></p>
+    <p><%= link_to user.name, user_path(user.id) %>
       <% if user.aid == '担送' %>
-          <span class="label label-danger">担</span>
+          <span style="background-color: #FF0000">担</span>
       <% elsif user.aid == '護送' %>
-          <span class="label label-warning">護</span>
+          <span style="background-color: #FFFF00">護</span>
       <% else %>
-          <span class="label label-success">独</span>
+          <span style="background-color: #33CC33">独</span>
       <% end %>
+    </p></div>
+        <div class="box3"><font size="2">2</font></div>
       </div>
-    <% elsif user.name == nil %>
-    <div class="box6">
-    <p>３号室</p>
-    </div>
-    <div class="box2">
-    <p>空室</p>
-    <span class="label label-default">空</span>
-    </div>
-  <% end %>
-<% end %>
-
-    <div class="box3">
-    <p>3</p>
-    </div>
-  </div>
+      <% end %><% end %>
   
-<div class="box">
-<% @users.each do |user| %>
-  <% if user.roomno == '６' %>
-    <% if user.gender == '男' %>
-      <div class="box1">
-    <% else %>
-      <div class="box5">
-    <% end %>
-        <p>６号室</p>
-      </div>
+      <% if user.roomno == '３' %>
+        <% if user.name== '空室' %>
+          <div class="box">
+          <div class="box6"><p>３号室</p></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">3</font></div>
+          </div>
+        <% else %>
+      <div class="box">
+        <% if user.gender == '男' %>
+        <div class="box1"><p>３号室</p></div>
+        <% else %>
+        <div class="box5"><p>３号室</p></div>
+        <% end %>
 
     <% if user.infection == '有' %>
-      <div class="box4">
+      <div class="box4"><font size="2">
     <% else %>
-      <div class="box2">
+      <div class="box2"><font size="2">
     <% end %>
-    <p><%= user.name %></p>
+    <p><%= link_to user.name, user_path(user.id) %>
       <% if user.aid == '担送' %>
-          <span class="label label-danger">担</span>
+          <span style="background-color: #FF0000">担</span>
       <% elsif user.aid == '護送' %>
-          <span class="label label-warning">護</span>
+          <span style="background-color: #FFFF00">護</span>
       <% else %>
-          <span class="label label-success">独</span>
+          <span style="background-color: #33CC33">独</span>
       <% end %>
+    </p></div>
+        <div class="box3"><font size="2">3</font></div>
       </div>
-    <% elsif user.name == nil %>
-    <div class="box6">
-    <p>６号室</p>
-    </div>
-    <div class="box2">
-    <p>空室</p>
-    <span class="label label-default">空</span>
-    </div>
-  <% end %>
+      <% end %><% end %>
+
+      <% if user.roomno == '６' %>
+        <% if user.name== '空室' %>
+          <div class="box">
+          <div class="box6"><p>６号室</p></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">6</font></div>
+          </div>
+        <% else %>
+      <div class="box">
+        <% if user.gender == '男' %>
+        <div class="box1"><p>６号室</p></div>
+        <% else %>
+        <div class="box5"><p>６号室</p></div>
+        <% end %>
+    <% if user.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to user.name, user_path(user.id) %>
+      <% if user.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif user.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+      <div class="box3"><font size="2">6</font></div>
+      </div>
+      <% end %><% end %>
+
+      <% if user.roomno == '７' %>
+        <% if user.name== '空室' %>
+          <div class="box">
+          <div class="box6"><p>７号室</p></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">7</font></div>
+          </div>
+        <% else %>
+      <div class="box">
+        <% if user.gender == '男' %>
+        <div class="box1"><p>７号室</p></div>
+        <% else %>
+        <div class="box5"><p>７号室</p></div>
+        <% end %>
+    <% if user.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to user.name, user_path(user.id) %>
+      <% if user.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif user.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">7</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if user.roomno == '１０' %>
+  <div class="boxs">食堂</div>
+        <% if user.name== '空室' %>
+          <div class="box">
+          <div class="box6"><p>１０号室</p></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">10</font></div>
+          </div>
+        <% else %>
+      <div class="box">
+        <% if user.gender == '男' %>
+        <div class="box1"><p>１０号室</p></div>
+        <% else %>
+        <div class="box5"><p>１０号室</p></div>
+        <% end %>
+    <% if user.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to user.name, user_path(user.id) %>
+      <% if user.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif user.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">10</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if user.roomno == '１１' %>
+        <% if user.name== '空室' %>
+          <div class="box">
+          <div class="box6"><p>１１号室</p></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">11</font></div>
+          </div>
+        <% else %>
+      <div class="box">
+        <% if user.gender == '男' %>
+        <div class="box1"><p>１１号室</p></div>
+        <% else %>
+        <div class="box5"><p>１１号室</p></div>
+        <% end %>
+    <% if user.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to user.name, user_path(user.id) %>
+      <% if user.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif user.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">11</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if user.roomno == '１３－１' %>
+        <% if user.name== '空室' %>
+          <div class="box">
+          <div class="box6"><p>１３号室</p></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">13-1</font></div>
+          </div>
+        <% else %>
+      <div class="box">
+        <% if user.gender == '男' %>
+        <div class="box1"><p>１３号室</p></div>
+        <% else %>
+        <div class="box5"><p>１３号室</p></div>
+        <% end %>
+    <% if user.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to user.name, user_path(user.id) %>
+      <% if user.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif user.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">13-1</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if user.roomno == '１４－１' %>
+        <% if user.name== '空室' %>
+          <div class="box">
+          <div class="box6"><p>１４号室</p></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">14-1</font></div>
+          </div>
+        <% else %>
+      <div class="box">
+        <% if user.gender == '男' %>
+        <div class="box1"><p>１４号室</p></div>
+        <% else %>
+        <div class="box5"><p>１４号室</p></div>
+        <% end %>
+    <% if user.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to user.name, user_path(user.id) %>
+      <% if user.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif user.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">14-1</font></div>
+      </div>
+      <% end %>
+      <% end %>
 <% end %>
 
-    <div class="box3">
-    <p>6</p>
-    </div>
-  </div>
-  
+
+<% @users.each do |user| %>
+      <% if user.roomno == '１－１' %>
+        <% if user.name== '空室' %>
+          <div class="boxl">
+          <div class="box6"><p>１号室</p></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">1-1</font></div>
+          </div>
+        <% else %>
+      <div class="boxl">
+        <% if user.gender == '男' %>
+        <div class="box1"><p>１号室</p></div>
+        <% else %>
+        <div class="box5"><p>１号室</p></div>
+        <% end %>
+    <% if user.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to user.name, user_path(user.id) %>
+      <% if user.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif user.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">1-1</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if user.roomno == '４－１' %>
+        <% if user.name== '空室' %>
+          <div class="boxl">
+          <div class="box6"><p>４号室</p></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">4-1</font></div>
+          </div>
+        <% else %>
+      <div class="boxl">
+        <% if user.gender == '男' %>
+        <div class="box1"><p>４号室</p></div>
+        <% else %>
+        <div class="box5"><p>４号室</p></div>
+        <% end %>
+    <% if user.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to user.name, user_path(user.id) %>
+      <% if user.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif user.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">4-1</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if user.roomno == '５－１' %>
+        <% if user.name== '空室' %>
+          <div class="boxl">
+          <div class="box6"><p>５号室</p></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">5-1</font></div>
+          </div>
+        <% else %>
+      <div class="boxl">
+        <% if user.gender == '男' %>
+        <div class="box1"><p>５号室</p></div>
+        <% else %>
+        <div class="box5"><p>５号室</p></div>
+        <% end %>
+    <% if user.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to user.name, user_path(user.id) %>
+      <% if user.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif user.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">5-1</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if user.roomno == '８' %>
+        <% if user.name== '空室' %>
+          <div class="boxl">
+          <div class="box6"><p>８号室</p></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">8-1</font></div>
+          </div>
+        <% else %>
+      <div class="boxl">
+        <% if user.gender == '男' %>
+        <div class="box1"><p>８号室</p></div>
+        <% else %>
+        <div class="box5"><p>８号室</p></div>
+        <% end %>
+    <% if user.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to user.name, user_path(user.id) %>
+      <% if user.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif user.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">8-1</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if user.roomno == '９' %>
+  <div class="boxs2"></div>
+        <% if user.name== '空室' %>
+          <div class="boxl">
+          <div class="box6"><p>９号室</p></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">9</font></div>
+          </div>
+        <% else %>
+      <div class="boxl">
+        <% if user.gender == '男' %>
+        <div class="box1"><p>９号室</p></div>
+        <% else %>
+        <div class="box5"><p>９号室</p></div>
+        <% end %>
+    <% if user.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to user.name, user_path(user.id) %>
+      <% if user.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif user.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">9</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if user.roomno == '１２' %>
+        <% if user.name== '空室' %>
+          <div class="boxl">
+          <div class="box6"><p>１２号室</p></div>
+          <div class="box2"></div>
+          <div class="box3"><font size="2">12</font></div>
+          </div>
+        <% else %>
+      <div class="boxl">
+        <% if user.gender == '男' %>
+        <div class="box1"><p>１２号室</p></div>
+        <% else %>
+        <div class="box5"><p>１２号室</p></div>
+        <% end %>
+    <% if user.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to user.name, user_path(user.id) %>
+      <% if user.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif user.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">12</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if user.roomno == '１３－２' %>
+        <% if user.name== '空室' %>
+          <div class="boxl1">
+          
+          <div class="box2"></div>
+          <div class="box3"><font size="2">13-2</font></div>
+          </div>
+        <% else %>
+      <div class="boxl1">
+    <% if user.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to user.name, user_path(user.id) %>
+      <% if user.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif user.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">13-2</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% if user.roomno == '１４－２' %>
+        <% if user.name== '空室' %>
+          <div class="boxl1">
+          <div class="box2"></div>
+          <div class="box3"><font size="2">14-2</font></div>
+          </div>
+        <% else %>
+      <div class="boxl1">
+    <% if user.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to user.name, user_path(user.id) %>
+      <% if user.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif user.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">14-2</font></div>
+      </div>
+      <% end %>
+      <% end %>
+
+<% end %>
 
 
-<div class="box">
-    <div class="box6">
-    <p>７号室</p>
-    </div>
-    <div class="box2">
-    <p>空室</p>
-    <span class="label label-default">空</span>
-    </div>
-    <div class="box3">
-    <p>7</p>
-    </div>
-  </div>
+<% @users.each do |user| %>
+      <% if user.roomno == '１－２' %>
+        <% if user.name== '空室' %>
+          <div class="boxl2">
+          <div class="box2"></div>
+          <div class="box3"><font size="2">1-2</font></div>
+          </div>
+        <% else %>
+      <div class="boxl2">
+    <% if user.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to user.name, user_path(user.id) %>
+      <% if user.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif user.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">1-2</font></div>
+      </div>
+      <% end %>
+      <% end %>
 
-  <div class="box">食堂</div>
+      <% if user.roomno == '４－２' %>
+        <% if user.name== '空室' %>
+          <div class="boxl2">
+          <div class="box2"></div>
+          <div class="box3"><font size="2">4-2</font></div>
+          </div>
+        <% else %>
+      <div class="boxl2">
+    <% if user.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to user.name, user_path(user.id) %>
+      <% if user.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif user.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">4-2</font></div>
+      </div>
+      <% end %>
+      <% end %>
 
-<div class="box">
-    <div class="box6">
-    <p>１０号室</p>
-    </div>
-    <div class="box2">
-    <p>空室</p>
-    <span class="label label-default">空</span>
-    </div>
-    <div class="box3">
-    <p>10</p>
-    </div>
-  </div>
+      <% if user.roomno == '５－２' %>
+        <% if user.name== '空室' %>
+          <div class="boxl2">
+          <div class="box2"></div>
+          <div class="box3"><font size="2">5-2</font></div>
+          </div>
+        <% else %>
+      <div class="boxl2">
+    <% if user.infection == '有' %>
+      <div class="box4"><font size="2">
+    <% else %>
+      <div class="box2"><font size="2">
+    <% end %>
+    <p><%= link_to user.name, user_path(user.id) %>
+      <% if user.aid == '担送' %>
+          <span style="background-color: #FF0000">担</span>
+      <% elsif user.aid == '護送' %>
+          <span style="background-color: #FFFF00">護</span>
+      <% else %>
+          <span style="background-color: #33CC33">独</span>
+      <% end %>
+    </p></div>
+        <div class="box3"><font size="2">5-2</font></div>
+      </div>
+      <% end %>
+      <% end %>
 
-  <div class="box">
-    <div class="box6">
-    <p>１１号室</p>
-    </div>
-    <div class="box2">
-    <p>空室</p>
-    <span class="label label-default">空</span>
-    </div>
-    <div class="box3">
-    <p>11</p>
-    </div>
-  </div>  
+      <% if user.roomno == '８' %>
+          <div class="boxl2">
+          <div class="box2"></div>
+          <div class="box3"><font size="2">8-2</font></div>
+          </div>
+      <% end %>
 
-  <div class="box">
-    <div class="box6">
-    <p>１３号室</p>
-    </div>
-    <div class="box2">
-    <p>空室</p>
-    <span class="label label-default">空</span>
-    </div>
-    <div class="box3">
-    <p>13-1</p>
-    </div>
-  </div>
-  
-  <div class="box">
-    <div class="box6">
-    <p>１４号室</p>
-    </div>
-    <div class="box2">
-    <p>空室</p>
-    <span class="label label-default">空</span>
-    </div>
-    <div class="box3">
-    <p>14-1</p>
-    </div>
-  </div>  
-  
-  <div class="box">
-  <div class="list-group">
-    <div class="box6">
-    <p>１号室</p>
-    </div>
-    <button type="button" class="list-group-item">空室
-    <span class="label label-default">空</span>
-    </button>
-    <div class="box3">
-    <p>1-1</p>
-    </div>
-    <a href="#" class="list-group-item list-group-item-success">空室
-    <span class="label label-default">空</span>
-    </a>
-    <div class="box3">
-    <p>1-2</p>
-    </div>
-  </div>
-  </div>
+      <% if user.roomno == '９' %>
+        <div class="boxs3"></div>
+          <div class="boxl2">
+          </div>
+      <% end %>
 
+      <% if user.roomno == '１２' %>
+          <div class="boxl2">
+          </div>
+      <% end %>
 
-  <div class="box">
-    <div class="box6">
-    <p>４号室</p>
-    </div>
-    <div class="box2">
-    <p>空室</p>
-    <span class="label label-default">空</span>
-    </div>
-    <div class="box3">
-    <p>4-1</p>
-    </div>
-    <div class="box2">
-    <p>空室</p>
-    <span class="label label-default">空</span>
-    </div>
-    <div class="box3">
-    <p>4-2</p>
-    </div>
-  </div> 
-  
-  <div class="box">
-    <div class="box6">
-    <p>５号室</p>
-    </div>
-    <div class="box2">
-    <p>空室</p>
-    <span class="label label-default">空</span>
-    </div>
-    <div class="box3">
-    <p>5-1</p>
-    </div>
-    <div class="box2">
-    <p>空室</p>
-    <span class="label label-default">空</span>
-    </div>
-    <div class="box3">
-    <p>5-2</p>
-    </div>
-  </div> 
-  
-  <div class="box">
-    <div class="box6">
-    <p>８号室</p>
-    </div>
-    <div class="box2">
-    <p>空室</p>
-    <span class="label label-default">空</span>
-    </div>
-    <div class="box3">
-    <p>8-1</p>
-    </div>
-    <div class="box2">
-    <p>空室</p>
-    <span class="label label-default">空</span>
-    </div>
-    <div class="box3">
-    <p>8-2</p>
-    </div>
-  </div> 
-  
-  <div class="box"><div class="box3">
-  <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
-  </div></div>
+      <% if user.roomno == '１３－１' %>
+          <div class="boxl2">
+          </div>
+      <% end %>
 
+      <% if user.roomno == '１４－１' %>
+          <div class="boxl2">
+          </div>
+      <% end %>
 
-
-
-  <div class="box">
-    <div class="box6">
-    <p>９号室</p>
-    </div>
-    <div class="box2">
-    <p>空室</p>
-    <span class="label label-default">空</span>
-    </div>
-    <div class="box3">
-    <p>9</p>
-    </div>
-  </div>
-  
-
-  <div class="box">
-    <br>
-  <div class="list-group">
-    <div class="box6">
-    <p>１２号室</p>
-    </div>
-    <button type="button" class="list-group-item">空室
-    <span class="label label-default">空</span>
-    </button>
-    <div class="box3">
-    <p>12</p>
-    </div>
-  </div>
-  </div>
-
-
-  <div class="box"><br>
-  <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-success">空室
-  <span class="label label-default">空</span>
-  </a>
-    <div class="box3">
-    <p>13-2</p>
-    </div>
-  </div>
-  </div>  
-
-  <div class="box">
-    <br>
-  <div class="list-group">
-  <button type="button" class="list-group-item">空室
-  <span class="label label-default">空</span>
-  </button>
-    <div class="box3">
-    <p>14-2</p>
-    </div>
-  </div>
-  </div>   
-
-
-
-  </div>
-  </div>
-
-
-<%= link_to '新規患者登録', new_user_path %>
-
-
-
-
-  <aside>
-    サイドバー
-  </aside>
+<% end %>
 </div>
 
 
 
 
 
+    <aside id="sidebar">
+        サイドバー
+    </aside>
 
+<p><a href="/">bedmap</a>・<%= link_to '患者一覧', users_path %>・<%= link_to '新規患者登録', new_user_path %></p>
+</div>

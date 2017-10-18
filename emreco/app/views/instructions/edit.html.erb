@@ -1,0 +1,28 @@
+<h1>指示簿編集入力一覧</h1>
+<div class="row">
+<aside class="col-md-4">
+
+<%= form_for(@instruction) do |f| %>
+    <div class="instructday_field">
+      <%= f.label :instruct_day, '入力設定日' %>
+      <%= f.date_select(:instruct_day,
+      start_year: 2017,
+      end_year:   (Time.now.year - 18),
+      default:    Date.new(2017, 1, 1)) %>
+    </div>
+
+  <div class="field">
+    <%= f.label :execution, '実施状況' %>
+    <%= f.select :execution, Instruction.executions.keys, {prompt: '選択してください'}, class: 'form-control btn btn-info' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :content, '指示内容' %>
+    <%= f.text_area :content, class: 'form-control', rows: 3 %>
+  </div>
+        <%= f.submit '入力', class: 'btn btn-primary btn-xs' %>
+        <%= link_to '一覧に戻る',users_path, class: 'btn btn-primary btn-xs' %>
+
+<% end %>
+</aside>
+</div>
