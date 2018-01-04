@@ -1,0 +1,26 @@
+<h1>グラフデータ</h1>
+<p><%= @user.name %></p>
+<div class="row">
+<aside class="col-md-4">
+
+<% @observations.each do |@observation| %>
+  <td> 
+    <table class="table">
+        <tr><td class="text-left"><%= @observation.id %></td></tr>
+        <tr><td class="text-left"><%= @observation.config_day %></td></tr>
+        <tr><td class="text-left"><%= @observation.m_bp %>・<%= @observation.l_bp %>・<%= @observation.d_bp %></td></tr>
+        <tr><td class="text-left"><%= @observation.m_kt %>・<%= @observation.l_kt %>・<%= @observation.d_kt %></td></tr>
+        <tr><td class="text-left"><%= @observation.m_p %>・<%= @observation.l_p %>・<%= @observation.d_p %></td></tr>
+        <tr><td class="text-left"><%= @observation.m_r %>・<%= @observation.l_r %>・<%= @observation.d_r %></td></tr>
+
+        <%= hidden_field_tag :follow_id, user.id %>
+        <tr><td class="text-left">
+        <%= link_to '編集', edit_observation_path(observation), class: 'btn btn-info btn-xs' %>
+        <%= link_to "削除", observation, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
+        </td></tr>
+    </table>
+  </td>
+<% end %>
+
+</aside>
+</div>

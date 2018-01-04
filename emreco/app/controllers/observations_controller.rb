@@ -3,8 +3,7 @@ class ObservationsController < ApplicationController
   end
 
   def show
-    @user= User.find(params[:id])
-    @observation = @user.observations.build #フォーム用の新規Observationインスタンス
+    @observation = Observation.find(params[:id])
   end
 
   def new

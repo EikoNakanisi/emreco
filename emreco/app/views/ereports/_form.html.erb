@@ -1,0 +1,25 @@
+<%= form_for(ereport) do |f| %>
+  <div class="form-group">
+  <%= f.label :ert01, '1時間' %><%= f.text_area :ert01, class: 'form-control', rows: 1 %>
+  <%= f.label :ers01, '職種' %><%= f.text_area :ers01, class: 'form-control', rows: 1 %>
+  <%= f.label :er01, '記録' %><%= f.text_area :er01, class: 'form-control', rows: 3 %>
+
+  <%= f.label :ert02, '2時間' %><%= f.text_area :ert02, class: 'form-control', rows: 1 %>
+  <%= f.label :ers02, '職種 %><%= f.text_area :ers02, class: 'form-control', rows: 1 %>
+  <%= f.label :er02, '記録' %><%= f.text_area :er02, class: 'form-control', rows: 3 %>
+
+  <%= f.label :ert03, '3時間' %><%= f.text_area :ert03, class: 'form-control', rows: 1 %>
+  <%= f.label :ers03, '職種' %><%= f.text_area :ers03, class: 'form-control', rows: 1 %>
+  <%= f.label :er03, '記録' %><%= f.text_area :er03, class: 'form-control', rows: 3 %>
+
+  <%= f.label :ert04, '4時間' %><%= f.text_area :ert04, class: 'form-control', rows: 1 %>
+  <%= f.label :ers04, '職種' %><%= f.text_area :ers04, class: 'form-control', rows: 1 %>
+  <%= f.label :er04, '記録' %><%= f.text_area :er04, class: 'form-control', rows: 3 %>
+
+  <%= f.label :ert05, '5時間' %><%= f.text_area :ert05, class: 'form-control', rows: 1 %>
+  <%= f.label :ers05, '職種' %><%= f.text_area :ers05, class: 'form-control', rows: 1 %>
+  <%= f.label :er05, '記録' %><%= f.text_area :er05, class: 'form-control', rows: 3 %>
+
+  </div>
+  <%= f.submit '入力', class: 'btn btn-primary btn-xs' %>
+<% end %>

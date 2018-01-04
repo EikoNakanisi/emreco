@@ -1,0 +1,2 @@
+class NinstructionsController < ApplicationController
+end

@@ -1,0 +1,105 @@
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+      <div class="navbar-header">
+        <p><font size="+1" color="#000000">記録文章参照</font><BR>
+        ID : <%= @ereport.id %></p>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <%= link_to '× 閉じる', user_path, class: 'btn btn-warning' %>
+        </ul>
+      </div>
+  </div>
+</nav>
+</header>
+
+  <h5><font color="#FFFFFF">0</font></h5><BR>
+<% 1.upto(25) do |num| %>
+<font color="#FFFFFF"><% num = "%02d" % num %></font>
+<%= num %>
+<% end %>
+<BR>
+
+<div class="col-sm-5">
+<% unless @ereport.dro01.blank? %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">【<%= @ereport.ers01 %>】<br>
+  01版：<%= @ereport.ert01 %>　○○）○○○○○○○○</div>
+  <!-- Table -->
+  <table class="table-bordered">
+  <tr>
+    <td>─</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@ereport.er01) %></font></td>
+  </tr>
+  </table>
+  </div>
+<% end %>
+
+<% unless @ereport.dro02.blank? %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">【<%= @ereport.ers02 %>】<br>
+  01版：<%= @ereport.ert02 %>　○○）○○○○○○○○</div>
+  <!-- Table -->
+  <table class="table-bordered">
+  <tr>
+    <td>─</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@ereport.er02) %></font></td>
+  </tr>
+  </table>
+  </div>
+<% end %>
+
+<% unless @ereport.dro03.blank? %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">【<%= @ereport.ers03 %>】<br>
+  01版：<%= @ereport.ert03 %>　○○）○○○○○○○○</div>
+  <!-- Table -->
+  <table class="table-bordered">
+  <tr>
+    <td>─</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@ereport.er03) %></font></td>
+  </tr>
+  </table>
+  </div>
+<% end %>
+
+<% unless @ereport.dro04.blank? %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">【<%= @ereport.ers04 %>】<br>
+  01版：<%= @ereport.ert04 %>　○○）○○○○○○○○</div>
+  <!-- Table -->
+  <table class="table-bordered">
+  <tr>
+    <td>─</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@ereport.er04) %></font></td>
+  </tr>
+  </table>
+  </div>
+<% end %>
+
+<% unless @ereport.dro05.blank? %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">【<%= @ereport.ers05 %>】<br>
+  01版：<%= @ereport.ert05 %>　○○）○○○○○○○○</div>
+  <!-- Table -->
+  <table class="table-bordered">
+  <tr>
+    <td>─</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@ereport.er05) %></font></td>
+  </tr>
+  </table>
+  </div>
+<% end %>
+
+
+<%= link_to 'この多職種記録を編集する', edit_ereport_path(@ereport) %>
+<%= link_to 'この多職種記を削除する', @ereport, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+<%= link_to '新規多職種記の投稿', new_ereport_path %>
+
+</div>

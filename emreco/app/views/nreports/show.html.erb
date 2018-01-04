@@ -1,0 +1,344 @@
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+      <div class="navbar-header">
+        <p><font size="+1" color="#000000">記録文章参照</font><BR>
+        ID : <%= @nreport.id %></p>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <%= link_to '× 閉じる', user_path, class: 'btn btn-warning' %>
+        </ul>
+      </div>
+  </div>
+</nav>
+</header>
+
+  <h5><font color="#FFFFFF">0</font></h5><BR>
+<% 1.upto(25) do |num| %>
+<font color="#FFFFFF"><% num = "%02d" % num %></font>
+<%= num %>
+<% end %>
+<BR>
+
+<div class="col-sm-5">
+<% unless @nreport.nro01.blank? %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">【SOAP&フォーカス】<%= @nreport.nrt01 %><br>
+  01版：<%= @nreport.nrt01 %>　看護師）看護花子</div>
+
+  <!-- Table -->
+  <table class="table-bordered">
+  <tr>
+    <td>（＃）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrm01) %></font></td>
+  </tr>
+  <tr>
+    <td>（S）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrs01) %></font></td>
+  </tr>
+  <tr>
+    <td>（O）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nro01) %></font></td>
+  </tr>
+  <tr>
+    <td>（A）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nra01) %></font></td>
+  </tr>
+  <tr>
+    <td>（P）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrp01) %></font></td>
+  </tr>
+  </table>
+  </div>
+<% end %>
+
+<% unless @nreport.nro02.blank? %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">【SOAP&フォーカス】<%= @nreport.nrt02 %><br>
+  01版：<%= @nreport.nrt02 %>　看護師）看護花子</div>
+
+  <!-- Table -->
+  <table class="table-bordered">
+  <tr>
+    <td>（＃）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrm02) %></font></td>
+  </tr>  <tr>
+    <td>（S）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrs02) %></font></td>
+  </tr>
+  <tr>
+    <td>（O）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nro02) %></font></td>
+  </tr>
+  <tr>
+    <td>（A）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nra02) %></font></td>
+  </tr>
+  <tr>
+    <td>（P）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrp02) %></font></td>
+  </tr>
+  </table>
+  </div>
+<% end %>
+
+<% unless @nreport.nro03.blank? %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">【SOAP&フォーカス】<%= @nreport.nrt03 %><br>
+  01版：<%= @nreport.nrt03 %>　看護師）看護花子</div>
+
+  <!-- Table -->
+  <table class="table-bordered">
+  <tr>
+    <td>（＃）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrm03) %></font></td>
+  </tr>  <tr>
+    <td>（S）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrs03) %></font></td>
+  </tr>
+  <tr>
+    <td>（O）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nro03) %></font></td>
+  </tr>
+  <tr>
+    <td>（A）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nra03) %></font></td>
+  </tr>
+  <tr>
+    <td>（P）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrp03) %></font></td>
+  </tr>
+  </table>
+  </div>
+<% end %>
+
+<% unless @nreport.nro04.blank? %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">【SOAP&フォーカス】<%= @nreport.nrt04 %><br>
+  01版：<%= @nreport.nrt04 %>　看護師）看護花子</div>
+
+  <!-- Table -->
+  <table class="table-bordered">
+  <tr>
+    <td>（＃）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrm04) %></font></td>
+  </tr>  <tr>
+    <td>（S）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrs04) %></font></td>
+  </tr>
+  <tr>
+    <td>（O）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nro04) %></font></td>
+  </tr>
+  <tr>
+    <td>（A）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nra04) %></font></td>
+  </tr>
+  <tr>
+    <td>（P）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrp04) %></font></td>
+  </tr>
+  </table>
+  </div>
+<% end %>
+
+<% unless @nreport.nro05.blank? %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">【SOAP&フォーカス】<%= @nreport.nrt05 %><br>
+  01版：<%= @nreport.nrt05 %>　看護師）看護花子</div>
+
+  <!-- Table -->
+  <table class="table-bordered">
+  <tr>
+    <td>（＃）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrm05) %></font></td>
+  </tr>  <tr>
+    <td>（S）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrs05) %></font></td>
+  </tr>
+  <tr>
+    <td>（O）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nro05) %></font></td>
+  </tr>
+  <tr>
+    <td>（A）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nra05) %></font></td>
+  </tr>
+  <tr>
+    <td>（P）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrp05) %></font></td>
+  </tr>
+  </table>
+  </div>
+
+
+<% unless @nreport.nro06.blank? %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">【SOAP&フォーカス】<%= @nreport.nrt06 %><br>
+  01版：<%= @nreport.nrt06 %>　看護師）看護花子</div>
+
+  <!-- Table -->
+  <table class="table-bordered">
+  <tr>
+    <td>（＃）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrm06) %></font></td>
+  </tr>
+  <tr>
+    <td>（S）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrs06) %></font></td>
+  </tr>
+  <tr>
+    <td>（O）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nro06) %></font></td>
+  </tr>
+  <tr>
+    <td>（A）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nra06) %></font></td>
+  </tr>
+  <tr>
+    <td>（P）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrp06) %></font></td>
+  </tr>
+  </table>
+  </div>
+<% end %>
+
+<% unless @nreport.nro07.blank? %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">【SOAP&フォーカス】<%= @nreport.nrt07 %><br>
+  01版：<%= @nreport.nrt07 %>　看護師）看護花子</div>
+
+  <!-- Table -->
+  <table class="table-bordered">
+  <tr>
+    <td>（＃）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrm07) %></font></td>
+  </tr>  <tr>
+    <td>（S）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrs07) %></font></td>
+  </tr>
+  <tr>
+    <td>（O）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nro07) %></font></td>
+  </tr>
+  <tr>
+    <td>（A）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nra07) %></font></td>
+  </tr>
+  <tr>
+    <td>（P）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrp07) %></font></td>
+  </tr>
+  </table>
+  </div>
+<% end %>
+
+<% unless @nreport.nro08.blank? %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">【SOAP&フォーカス】<%= @nreport.nrt08 %><br>
+  01版：<%= @nreport.nrt08 %>　看護師）看護花子</div>
+
+  <!-- Table -->
+  <table class="table-bordered">
+  <tr>
+    <td>（＃）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrm08) %></font></td>
+  </tr>  <tr>
+    <td>（S）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrs08) %></font></td>
+  </tr>
+  <tr>
+    <td>（O）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nro08) %></font></td>
+  </tr>
+  <tr>
+    <td>（A）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nra08) %></font></td>
+  </tr>
+  <tr>
+    <td>（P）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrp08) %></font></td>
+  </tr>
+  </table>
+  </div>
+<% end %>
+
+<% unless @nreport.nro09.blank? %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">【SOAP&フォーカス】<%= @nreport.nrt09 %><br>
+  01版：<%= @nreport.nrt09 %>　看護師）看護花子</div>
+
+  <!-- Table -->
+  <table class="table-bordered">
+  <tr>
+    <td>（＃）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrm09) %></font></td>
+  </tr>  <tr>
+    <td>（S）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrs09) %></font></td>
+  </tr>
+  <tr>
+    <td>（O）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nro09) %></font></td>
+  </tr>
+  <tr>
+    <td>（A）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nra09) %></font></td>
+  </tr>
+  <tr>
+    <td>（P）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrp09) %></font></td>
+  </tr>
+  </table>
+  </div>
+<% end %>
+
+<% unless @nreport.nro10.blank? %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">【SOAP&フォーカス】<%= @nreport.nrt10 %><br>
+  01版：<%= @nreport.nrt10 %>　看護師）看護花子</div>
+
+  <!-- Table -->
+  <table class="table-bordered">
+  <tr>
+    <td>（＃）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrm10) %></font></td>
+  </tr>  <tr>
+    <td>（S）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrs10) %></font></td>
+  </tr>
+  <tr>
+    <td>（O）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nro10) %></font></td>
+  </tr>
+  <tr>
+    <td>（A）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nra10) %></font></td>
+  </tr>
+  <tr>
+    <td>（P）</td>
+    <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrp10) %></font></td>
+  </tr>
+  </table>
+  </div>
+
+
+<% end %>
+
+
+<%= link_to 'この看護SOAPを編集する', edit_nreport_path(@nreport) %>
+<%= link_to 'この看護師SOAPを削除する', @nreport, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+<%= link_to '新規看護SOAPの投稿', new_nreport_path %>
+
+</div>

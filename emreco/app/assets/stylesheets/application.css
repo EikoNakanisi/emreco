@@ -15,9 +15,9 @@ header {
 .cover {
   margin: 0px;
   float: left;
-  width: 88%;
-  height: 900px;
-  background-image:url("/bedmap01.png");
+  width: 1100px;
+  height: 980px;
+  background-image:url("/images/bedmap01.png");
   background-size:100% auto;
 }
 
@@ -250,9 +250,163 @@ header {
 
 #sidebar {
     width: 12%;
-    height: 900px;
-    background-image:url("/sidebar01.png");
+    height: 980px;
+    background-image:url("/images/sidebar01.png");
     background-size:100% auto;
     float: right;
+}
+
+
+.clearfix::after {
+    content: 'ここに .clearfix::after が入っている';
+    display: block;
+    clear: both;
+}
+
+.page-header {
+  position: fixed;
+  top: 0px;
+  margin: 0px;
+  float: left;
+  height: 80px;
+  width: 1200px;
+  background-image:url("/images/head_01.jpg");
+  background-size:100% auto;
+}
+.cover01 {
+  position: fixed;
+  top: 80px;
+  float: left;
+  margin: 0px;
+  width: 1200px;
+  height: 122px;
+  background-image:url("/images/kenon_head.png");
+  background-size:100% auto;
+}
+.cover0201 {
+  float: left;
+  margin: 0px;
+  width: 1200px;
+  height: 6000px;
+  background-image:url("/images/kenon_body.png");
+  background-size:100% auto;
+}
+.aside {
+  float: right;
+  width: 145px;
+  height: 6000px;
+  background-image:url("/images/sidebar01.png");
+  background-repeat: no-repeat;
+  background-color: #C0C0C0;
+}
+
+
+
+.headbox01{
+  float: left;
+  padding: 0px;
+  width: 8%;
+  height: 80px;
+  }
+
+.headbox01Container{
+  overflow: hidden;
+}
+
+.headbox02{
+  float: left;
+  padding: 0px;
+  width: 15%;
+  height: 80px;
+}
+
+.headbox02Container{
+  overflow: hidden;
+}
+
+p.sample1 {text-align: left; }
+p.sample2 {text-align: right; }
+
+
+.headbox03{
+  float: left;
+  padding: 0px;
+  width: 25%;
+  height: 80px;
+}
+
+.headbox03Container{
+  overflow: hidden;
+}
+
+.headbox04{
+  float: left;
+  padding: 0px;
+  width: 27%;
+  height: 80px;
+}
+
+.headbox04Container{
+  overflow: hidden;
+}
+
+.headbox05{
+  float: left;
+  padding: 0px;
+  width: 6%;
+  height: 80px;
+}
+
+.headbox05Container{
+  overflow: hidden;
+}
+
+ul.nav{
+  padding: 0px;
+  font-size: 0;
+}
+
+
+ul.nav li{
+  display: inline-block;
+  border: 1px solid #D35400;
+  padding: 0px;
+  background: #FFCC99;
+  width: 65px;
+  text-align: center;
+  font-size: 1rem;
+}
+ul.nav li a{
+      color: black;
+      text-decoration: none;
+}
+
+
+
+
+div.ao {color: #FFFFFF; background-color:royalblue;}
+
+.graf01{
+  float: left;
+  padding: 0px;
+  width: 3%;
+  height: 200px;
+  border: solid 1px #000000;
+}
+
+.graf01Container{
+  overflow: hidden;
+}
+
+.graf02{
+  float: left;
+  padding: 0px;
+  width: 88%;
+  height: 200px;
+  border: solid 1px #000000;
+}
+
+.graf02Container{
+  overflow: hidden;
 }
 

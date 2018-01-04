@@ -9,6 +9,8 @@ class UsersController < ApplicationController
     @observations = @user.observations.order('created_at DESC').page(params[:page])
     @instruction = @user.instructions.build  # form_for 用
     @instructions = @user.instructions.order('created_at DESC').page(params[:page])
+    @hensu1 = 10
+    @hensu2 = 20
   end
 
   def new

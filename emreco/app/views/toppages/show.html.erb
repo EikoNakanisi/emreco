@@ -1,0 +1,62 @@
+<div class="col-md-6 col-md-offset-3">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">ＩＤ</h3>
+  </div>
+  <div class="panel-body">
+    <%= @user.id %>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">名前</h3>
+  </div>
+  <div class="panel-body">
+    <%= @user.name %>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">年齢</h3>
+  </div>
+  <div class="panel-body">
+    <%= @user.age %>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">性別</h3>
+  </div>
+  <div class="panel-body">
+    <%= @user.gender %>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">掲示板</h3>
+  </div>
+  <div class="panel-body">
+    <%= @user.post %>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">注意事項</h3>
+  </div>
+  <div class="panel-body">
+    <%= @user.attention %>
+  </div>
+</div>
+
+
+  <div class="media-body">
+    <%= link_to '戻る', root_path, class: 'btn btn-primary btn-lg' %>
+    <%= link_to '経過表', user_path, class: 'btn btn-primary btn-lg' %>
+  </div>
+
+</div>
