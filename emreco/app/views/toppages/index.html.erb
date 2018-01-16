@@ -650,11 +650,46 @@
 
 
     <aside id="sidebar">
-        <p><a href="/">bedmap</a>・<%= link_to '患者一覧', users_path %>・<%= link_to '新規患者登録', new_user_path %></p>
-<%= link_to '新規医師指示簿の投稿', new_dinstruction_path %>
-<%= link_to '新規医師SOAPの投稿', new_dreport_path %>
-<%= link_to '新規看護SOAPの投稿', new_nreport_path %>
-<%= link_to '新規他職SOAPの投稿', new_ereport_path %>
+<div class="space5">
+
+<a href="/users/1 %>"><font size="2">北海タラ</font></a><br>
+<a href="/users/2 %>"><font size="2">青森りんご</font></a><br>
+<a href="/users/3 %>"><font size="2">秋田よしお</font></a><br>
+<a href="/users/4 %>"><font size="2">岩手なおみ</font></a><br>
+<a href="/users/5 %>"><font size="2">福島たけし</font></a><br>
+<br>
+<br>
+<br><br>
+経過表<br>
+看護指示<br>
+指示簿一覧<br>
+看護計画<br>
+患者ｽｹｼﾞｭｰﾙ<br>
+看護プロファイル<br>
+移動食事カレンダ<br>
+入院処置<br>
+テンプレート<br>
+SOAP&フォーカス<br>
+患者認証業務<br>
+
+
+
+<a href="/">bedmap</a><br>
+<%= link_to '患者一覧', users_path %><br>
+<%= link_to '新規患者登録', new_user_path %><br>
+<%= link_to '新規医師指示簿の投稿', new_dinstruction_path %><br>
+<%= link_to '新規医師SOAPの投稿', new_dreport_path %><br>
+<%= link_to '新規看護SOAPの投稿', new_nreport_path %><br>
+<%= link_to '新規他職SOAPの投稿', new_ereport_path %><br>
+<%= link_to '新規看護指示の投稿', new_ninstruction_path %><br>
+<%= link_to '新規注射の投稿', new_injection_path %><br>
+<%= link_to '新規処方の投稿', new_prescription_path %><br>
+<%= link_to '新規テンプレートの投稿', new_instruction_path %><br>
+<%= link_to '新規計画の投稿', new_plan_path %><br>
+<%= link_to '新規検査結果の投稿', new_result_path %><br>
+<a href="../results/1">検査結果</a><br>
+
+</div>
     </aside>
 
 

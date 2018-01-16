@@ -1,0 +1,142 @@
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+      <div class="navbar-header">
+        <p><font size="+1" color="#000000">テンプレート参照</font><BR>
+        ID : <%= @instruction.id %></p>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+
+
+  <% if @instruction.id > 20 %>
+    <a href="../users/<%= @instruction.id-@hensu2 %>#a8"><img src="../images/close_btn.png" border="0"></a>
+  <% elsif @instruction.id > 10 %>
+    <a href="../users/<%= @instruction.id-@hensu1 %>#a8"><img src="../images/close_btn.png" border="0"></a>
+  <% else %>
+    <a href="../users/<%= @instruction.id %>#a8"><img src="../images/close_btn.png" border="0"></a>
+  <% end %>
+
+        </ul>
+      </div>
+  </div>
+</nav>
+</header>
+
+<div class="space5">
+<div class="col-sm-5">
+
+<% unless @instruction.tcon01.blank? %>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <font size="+1">【<%= @instruction.tna01 %>】<%= @instruction.tday01.strftime("%Y年%m月%d日(%a) %H:%M") %></font><br>
+  01版：<%= @instruction.tday01.strftime("%Y年%m月%d日(%a) %H:%M") %>　看護師）看護花子
+  </div>
+  <div class="panel-body">
+    <font size="+1"><%= simple_format(@instruction.tcon01) %></font>
+  </div>
+</div>
+<% end %>
+
+<% unless @instruction.tcon02.blank? %>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <font size="+1">【<%= @instruction.tna02 %>】<%= @instruction.tday02.strftime("%Y年%m月%d日(%a) %H:%M") %></font><br>
+  01版：<%= @instruction.tday02.strftime("%Y年%m月%d日(%a) %H:%M") %>　看護師）看護花子
+  </div>
+  <div class="panel-body">
+    <font size="+1"><%= simple_format(@instruction.tcon02) %></font>
+  </div>
+</div>
+<% end %>
+
+<% unless @instruction.tcon03.blank? %>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <font size="+1">【<%= @instruction.tna03 %>】<%= @instruction.tday03.strftime("%Y年%m月%d日(%a) %H:%M") %></font><br>
+  01版：<%= @instruction.tday03.strftime("%Y年%m月%d日(%a) %H:%M") %>　看護師）看護花子
+  </div>
+  <div class="panel-body">
+    <font size="+1"><%= simple_format(@instruction.tcon03) %></font>
+  </div>
+</div>
+<% end %>
+
+<% unless @instruction.tcon04.blank? %>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <font size="+1">【<%= @instruction.tna04 %>】<%= @instruction.tday04.strftime("%Y年%m月%d日(%a) %H:%M") %></font><br>
+  01版：<%= @instruction.tday04.strftime("%Y年%m月%d日(%a) %H:%M") %>　看護師）看護花子
+  </div>
+  <div class="panel-body">
+    <font size="+1"><%= simple_format(@instruction.tcon04) %></font>
+  </div>
+</div>
+<% end %>
+
+<% unless @instruction.tcon05.blank? %>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <font size="+1">【<%= @instruction.tna05 %>】<%= @instruction.tday05.strftime("%Y年%m月%d日(%a) %H:%M") %></font><br>
+  01版：<%= @instruction.tday05.strftime("%Y年%m月%d日(%a) %H:%M") %>　看護師）看護花子
+  </div>
+  <div class="panel-body">
+    <font size="+1"><%= simple_format(@instruction.tcon05) %></font>
+  </div>
+</div>
+<% end %>
+
+<% unless @instruction.tcon06.blank? %>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <font size="+1">【<%= @instruction.tna06 %>】<%= @instruction.tday06.strftime("%Y年%m月%d日(%a) %H:%M") %></font><br>
+  01版：<%= @instruction.tday06.strftime("%Y年%m月%d日(%a) %H:%M") %>　看護師）看護花子
+  </div>
+  <div class="panel-body">
+    <font size="+1"><%= simple_format(@instruction.tcon06) %></font>
+  </div>
+</div>
+<% end %>
+
+<% unless @instruction.tcon07.blank? %>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <font size="+1">【<%= @instruction.tna07 %>】<%= @instruction.tday07.strftime("%Y年%m月%d日(%a) %H:%M") %></font><br>
+  01版：<%= @instruction.tday07.strftime("%Y年%m月%d日(%a) %H:%M") %>　看護師）看護花子
+  </div>
+  <div class="panel-body">
+    <font size="+1"><%= simple_format(@instruction.tcon07) %></font>
+  </div>
+</div>
+<% end %>
+
+<% unless @instruction.tcon08.blank? %>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <font size="+1">【<%= @instruction.tna08 %>】<%= @instruction.tday08.strftime("%Y年%m月%d日(%a) %H:%M") %></font><br>
+  01版：<%= @instruction.tday08.strftime("%Y年%m月%d日(%a) %H:%M") %>　看護師）看護花子
+  </div>
+  <div class="panel-body">
+    <font size="+1"><%= simple_format(@instruction.tcon08) %></font>
+  </div>
+</div>
+<% end %>
+
+<% unless @instruction.tcon09.blank? %>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <font size="+1">【<%= @instruction.tna09 %>】<%= @instruction.tday09.strftime("%Y年%m月%d日(%a) %H:%M") %></font><br>
+  01版：<%= @instruction.tday09.strftime("%Y年%m月%d日(%a) %H:%M") %>　看護師）看護花子
+  </div>
+  <div class="panel-body">
+    <font size="+1"><%= simple_format(@instruction.tcon09) %></font>
+  </div>
+</div>
+<% end %>
+
+
+<%= link_to 'このテンプレートを編集する', edit_instruction_path(@instruction) %>
+<%= link_to 'このテンプレートを削除する', @instruction, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+<%= link_to '新規テンプレートの投稿', new_instruction_path %>
+</div>
+</div>

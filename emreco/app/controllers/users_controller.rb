@@ -7,8 +7,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @observation = @user.observations.build  # form_for 用
     @observations = @user.observations.order('created_at DESC').page(params[:page])
-    @instruction = @user.instructions.build  # form_for 用
-    @instructions = @user.instructions.order('created_at DESC').page(params[:page])
     @hensu1 = 10
     @hensu2 = 20
   end

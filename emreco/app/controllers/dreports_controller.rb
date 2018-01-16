@@ -1,7 +1,12 @@
 class DreportsController < ApplicationController
+  def index
+    @dreports = Dreport.all
+  end
 
   def show
     @dreport = Dreport.find(params[:id])
+    @hensu1 = 10
+    @hensu2 = 20
   end
 
   def new

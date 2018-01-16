@@ -1,0 +1,534 @@
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+      <div class="navbar-header">
+        <p><font size="+1" color="#000000">看護指示伝票詳細</font>  ID : <%= @ninstruction.id %><br>
+        <%= @ninstruction.ntt01.strftime("%Y年%m月%d日(%a)") %></p>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+
+  <% if @ninstruction.id > 20 %>
+    <a href="../users/<%= @ninstruction.id-@hensu2 %>#a1"><img src="../images/close_btn.png" border="0"></a>
+  <% elsif @ninstruction.id > 10 %>
+    <a href="../users/<%= @ninstruction.id-@hensu1 %>#a1"><img src="../images/close_btn.png" border="0"></a>
+  <% else %>
+    <a href="../users/<%= @ninstruction.id %>#a1"><img src="../images/close_btn.png" border="0"></a>
+  <% end %>
+
+        </ul>
+      </div>
+  </div>
+</nav>
+</header>
+
+<br><br><br><br>
+
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">+清潔<br>
+  実施日時未定<br>
+  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
+  指示開始日時:2018/01/15 10:00<br>
+  指示終了日時:<br>
+  指示受け日時:2018/01/15 10:00<br>
+  指示確認日時:<br>
+  実施日時:<br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+臨時リネン交換<br>
+毎日<br>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
+
+<% unless @ninstruction.ni01.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @ninstruction.no01 == '無０１' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @ninstruction.no01 == '未実施０１' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">
+    <%= @ninstruction.ni01 %><br>
+    <%= @ninstruction.ntt01.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @ninstruction.ntt02.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@ninstruction.ni02) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+
+
+
+
+<% unless @ninstruction.ni03.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @ninstruction.no03 == '無０３' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @ninstruction.no03 == '未実施０３' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">
+    <%= @ninstruction.ni03 %><br>
+    <%= @ninstruction.ntt03.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @ninstruction.ntt04.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@ninstruction.ni04) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+
+
+<% unless @ninstruction.ni05.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @ninstruction.no05 == '無０５' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @ninstruction.no05 == '未実施０５' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">
+    <%= @ninstruction.ni05 %><br>
+    <%= @ninstruction.ntt05.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @ninstruction.ntt06.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@ninstruction.ni06) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+
+
+
+<% unless @ninstruction.ni07.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @ninstruction.no07 == '無０７' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @ninstruction.no07 == '未実施０７' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">
+    <%= @ninstruction.ni07 %><br>
+    <%= @ninstruction.ntt07.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @ninstruction.ntt08.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@ninstruction.ni08) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+
+
+<% unless @ninstruction.ni09.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @ninstruction.no09 == '無０９' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @ninstruction.no09 == '未実施０９' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">
+    <%= @ninstruction.ni09 %><br>
+    <%= @ninstruction.ntt09.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @ninstruction.ntt10.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@ninstruction.ni10) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+
+
+<% unless @ninstruction.ni11.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @ninstruction.no11 == '無１１' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @ninstruction.no11 == '未実施１１' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">
+    <%= @ninstruction.ni11 %><br>
+    <%= @ninstruction.ntt11.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @ninstruction.ntt12.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@ninstruction.ni12) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+
+
+<% unless @ninstruction.ni13.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @ninstruction.no13 == '無１３' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @ninstruction.no13 == '未実施１３' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">
+    <%= @ninstruction.ni13 %><br>
+    <%= @ninstruction.ntt13.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @ninstruction.ntt14.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@ninstruction.ni14) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+
+
+<% unless @ninstruction.ni15.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @ninstruction.no15 == '無１５' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @ninstruction.no15 == '未実施１５' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">
+    <%= @ninstruction.ni15 %><br>
+    <%= @ninstruction.ntt15.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @ninstruction.ntt16.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@ninstruction.ni16) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+
+
+<% unless @ninstruction.ni17.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @ninstruction.no17 == '無１７' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @ninstruction.no17 == '未実施１７' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">
+    <%= @ninstruction.ni17 %><br>
+    <%= @ninstruction.ntt17.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @ninstruction.ntt18.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@ninstruction.ni18) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+
+
+<% unless @ninstruction.ni19.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @ninstruction.no19 == '無１９' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @ninstruction.no19 == '未実施１９' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">
+    <%= @ninstruction.ni19 %><br>
+    <%= @ninstruction.ntt19.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @ninstruction.ntt20.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@ninstruction.ni20) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+
+
+<% unless @ninstruction.ni21.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @ninstruction.no21 == '無２１' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @ninstruction.no21 == '未実施２１' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">
+    <%= @ninstruction.ni21 %><br>
+    <%= @ninstruction.ntt21.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @ninstruction.ntt22.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@ninstruction.ni22) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+
+
+<% unless @ninstruction.ni23.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @ninstruction.no23 == '無２３' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @ninstruction.no23 == '未実施２３' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">
+    <%= @ninstruction.ni23 %><br>
+    <%= @ninstruction.ntt23.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @ninstruction.ntt24.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@ninstruction.ni24) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+
+
+
+
+<%= link_to 'この看護指示簿を編集する', edit_ninstruction_path(@ninstruction) %>
+<%= link_to 'この看護指示簿を削除する', @ninstruction, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+<%= link_to '新規看護指示簿の投稿', new_ninstruction_path %>

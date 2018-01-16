@@ -1,0 +1,54 @@
+class AddTimeToPrescriptions < ActiveRecord::Migration[5.0]
+  def change
+    add_column :prescriptions, :pty01, :datetime
+    add_column :prescriptions, :pty02, :datetime
+    add_column :prescriptions, :pty03, :datetime
+    add_column :prescriptions, :pty04, :datetime
+    add_column :prescriptions, :pty05, :datetime
+    add_column :prescriptions, :pty06, :datetime
+    add_column :prescriptions, :pty07, :datetime
+    add_column :prescriptions, :pty08, :datetime
+    add_column :prescriptions, :pty09, :datetime
+    add_column :prescriptions, :pty10, :datetime
+    add_column :prescriptions, :pty11, :datetime
+    add_column :prescriptions, :pty12, :datetime
+    add_column :prescriptions, :pty13, :datetime
+    add_column :prescriptions, :pty14, :datetime
+    add_column :prescriptions, :pty15, :datetime
+    add_column :prescriptions, :pty16, :datetime
+    add_column :prescriptions, :pty17, :datetime
+    add_column :prescriptions, :pty18, :datetime
+    add_column :prescriptions, :pty19, :datetime
+    add_column :prescriptions, :pty20, :datetime
+    add_column :prescriptions, :pty21, :datetime
+    add_column :prescriptions, :pty22, :datetime
+    add_column :prescriptions, :pty23, :datetime
+    add_column :prescriptions, :pty24, :datetime
+    add_column :prescriptions, :pty25, :datetime
+    add_column :prescriptions, :ptj01, :datetime
+    add_column :prescriptions, :ptj02, :datetime
+    add_column :prescriptions, :ptj03, :datetime
+    add_column :prescriptions, :ptj04, :datetime
+    add_column :prescriptions, :ptj05, :datetime
+    add_column :prescriptions, :ptj06, :datetime
+    add_column :prescriptions, :ptj07, :datetime
+    add_column :prescriptions, :ptj08, :datetime
+    add_column :prescriptions, :ptj09, :datetime
+    add_column :prescriptions, :ptj10, :datetime
+    add_column :prescriptions, :ptj11, :datetime
+    add_column :prescriptions, :ptj12, :datetime
+    add_column :prescriptions, :ptj13, :datetime
+    add_column :prescriptions, :ptj14, :datetime
+    add_column :prescriptions, :ptj15, :datetime
+    add_column :prescriptions, :ptj16, :datetime
+    add_column :prescriptions, :ptj17, :datetime
+    add_column :prescriptions, :ptj18, :datetime
+    add_column :prescriptions, :ptj19, :datetime
+    add_column :prescriptions, :ptj20, :datetime
+    add_column :prescriptions, :ptj21, :datetime
+    add_column :prescriptions, :ptj22, :datetime
+    add_column :prescriptions, :ptj23, :datetime
+    add_column :prescriptions, :ptj24, :datetime
+    add_column :prescriptions, :ptj25, :datetime
+  end
+end

@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+<%= form_for(plan) do |f| %>
+  <%= render 'layouts/error_messages', model: f.object %>
+
+<div class="form-group">
+  <%= f.label :npn01, '看護計画名01' %><%= f.text_area :npn01, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :np01, '看護計画目標01' %><%= f.text_area :np01, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="form-group">
+  <%= f.label :npn02, '看護計画名02' %><%= f.text_area :npn02, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :np02, '看護計画目標02' %><%= f.text_area :np02, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="form-group">
+  <%= f.label :npn03, '看護計画名03' %><%= f.text_area :npn03, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :np03, '看護計画目標03' %><%= f.text_area :np03, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="form-group">
+  <%= f.label :npn04, '看護計画名04' %><%= f.text_area :npn04, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :np04, '看護計画目標04' %><%= f.text_area :np04, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="form-group">
+  <%= f.label :npn05, '看護計画名05' %><%= f.text_area :npn05, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :np05, '看護計画目標05' %><%= f.text_area :np05, class: 'form-control', rows: 3 %>
+</div>
+
+
+  <%= f.submit '入力', class: 'btn btn-primary btn-xs' %>
+<% end %>
+
+</div></div>

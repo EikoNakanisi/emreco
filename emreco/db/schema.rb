@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180104172159) do
+ActiveRecord::Schema.define(version: 20180116124306) do
 
   create_table "dinstructions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "di01"
@@ -43,43 +43,41 @@ ActiveRecord::Schema.define(version: 20180104172159) do
   end
 
   create_table "dreports", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "drs01"
-    t.string   "dro01"
-    t.string   "dra01"
-    t.string   "drp01"
-    t.string   "drs02"
-    t.string   "dro02"
-    t.string   "dra02"
-    t.string   "drp02"
-    t.string   "drs03"
-    t.string   "dro03"
-    t.string   "dra03"
-    t.string   "drp03"
-    t.string   "drs04"
-    t.string   "dro04"
-    t.string   "dra04"
-    t.string   "drp04"
-    t.string   "drs05"
-    t.string   "dro05"
-    t.string   "dra05"
-    t.string   "drp05"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "drs01",      limit: 65535
+    t.text     "dro01",      limit: 65535
+    t.text     "dra01",      limit: 65535
+    t.text     "drp01",      limit: 65535
+    t.text     "drs02",      limit: 65535
+    t.text     "dro02",      limit: 65535
+    t.text     "dra02",      limit: 65535
+    t.text     "drp02",      limit: 65535
+    t.text     "drs03",      limit: 65535
+    t.text     "dro03",      limit: 65535
+    t.text     "dra03",      limit: 65535
+    t.text     "drp03",      limit: 65535
+    t.text     "drs04",      limit: 65535
+    t.text     "dro04",      limit: 65535
+    t.text     "dra04",      limit: 65535
+    t.text     "drp04",      limit: 65535
+    t.text     "drs05",      limit: 65535
+    t.text     "dro05",      limit: 65535
+    t.text     "dra05",      limit: 65535
+    t.text     "drp05",      limit: 65535
     t.string   "drt01"
     t.string   "drt02"
     t.string   "drt03"
     t.string   "drt04"
     t.string   "drt05"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "ereports", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "er01"
-    t.string   "er02"
-    t.string   "er03"
-    t.string   "er04"
-    t.string   "er05"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "er01",       limit: 65535
+    t.text     "er02",       limit: 65535
+    t.text     "er03",       limit: 65535
+    t.text     "er04",       limit: 65535
+    t.text     "er05",       limit: 65535
     t.string   "ert01"
     t.string   "ert02"
     t.string   "ert03"
@@ -90,6 +88,8 @@ ActiveRecord::Schema.define(version: 20180104172159) do
     t.string   "ers03"
     t.string   "ers04"
     t.string   "ers05"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "injections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -105,16 +105,78 @@ ActiveRecord::Schema.define(version: 20180104172159) do
     t.string   "ii10"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "io01"
+    t.integer  "io02"
+    t.integer  "io03"
+    t.integer  "io04"
+    t.integer  "io05"
+    t.integer  "io06"
+    t.integer  "io07"
+    t.integer  "io08"
+    t.integer  "io09"
+    t.integer  "io10"
+    t.string   "it01"
+    t.string   "it02"
+    t.string   "it03"
+    t.string   "it04"
+    t.string   "it05"
+    t.string   "it06"
+    t.string   "it07"
+    t.string   "it08"
+    t.string   "it09"
+    t.string   "it10"
+    t.datetime "ity01"
+    t.datetime "ity02"
+    t.datetime "ity03"
+    t.datetime "ity04"
+    t.datetime "ity05"
+    t.datetime "ity06"
+    t.datetime "ity07"
+    t.datetime "ity08"
+    t.datetime "ity09"
+    t.datetime "ity10"
+    t.datetime "itj01"
+    t.datetime "itj02"
+    t.datetime "itj03"
+    t.datetime "itj04"
+    t.datetime "itj05"
+    t.datetime "itj06"
+    t.datetime "itj07"
+    t.datetime "itj08"
+    t.datetime "itj09"
+    t.datetime "itj10"
   end
 
   create_table "instructions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.date     "instruct_day"
-    t.integer  "user_id"
-    t.string   "content"
-    t.integer  "execution",    default: 0
+    t.datetime "tday01"
+    t.datetime "tday02"
+    t.datetime "tday03"
+    t.datetime "tday04"
+    t.datetime "tday05"
+    t.datetime "tday06"
+    t.datetime "tday07"
+    t.datetime "tday08"
+    t.datetime "tday09"
+    t.string   "tna01"
+    t.string   "tna02"
+    t.string   "tna03"
+    t.string   "tna04"
+    t.string   "tna05"
+    t.string   "tna06"
+    t.string   "tna07"
+    t.string   "tna08"
+    t.string   "tna09"
+    t.text     "tcon01",     limit: 65535
+    t.text     "tcon02",     limit: 65535
+    t.text     "tcon03",     limit: 65535
+    t.text     "tcon04",     limit: 65535
+    t.text     "tcon05",     limit: 65535
+    t.text     "tcon06",     limit: 65535
+    t.text     "tcon07",     limit: 65535
+    t.text     "tcon08",     limit: 65535
+    t.text     "tcon09",     limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
-    t.index ["user_id"], name: "index_instructions_on_user_id", using: :btree
   end
 
   create_table "ninstructions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -145,51 +207,124 @@ ActiveRecord::Schema.define(version: 20180104172159) do
     t.string   "ni25"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "no01"
+    t.integer  "no02"
+    t.integer  "no03"
+    t.integer  "no04"
+    t.integer  "no05"
+    t.integer  "no06"
+    t.integer  "no07"
+    t.integer  "no08"
+    t.integer  "no09"
+    t.integer  "no10"
+    t.integer  "no11"
+    t.integer  "no12"
+    t.integer  "no13"
+    t.integer  "no14"
+    t.integer  "no15"
+    t.integer  "no16"
+    t.integer  "no17"
+    t.integer  "no18"
+    t.integer  "no19"
+    t.integer  "no20"
+    t.integer  "no21"
+    t.integer  "no22"
+    t.integer  "no23"
+    t.integer  "no24"
+    t.integer  "no25"
+    t.string   "nt01"
+    t.string   "nt02"
+    t.string   "nt03"
+    t.string   "nt04"
+    t.string   "nt05"
+    t.string   "nt06"
+    t.string   "nt07"
+    t.string   "nt08"
+    t.string   "nt09"
+    t.string   "nt10"
+    t.string   "nt11"
+    t.string   "nt12"
+    t.string   "nt13"
+    t.string   "nt14"
+    t.string   "nt15"
+    t.string   "nt16"
+    t.string   "nt17"
+    t.string   "nt18"
+    t.string   "nt19"
+    t.string   "nt20"
+    t.string   "nt21"
+    t.string   "nt22"
+    t.string   "nt23"
+    t.string   "nt24"
+    t.string   "nt25"
+    t.datetime "ntt01"
+    t.datetime "ntt02"
+    t.datetime "ntt03"
+    t.datetime "ntt04"
+    t.datetime "ntt05"
+    t.datetime "ntt06"
+    t.datetime "ntt07"
+    t.datetime "ntt08"
+    t.datetime "ntt09"
+    t.datetime "ntt10"
+    t.datetime "ntt11"
+    t.datetime "ntt12"
+    t.datetime "ntt13"
+    t.datetime "ntt14"
+    t.datetime "ntt15"
+    t.datetime "ntt16"
+    t.datetime "ntt17"
+    t.datetime "ntt18"
+    t.datetime "ntt19"
+    t.datetime "ntt20"
+    t.datetime "ntt21"
+    t.datetime "ntt22"
+    t.datetime "ntt23"
+    t.datetime "ntt24"
+    t.datetime "ntt25"
   end
 
   create_table "nreports", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "nrs01"
-    t.string   "nro01"
-    t.string   "nra01"
-    t.string   "nrp01"
-    t.string   "nrs02"
-    t.string   "nro02"
-    t.string   "nra02"
-    t.string   "nrp02"
-    t.string   "nrs03"
-    t.string   "nro03"
-    t.string   "nra03"
-    t.string   "nrp03"
-    t.string   "nrs04"
-    t.string   "nro04"
-    t.string   "nra04"
-    t.string   "nrp04"
-    t.string   "nrs05"
-    t.string   "nro05"
-    t.string   "nra05"
-    t.string   "nrp05"
-    t.string   "nrs06"
-    t.string   "nro06"
-    t.string   "nra06"
-    t.string   "nrp06"
-    t.string   "nrs07"
-    t.string   "nro07"
-    t.string   "nra07"
-    t.string   "nrp07"
-    t.string   "nrs08"
-    t.string   "nro08"
-    t.string   "nra08"
-    t.string   "nrp08"
-    t.string   "nrs09"
-    t.string   "nro09"
-    t.string   "nra09"
-    t.string   "nrp09"
-    t.string   "nrs10"
-    t.string   "nro10"
-    t.string   "nra10"
-    t.string   "nrp10"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "nrs01",      limit: 65535
+    t.text     "nro01",      limit: 65535
+    t.text     "nra01",      limit: 65535
+    t.text     "nrp01",      limit: 65535
+    t.text     "nrs02",      limit: 65535
+    t.text     "nro02",      limit: 65535
+    t.text     "nra02",      limit: 65535
+    t.text     "nrp02",      limit: 65535
+    t.text     "nrs03",      limit: 65535
+    t.text     "nro03",      limit: 65535
+    t.text     "nra03",      limit: 65535
+    t.text     "nrp03",      limit: 65535
+    t.text     "nrs04",      limit: 65535
+    t.text     "nro04",      limit: 65535
+    t.text     "nra04",      limit: 65535
+    t.text     "nrp04",      limit: 65535
+    t.text     "nrs05",      limit: 65535
+    t.text     "nro05",      limit: 65535
+    t.text     "nra05",      limit: 65535
+    t.text     "nrp05",      limit: 65535
+    t.text     "nrs06",      limit: 65535
+    t.text     "nro06",      limit: 65535
+    t.text     "nra06",      limit: 65535
+    t.text     "nrp06",      limit: 65535
+    t.text     "nrs07",      limit: 65535
+    t.text     "nro07",      limit: 65535
+    t.text     "nra07",      limit: 65535
+    t.text     "nrp07",      limit: 65535
+    t.text     "nrs08",      limit: 65535
+    t.text     "nro08",      limit: 65535
+    t.text     "nra08",      limit: 65535
+    t.text     "nrp08",      limit: 65535
+    t.text     "nrs09",      limit: 65535
+    t.text     "nro09",      limit: 65535
+    t.text     "nra09",      limit: 65535
+    t.text     "nrp09",      limit: 65535
+    t.text     "nrs10",      limit: 65535
+    t.text     "nro10",      limit: 65535
+    t.text     "nra10",      limit: 65535
+    t.text     "nrp10",      limit: 65535
     t.string   "nrt01"
     t.string   "nrt02"
     t.string   "nrt03"
@@ -210,6 +345,8 @@ ActiveRecord::Schema.define(version: 20180104172159) do
     t.string   "nrm08"
     t.string   "nrm09"
     t.string   "nrm10"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "observations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -270,6 +407,11 @@ ActiveRecord::Schema.define(version: 20180104172159) do
     t.string   "np05"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "npn01"
+    t.string   "npn02"
+    t.string   "npn03"
+    t.string   "npn04"
+    t.string   "npn05"
   end
 
   create_table "prescriptions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -300,6 +442,106 @@ ActiveRecord::Schema.define(version: 20180104172159) do
     t.string   "pi25"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "pt01"
+    t.string   "pt02"
+    t.string   "pt03"
+    t.string   "pt04"
+    t.string   "pt05"
+    t.string   "pt06"
+    t.string   "pt07"
+    t.string   "pt08"
+    t.string   "pt09"
+    t.string   "pt10"
+    t.string   "pt11"
+    t.string   "pt12"
+    t.string   "pt13"
+    t.string   "pt14"
+    t.string   "pt15"
+    t.string   "pt16"
+    t.string   "pt17"
+    t.string   "pt18"
+    t.string   "pt19"
+    t.string   "pt20"
+    t.string   "pt21"
+    t.string   "pt22"
+    t.string   "pt23"
+    t.string   "pt24"
+    t.string   "pt25"
+    t.integer  "po01"
+    t.integer  "po02"
+    t.integer  "po03"
+    t.integer  "po04"
+    t.integer  "po05"
+    t.integer  "po06"
+    t.integer  "po07"
+    t.integer  "po08"
+    t.integer  "po09"
+    t.integer  "po10"
+    t.integer  "po11"
+    t.integer  "po12"
+    t.integer  "po13"
+    t.integer  "po14"
+    t.integer  "po15"
+    t.integer  "po16"
+    t.integer  "po17"
+    t.integer  "po18"
+    t.integer  "po19"
+    t.integer  "po20"
+    t.integer  "po21"
+    t.integer  "po22"
+    t.integer  "po23"
+    t.integer  "po24"
+    t.integer  "po25"
+    t.datetime "pty01"
+    t.datetime "pty02"
+    t.datetime "pty03"
+    t.datetime "pty04"
+    t.datetime "pty05"
+    t.datetime "pty06"
+    t.datetime "pty07"
+    t.datetime "pty08"
+    t.datetime "pty09"
+    t.datetime "pty10"
+    t.datetime "pty11"
+    t.datetime "pty12"
+    t.datetime "pty13"
+    t.datetime "pty14"
+    t.datetime "pty15"
+    t.datetime "pty16"
+    t.datetime "pty17"
+    t.datetime "pty18"
+    t.datetime "pty19"
+    t.datetime "pty20"
+    t.datetime "pty21"
+    t.datetime "pty22"
+    t.datetime "pty23"
+    t.datetime "pty24"
+    t.datetime "pty25"
+    t.datetime "ptj01"
+    t.datetime "ptj02"
+    t.datetime "ptj03"
+    t.datetime "ptj04"
+    t.datetime "ptj05"
+    t.datetime "ptj06"
+    t.datetime "ptj07"
+    t.datetime "ptj08"
+    t.datetime "ptj09"
+    t.datetime "ptj10"
+    t.datetime "ptj11"
+    t.datetime "ptj12"
+    t.datetime "ptj13"
+    t.datetime "ptj14"
+    t.datetime "ptj15"
+    t.datetime "ptj16"
+    t.datetime "ptj17"
+    t.datetime "ptj18"
+    t.datetime "ptj19"
+    t.datetime "ptj20"
+    t.datetime "ptj21"
+    t.datetime "ptj22"
+    t.datetime "ptj23"
+    t.datetime "ptj24"
+    t.datetime "ptj25"
   end
 
   create_table "results", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -309,6 +551,87 @@ ActiveRecord::Schema.define(version: 20180104172159) do
     t.string   "rday04"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "re01"
+    t.string   "rm01"
+    t.string   "re02"
+    t.string   "rm02"
+    t.string   "re03"
+    t.string   "rm03"
+    t.string   "re04"
+    t.string   "rm04"
+    t.string   "re05"
+    t.string   "rm05"
+    t.string   "re06"
+    t.string   "rm06"
+    t.string   "re07"
+    t.string   "rm07"
+    t.string   "re08"
+    t.string   "rm08"
+    t.string   "re09"
+    t.string   "rm09"
+    t.string   "re10"
+    t.string   "rm10"
+    t.string   "re11"
+    t.string   "rm11"
+    t.string   "re12"
+    t.string   "rm12"
+    t.string   "re13"
+    t.string   "rm13"
+    t.string   "re14"
+    t.string   "rm14"
+    t.string   "re15"
+    t.string   "rm15"
+    t.string   "re16"
+    t.string   "rm16"
+    t.string   "re17"
+    t.string   "rm17"
+    t.string   "re18"
+    t.string   "rm18"
+    t.string   "re19"
+    t.string   "rm19"
+    t.string   "re20"
+    t.string   "rm20"
+    t.string   "re21"
+    t.string   "rm21"
+    t.string   "re22"
+    t.string   "rm22"
+    t.string   "re23"
+    t.string   "rm23"
+    t.string   "re24"
+    t.string   "rm24"
+    t.string   "re25"
+    t.string   "rm25"
+    t.string   "re26"
+    t.string   "rm26"
+    t.string   "re27"
+    t.string   "rm27"
+    t.string   "re28"
+    t.string   "rm28"
+    t.string   "re29"
+    t.string   "rm29"
+    t.string   "re30"
+    t.string   "rm30"
+    t.string   "re31"
+    t.string   "rm31"
+    t.string   "re32"
+    t.string   "rm32"
+    t.string   "re33"
+    t.string   "rm33"
+    t.string   "re34"
+    t.string   "rm34"
+    t.string   "re35"
+    t.string   "rm35"
+    t.string   "re36"
+    t.string   "rm36"
+    t.string   "re37"
+    t.string   "rm37"
+    t.string   "re38"
+    t.string   "rm38"
+    t.string   "re39"
+    t.string   "rm39"
+    t.string   "re40"
+    t.string   "rm40"
+    t.string   "re41"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -329,6 +652,5 @@ ActiveRecord::Schema.define(version: 20180104172159) do
     t.datetime "updated_at",                             null: false
   end
 
-  add_foreign_key "instructions", "users"
   add_foreign_key "observations", "users"
 end

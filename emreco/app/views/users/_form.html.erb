@@ -12,9 +12,9 @@
   <div class="hospitalization_field">
     <%= f.label :hospitalization, '入院日' %>
     <%= f.date_select(:hospitalization,
-    start_year: 2017,
-    end_year:   (Time.now.year - 18),
-    default:    Date.new(2017, 1, 1)) %>
+    start_year: 2018,
+    end_year:   (Time.now.year - 19),
+    default:    Date.new(2018, 1,15)) %>
   </div>
 
   <div class="field">
@@ -25,7 +25,7 @@
   <div class="birth_date_field">
     <%= f.label :birthday, '生年月日' %>
     <%= f.date_select(:birthday,
-    start_year: 1930,
+    start_year: 1910,
     end_year:   (Time.now.year - 18),
     default:    Date.new(1989, 1, 1)) %>
   </div>

@@ -1,62 +1,83 @@
-<div class="col-md-6 col-md-offset-3">
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">ＩＤ</h3>
-  </div>
-  <div class="panel-body">
-    <%= @user.id %>
-  </div>
+
+
+
+<div class="keiji">
+
+  <body>
+
+        <div class="ao">&ensp;&ensp;患者掲示板 ─ <%= @user.name %></div>
+
+<div class="container">
+<div class="row">
+
+<font size="4">
+<div class="id">
+  <%= @user.id %></div>
+ <div class="name">
+ <%= @user.name %></div>
+<div class="gender">
+  <%= @user.gender %></div>
+<div class="birth">
+  <%= @user.birthday %></div>
+<div class="age">
+  <%= @user.age %>歳</div>
+</font>
+      <%= link_to '戻る', root_path, class: 'btn btn-default' %>
+
+<div class="space1"></div>
+<div class="space2">
+<br><br><br><a href="../users/<%= @user.id %>"><img src="../images/close_btn.png" border="0"></a>
 </div>
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">名前</h3>
-  </div>
-  <div class="panel-body">
-    <%= @user.name %>
-  </div>
+<div class="space3"></div>
+<div class="space4"></div>
+
+<div class="col-md-5">
+  
+  <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">2018/01/15 15:30 中西永子【1年間】</div>
+
+  <!-- List group -->
+  <ul class="list-group">
+    <li class="list-group-item"><%= simple_format(@user.attention) %></li>
+    <li class="list-group-item"><%= simple_format(@user.post) %></li>
+  </ul>
+</div>
+  
+
 </div>
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">年齢</h3>
-  </div>
-  <div class="panel-body">
-    <%= @user.age %>
-  </div>
 </div>
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">性別</h3>
-  </div>
-  <div class="panel-body">
-    <%= @user.gender %>
-  </div>
 </div>
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">掲示板</h3>
-  </div>
-  <div class="panel-body">
-    <%= @user.post %>
-  </div>
-</div>
-
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">注意事項</h3>
-  </div>
-  <div class="panel-body">
-    <%= @user.attention %>
-  </div>
+  </body>
 </div>
 
 
-  <div class="media-body">
-    <%= link_to '戻る', root_path, class: 'btn btn-primary btn-lg' %>
-    <%= link_to '経過表', user_path, class: 'btn btn-primary btn-lg' %>
-  </div>
+<aside id="sidebar">
+<div class="space5">
 
+<a href="/toppages/1 %>"><font size="2">北海タラ</font></a><br>
+<a href="/toppages/2 %>"><font size="2">青森りんご</font></a><br>
+<a href="/toppages/3 %>"><font size="2">秋田よしお</font></a><br>
+<a href="/toppages/4 %>"><font size="2">岩手なおみ</font></a><br>
+<a href="/toppages/5 %>"><font size="2">福島たけし</font></a><br>
+<br>
+<br>
+<br>
+<a href="../users/<%= @user.id %>">経過表</a><br>
+<a href="../ninstructions/<%= @user.id %>">看護指示</a><br>
+<a href="../dinstructions/<%= @user.id %>">指示簿一覧</a><br>
+<a href="../plans/<%= @user.id %>">看護計画</a><br>
+患者ｽｹｼﾞｭｰﾙ<br>
+看護プロファイル<br>
+移動食事カレンダ<br>
+入院処置<br>
+<a href="../instructions/<%= @user.id %>">テンプレー</a><br>
+SOAP&フォーカス<br>
+患者認証業務<br>
 </div>
+  </aside>
+        

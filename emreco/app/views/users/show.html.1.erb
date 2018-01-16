@@ -1,0 +1,174 @@
+
+    <style>
+      .row div {
+        
+        padding: 1em;
+        text-align: center;
+        }
+    </style>
+
+<div class="page-header">
+      <div class="boxContainer">
+      <div class="row">
+        <div class="headbox01">入院 病棟<br>緩和ケア</div>
+        <div class="headbox02">
+          <p class="sample1">ID : <%= @user.id %><br>
+        ②後期　本人（30%）</p>
+        </div>
+        
+        <div class="headbox03">
+          <% if @user.gender == '男' %>
+          <%= image_tag 'men.png', :size => '100x50', :style=>"float:left;" %><br>
+          <% else %>
+          <%= image_tag 'women.png', :size => '100x50', :style=>"float:left;" %><br>
+          <% end %>
+          <font size="6"><u><%= @user.name %></u></font></div>
+        <div class="headbox04">
+          <% if @user.infection == '有' %>
+          <%= image_tag 'alrt_y.png', :title => 'HCV(+)', :size => '40x40', :style=>"float:left;" %><br>
+          <% else %>
+          <%= image_tag 'alrt_n.png', :size => '40x40', :style=>"float:left;" %><br>
+          <% end %>
+          <%= @user.age %>歳00ヶ月    <%= @user.bloodtype %>型Rh(+)    <u><%= @user.height %>cm  <%= @user.weight %>Kg</u></div>
+        <div class="headbox05">
+          <p class="sample1">
+          <button type="button" name="aaa" value="aaa">
+          <font size="2" color="#333399">Prof</font></button><br>
+          <button type="button" name="aaa" value="aaa">
+          <font size="2" color="#333399">病名</font></button>
+          </p></div>
+<div class="headbox05">
+<ul class="nav">
+  <li><a href="/">カルテ<br>閉じる</a></li>
+
+</ul>
+</div>
+        
+
+        <div class="headbox01"><%= link_to '一覧に戻る',users_path, class: 'btn btn-primary btn-xs' %></div>
+      </div>
+    </div>
+</div>
+
+<div id="wrapper" class="clearfix">
+  <div class="cover01">
+  <div class="ao">一般経過表 <%= @user.name %></div>
+  <% (1..3).each do |number| %>
+  <h6><font color="C5C5C5"><%= number %></font></h6>
+  <% end %>
+  </div>
+
+  
+  <div class="cover0201">
+    <% (1..8).each do |number| %>
+    <h5><font color="#CCCCFF"><%= number %></font></h5>
+    <% end %> 
+
+
+
+
+
+<!-- 検温左メモリ-->
+<div class="kenon"><img border="0" src="../images/bp_1aa.png" width="189" height="233" alt="検温表">
+<!-- グラフ-->
+<a href="../observations/<%= @user.id %>"><img src="../images/bp_<%= @user.id %>a.png" border="0"></a>
+</div>
+<!-- 酸素から処置まで-->
+<div class="kenon"><img border="0" src="../images/bp_<%= @user.id %>b.png" alt=""></div>
+<!-- 看護処置左ラベル -->
+<div class="kenon"><img border="0" src="../images/bp_<%= @user.id %>cc.png" alt="">
+<!-- 看護処置 -->
+<a href="../ninstructions/<%= @user.id %>"><img src="../images/bp_<%= @user.id %>c.png" border="0"></a>
+<a href="../ninstructions/<%= @hensu1 + @user.id %>"><img src="../images/bp_<%= @hensu1 + @user.id %>c.png" border="0"></a>
+<a href="../ninstructions/<%= @hensu2 + @user.id %>"><img src="../images/bp_<%= @hensu2 + @user.id %>c.png" border="0"></a>
+<img src="../images/bp_3<%= @user.id %>c.png" border="0">
+<img src="../images/bp_4<%= @user.id %>c.png" border="0"></div>
+<!-- 医師指示簿 -->
+<div class="kenon"><a href="../dinstructions/<%= @user.id %>"><img src="../images/bp_<%= @user.id %>d.png" border="0"></a></div>
+  <!-- 注射左ラベル -->
+<div class="kenon">
+<img border="0" src="../images/bp_<%= @user.id %>ee.png" alt="">
+<!-- 注射 -->
+<a href="../injections/<%= @user.id %>"><img src="../images/bp_<%= @user.id %>e.png" border="0"></a>
+<a href="../injections/<%= @hensu1 + @user.id %>"><img src="../images/bp_<%= @hensu1 + @user.id %>e.png" border="0"></a>
+<a href="../injections/<%= @hensu2 + @user.id %>"><img src="../images/bp_<%= @hensu2 + @user.id %>e.png" border="0"></a>
+<img src="../images/bp_3<%= @user.id %>e.png" border="0"></div>
+
+<!-- 処方 -->
+
+<!-- 医師記録 -->
+<div class="kenon"><img border="0" src="../images/bp_dk.png" alt="">
+<a href="../dreports/<%= @user.id %>"><img src="../images/bp_dk1.png" border="0" ></a>
+<a href="../dreports/<%= @hensu1 + @user.id %>"><img src="../images/bp_dk1.png" border="0" ></a>
+<img border="0" src="../images/bp_bk1.png" alt="">
+<img border="0" src="../images/bp_bk31.png" alt=""></div>
+<!-- 看護記録 -->
+<div class="kenon"><img border="0" src="../images/bp_nk.png" alt="">
+<a href="../nreports/<%= @user.id %>"><img src="../images/bp_nk1.png" border="0" ></a>
+<a href="../nreports/<%= @hensu1 + @user.id %>"><img src="../images/bp_nk1.png" border="0" ></a>
+<a href="../nreports/<%= @hensu2 + @user.id %>"><img src="../images/bp_nk1.png" border="0" ></a>
+<img border="0" src="../images/bp_bk31.png" alt=""></div>
+<!-- その他記録 -->
+<div class="kenon"><img border="0" src="../images/bp_ek.png" alt="">
+<a href="../ereports/<%= @user.id %>"><img src="../images/bp_ek1.png" border="0" ></a>
+<a href="../ereports/<%= @hensu1 + @user.id %>"><img src="../images/bp_ek1.png" border="0" ></a>
+<img border="0" src="../images/bp_bk1.png" alt="">
+<img border="0" src="../images/bp_bk31.png" alt=""></div>
+<!-- テンプレート -->
+<div class="kenon"><img border="0" src="../images/bp_1ff.png" alt="">
+<img border="0" src="../images/bp_t<%= @user.id %>.png" alt="">
+<img border="0" src="../images/bp_t<%= @hensu1 + @user.id %>.png" alt="">
+<img border="0" src="../images/bp_t<%= @hensu2 + @user.id %>.png" alt="">
+<img border="0" src="../images/bp_t31.png" alt=""></div>
+<!-- 看護計画 -->
+<div class="kenon"><img border="0" src="../images/bp_1gg.png" alt="">
+<img border="0" src="../images/bp_<%= @user.id %>g.png" alt="">
+<img border="0" src="../images/bp_3<%= @user.id %>gg.png" alt=""></div>
+<div class="kenon"><img border="0" src="../images/bp_1h.png" alt=""></div>
+<!-- 検査 -->
+<div class="kenon"><img border="0" src="../images/bp_1ii.png" alt="">
+<img border="0" src="../images/bp_1i.png" alt="">
+<img border="0" src="../images/bp_31i.png" alt=""></div>
+<div class="kenon"><img border="0" src="../images/bp_1j.png" alt=""></div>
+
+
+
+
+  </div>
+
+  <aside id="sidebar">
+<div class="space5"></div>
+<div class="space6"></div>
+
+<a href="/users/1 %>"><font size="2">北海タラ</font></a><br>
+<a href="/users/2 %>"><font size="2">青森りんご</font></a><br>
+<a href="/users/3 %>"><font size="2">秋田よしお</font></a><br>
+<a href="/users/4 %>"><font size="2">岩手なおみ</font></a><br>
+<a href="/users/5 %>"><font size="2">福島たけし</font></a><br>
+<br>
+<br>
+<br><br>
+<a href="../users/<%= @user.id %>">経過表</a><br>
+<a href="../ninstructions/<%= @user.id %>">看護指示</a><br>
+<a href="../dinstructions/<%= @user.id %>">指示簿一覧</a><br>
+<a href="../plans/<%= @user.id %>">看護計画</a><br>
+患者ｽｹｼﾞｭｰﾙ<br>
+看護プロファイル<br>
+移動食事カレンダ<br>
+入院処置<br>
+テンプレート<br>
+SOAP&フォーカス<br>
+患者認証業務<br>
+
+
+<p><%= @hensu1 + @user.id %></p>
+<p><%= @hensu2 + @user.id %></p>
+</aside>
+
+
+
+  </div>
+  
+  
+  
+  </div>

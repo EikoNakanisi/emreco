@@ -1,0 +1,54 @@
+class AddDateToNinstructions < ActiveRecord::Migration[5.0]
+  def change
+    add_column :ninstructions, :no01, :integer
+    add_column :ninstructions, :no02, :integer
+    add_column :ninstructions, :no03, :integer
+    add_column :ninstructions, :no04, :integer
+    add_column :ninstructions, :no05, :integer
+    add_column :ninstructions, :no06, :integer
+    add_column :ninstructions, :no07, :integer
+    add_column :ninstructions, :no08, :integer
+    add_column :ninstructions, :no09, :integer
+    add_column :ninstructions, :no10, :integer
+    add_column :ninstructions, :no11, :integer
+    add_column :ninstructions, :no12, :integer
+    add_column :ninstructions, :no13, :integer
+    add_column :ninstructions, :no14, :integer
+    add_column :ninstructions, :no15, :integer
+    add_column :ninstructions, :no16, :integer
+    add_column :ninstructions, :no17, :integer
+    add_column :ninstructions, :no18, :integer
+    add_column :ninstructions, :no19, :integer
+    add_column :ninstructions, :no20, :integer
+    add_column :ninstructions, :no21, :integer
+    add_column :ninstructions, :no22, :integer
+    add_column :ninstructions, :no23, :integer
+    add_column :ninstructions, :no24, :integer
+    add_column :ninstructions, :no25, :integer
+    add_column :ninstructions, :nt01, :string
+    add_column :ninstructions, :nt02, :string
+    add_column :ninstructions, :nt03, :string
+    add_column :ninstructions, :nt04, :string
+    add_column :ninstructions, :nt05, :string
+    add_column :ninstructions, :nt06, :string
+    add_column :ninstructions, :nt07, :string
+    add_column :ninstructions, :nt08, :string
+    add_column :ninstructions, :nt09, :string
+    add_column :ninstructions, :nt10, :string
+    add_column :ninstructions, :nt11, :string
+    add_column :ninstructions, :nt12, :string
+    add_column :ninstructions, :nt13, :string
+    add_column :ninstructions, :nt14, :string
+    add_column :ninstructions, :nt15, :string
+    add_column :ninstructions, :nt16, :string
+    add_column :ninstructions, :nt17, :string
+    add_column :ninstructions, :nt18, :string
+    add_column :ninstructions, :nt19, :string
+    add_column :ninstructions, :nt20, :string
+    add_column :ninstructions, :nt21, :string
+    add_column :ninstructions, :nt22, :string
+    add_column :ninstructions, :nt23, :string
+    add_column :ninstructions, :nt24, :string
+    add_column :ninstructions, :nt25, :string
+  end
+end

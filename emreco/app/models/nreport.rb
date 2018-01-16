@@ -61,4 +61,5 @@ class Nreport < ApplicationRecord
   validates :nrm08, length: { maximum: 100 }
   validates :nrm09, length: { maximum: 100 }
   validates :nrm10, length: { maximum: 100 }
+  
 end

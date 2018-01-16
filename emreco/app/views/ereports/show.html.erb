@@ -7,7 +7,15 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <%= link_to '× 閉じる', user_path, class: 'btn btn-warning' %>
+
+  <% if @ereport.id > 20 %>
+    <a href="../users/<%= @ereport.id-@hensu2 %>#a7"><img src="../images/close_btn.png" border="0"></a>
+  <% elsif @ereport.id > 10 %>
+    <a href="../users/<%= @ereport.id-@hensu1 %>#a7"><img src="../images/close_btn.png" border="0"></a>
+  <% else %>
+    <a href="../users/<%= @ereport.id %>#a7"><img src="../images/close_btn.png" border="0"></a>
+  <% end %>
+
         </ul>
       </div>
   </div>
@@ -22,7 +30,7 @@
 <BR>
 
 <div class="col-sm-5">
-<% unless @ereport.dro01.blank? %>
+<% unless @ereport.er01.blank? %>
 <div class="panel panel-primary">
   <!-- Default panel contents -->
   <div class="panel-heading">【<%= @ereport.ers01 %>】<br>
@@ -37,7 +45,7 @@
   </div>
 <% end %>
 
-<% unless @ereport.dro02.blank? %>
+<% unless @ereport.er02.blank? %>
 <div class="panel panel-primary">
   <!-- Default panel contents -->
   <div class="panel-heading">【<%= @ereport.ers02 %>】<br>
@@ -52,7 +60,7 @@
   </div>
 <% end %>
 
-<% unless @ereport.dro03.blank? %>
+<% unless @ereport.er03.blank? %>
 <div class="panel panel-primary">
   <!-- Default panel contents -->
   <div class="panel-heading">【<%= @ereport.ers03 %>】<br>
@@ -67,7 +75,7 @@
   </div>
 <% end %>
 
-<% unless @ereport.dro04.blank? %>
+<% unless @ereport.er04.blank? %>
 <div class="panel panel-primary">
   <!-- Default panel contents -->
   <div class="panel-heading">【<%= @ereport.ers04 %>】<br>
@@ -82,7 +90,7 @@
   </div>
 <% end %>
 
-<% unless @ereport.dro05.blank? %>
+<% unless @ereport.er05.blank? %>
 <div class="panel panel-primary">
   <!-- Default panel contents -->
   <div class="panel-heading">【<%= @ereport.ers05 %>】<br>

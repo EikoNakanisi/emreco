@@ -1,2 +1,414 @@
-<h1>Prescriptions#show</h1>
-<p>Find me in app/views/prescriptions/show.html.erb</p>
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+      <div class="navbar-header">
+        <p><font size="+1" color="#000000">処方指示伝票詳細</font>  ID : <%= @prescription.id %><br>
+        <%= @prescription.pty01.strftime("%Y年%m月%d日(%a)") %></p>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+
+  <% if @prescription.id > 20 %>
+    <a href="../users/<%= @prescription.id-@hensu2 %>#a4"><img src="../images/close_btn.png" border="0"></a>
+  <% elsif @prescription.id > 10 %>
+    <a href="../users/<%= @prescription.id-@hensu1 %>#a4"><img src="../images/close_btn.png" border="0"></a>
+  <% else %>
+    <a href="../users/<%= @prescription.id %>#a4"><img src="../images/close_btn.png" border="0"></a>
+  <% end %>
+
+  <% end %>
+
+        </ul>
+      </div>
+  </div>
+</nav>
+</header>
+
+  <h5><font color="#FFFFFF">0</font></h5><BR>
+<% 1.upto(25) do |num| %>
+<font color="#FFFFFF"><% num = "%02d" % num %></font>
+<%= num %>
+<% end %>
+<BR>
+
+<% unless @prescription.pi01.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @prescription.po01 == 'し無０１' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @prescription.po01 == 'し未実施０１' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">入院一般処方<br>
+    <%= @prescription.pty01.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @prescription.ptj01.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="2" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@prescription.pi01) %></font></td>
+    <td bgcolor="#FFFFFF" valign="top"><font size="+1"><br><%= simple_format(@prescription.pt01) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+<% unless @prescription.pi02.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @prescription.po02 == 'し無０２' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @prescription.po02 == 'し未実施０２' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">入院一般処方<br>
+    <%= @prescription.pty02.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @prescription.ptj02.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="2" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@prescription.pi02) %></font></td>
+    <td bgcolor="#FFFFFF" valign="top"><font size="+1"><br><%= simple_format(@prescription.pt02) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+<% unless @prescription.pi03.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @prescription.po03 == 'し無０３' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @prescription.po03 == 'し未実施０３' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">入院一般処方<br>
+    <%= @prescription.pty03.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @prescription.ptj03.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="2" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@prescription.pi03) %></font></td>
+    <td bgcolor="#FFFFFF" valign="top"><font size="+1"><br><%= simple_format(@prescription.pt03) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+<% unless @prescription.pi04.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @prescription.po04 == 'し無０４' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @prescription.po04 == 'し未実施０４' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">入院一般処方<br>
+    <%= @prescription.pty04.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @prescription.ptj04.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="2" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@prescription.pi04) %></font></td>
+    <td bgcolor="#FFFFFF" valign="top"><font size="+1"><br><%= simple_format(@prescription.pt04) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+<% unless @prescription.pi05.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @prescription.po05 == 'し無０５' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @prescription.po05 == 'し未実施０５' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">入院一般処方<br>
+    <%= @prescription.pty05.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @prescription.ptj05.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="2" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@prescription.pi05) %></font></td>
+    <td bgcolor="#FFFFFF" valign="top"><font size="+1"><br><%= simple_format(@prescription.pt05) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+<% unless @prescription.pi06.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @prescription.po06 == 'し無０６' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @prescription.po06 == 'し未実施０６' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">入院一般処方<br>
+    <%= @prescription.pty06.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @prescription.ptj06.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="2" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@prescription.pi06) %></font></td>
+    <td bgcolor="#FFFFFF" valign="top"><font size="+1"><br><%= simple_format(@prescription.pt06) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+<% unless @prescription.pi07.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @prescription.po07 == 'し無０７' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @prescription.po07 == 'し未実施０７' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">入院一般処方<br>
+    <%= @prescription.pty07.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @prescription.ptj07.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="2" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@prescription.pi07) %></font></td>
+    <td bgcolor="#FFFFFF" valign="top"><font size="+1"><br><%= simple_format(@prescription.pt07) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+<% unless @prescription.pi08.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @prescription.po08 == 'し無０８' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @prescription.po08 == 'し未実施０８' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">入院一般処方<br>
+    <%= @prescription.pty08.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @prescription.ptj08.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="2" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@prescription.pi08) %></font></td>
+    <td bgcolor="#FFFFFF" valign="top"><font size="+1"><br><%= simple_format(@prescription.pt08) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+
+
+
+
+
+<% unless @prescription.pi09.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @prescription.po09 == 'し無０９' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @prescription.po09 == 'し未実施０９' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">入院一般処方<br>
+    <%= @prescription.pty09.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @prescription.ptj09.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="2" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@prescription.pi09) %></font></td>
+    <td bgcolor="#FFFFFF" valign="top"><font size="+1"><br><%= simple_format(@prescription.pt09) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+<% unless @prescription.pi10.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @prescription.po10 == 'し無１０' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @prescription.po10 == 'し未実施１０' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">入院一般処方<br>
+    <%= @prescription.pty10.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @prescription.ptj10.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="2" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@prescription.pi10) %></font></td>
+    <td bgcolor="#FFFFFF" valign="top"><font size="+1"><br><%= simple_format(@prescription.pt10) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+
+
+
+<%= link_to 'この処方指示簿を編集する', edit_prescription_path(@prescription) %>
+<%= link_to 'この処方指示簿を削除する', @prescription, method: :delete, data: { confirm: '本当に削除してよろししですか？' } %>
+<%= link_to '新規処方指示簿の投稿', new_prescription_path %>

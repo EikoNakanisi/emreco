@@ -4,6 +4,8 @@ class DinstructionsController < ApplicationController
 
   def show
     @dinstruction = Dinstruction.find(params[:id])
+    @hensu1 = 10
+    @hensu2 = 20
   end
 
   def new

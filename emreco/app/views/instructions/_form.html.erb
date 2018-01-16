@@ -1,0 +1,137 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+<%= form_for(instruction) do |f| %>
+  <%= render 'layouts/error_messages', model: f.object %>
+
+  <div class="tday01_field">
+    <%= f.label :tday01, '年月日' %>
+    <%= f.datetime_select(:tday01,
+    start_year: 2018,
+    end_year:   (Time.now.year - 19),
+    default:    Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :tna01, 'テンプレート名01' %><%= f.text_area :tna01, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :tcon01, 'テンプレート内容01' %><%= f.text_area :tcon01, class: 'form-control', rows: 5 %>
+</div>
+
+  <div class="tday02_field">
+    <%= f.label :tday02, '年月日' %>
+    <%= f.datetime_select(:tday02,
+    start_year: 2018,
+    end_year:   (Time.now.year - 19),
+    default:    Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :tna02, 'テンプレート名02' %><%= f.text_area :tna02, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :tcon02, 'テンプレート内容02' %><%= f.text_area :tcon02, class: 'form-control', rows: 5 %>
+</div>
+
+  <div class="tday03_field">
+    <%= f.label :tday03, '年月日' %>
+    <%= f.datetime_select(:tday03,
+    start_year: 2018,
+    end_year:   (Time.now.year - 19),
+    default:    Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :tna03, 'テンプレート名03' %><%= f.text_area :tna03, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :tcon03, 'テンプレート内容03' %><%= f.text_area :tcon03, class: 'form-control', rows: 5 %>
+</div>
+
+  <div class="tday04_field">
+    <%= f.label :tday04, '年月日' %>
+    <%= f.datetime_select(:tday04,
+    start_year: 2018,
+    end_year:   (Time.now.year - 19),
+    default:    Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :tna04, 'テンプレート名04' %><%= f.text_area :tna04, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :tcon04, 'テンプレート内容04' %><%= f.text_area :tcon04, class: 'form-control', rows: 5 %>
+</div>
+
+  <div class="tday05_field">
+    <%= f.label :tday05, '年月日' %>
+    <%= f.datetime_select(:tday05,
+    start_year: 2018,
+    end_year:   (Time.now.year - 19),
+    default:    Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :tna05, 'テンプレート名05' %><%= f.text_area :tna05, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :tcon05, 'テンプレート内容05' %><%= f.text_area :tcon05, class: 'form-control', rows: 5 %>
+</div>
+
+  <div class="tday06_field">
+    <%= f.label :tday06, '年月日' %>
+    <%= f.datetime_select(:tday06,
+    start_year: 2018,
+    end_year:   (Time.now.year - 19),
+    default:    Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :tna06, 'テンプレート名06' %><%= f.text_area :tna06, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :tcon06, 'テンプレート内容06' %><%= f.text_area :tcon06, class: 'form-control', rows: 5 %>
+</div>
+
+  <div class="tday07_field">
+    <%= f.label :tday07, '年月日' %>
+    <%= f.datetime_select(:tday07,
+    start_year: 2018,
+    end_year:   (Time.now.year - 19),
+    default:    Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :tna07, 'テンプレート名07' %><%= f.text_area :tna07, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :tcon07, 'テンプレート内容07' %><%= f.text_area :tcon07, class: 'form-control', rows: 5 %>
+</div>
+
+  <div class="tday08_field">
+    <%= f.label :tday08, '年月日' %>
+    <%= f.datetime_select(:tday08,
+    start_year: 2018,
+    end_year:   (Time.now.year - 19),
+    default:    Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :tna08, 'テンプレート名08' %><%= f.text_area :tna08, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :tcon08, 'テンプレート内容08' %><%= f.text_area :tcon08, class: 'form-control', rows: 5 %>
+</div>
+
+  <div class="tday09_field">
+    <%= f.label :tday09, '年月日' %>
+    <%= f.datetime_select(:tday09,
+    start_year: 2018,
+    end_year:   (Time.now.year - 19),
+    default:    Date.new(2018, 1,15)) %>
+  </div>
+<div class="form-group">
+  <%= f.label :tna09, 'テンプレート名09' %><%= f.text_area :tna09, class: 'form-control', rows: 1 %>
+</div>
+<div class="form-group">
+  <%= f.label :tcon09, 'テンプレート内容09' %><%= f.text_area :tcon09, class: 'form-control', rows: 5 %>
+</div>
+
+
+  <%= f.submit '入力', class: 'btn btn-primary btn-xs' %>
+<% end %>
+
+</div></div>

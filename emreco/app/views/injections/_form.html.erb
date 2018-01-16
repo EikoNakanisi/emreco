@@ -1,0 +1,282 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+<%= form_for(injection) do |f| %>
+  <%= render 'layouts/error_messages', model: f.object %>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :io01, :い無０１, checked: "checked" %><%= f.label :無, class: "io01_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :io01, :い有０１ %><%= f.label :有, class: "io01_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :io01, :い未実施０１ %><%= f.label :未実施, class: "io01_label" %>
+  </div>
+</div>
+<div class="ity01_field">
+  <%= f.label :ity01, '予定年月日' %>
+  <%= f.datetime_select(:ity01, start_year: 2018, end_year: (Time.now.year - 19), default: Date.new(2018, 1,15)) %>
+</div>
+<div class="itj01_field">
+  <%= f.label :itj01, '実施年月日' %>
+  <%= f.datetime_select(:itj01, start_year: 2018, end_year: (Time.now.year - 19), default: Date.new(2018, 1,15)) %>
+ </div>
+<div class="form-group">
+  <%= f.label :ii01, '注射名01' %><%= f.text_area :ii01, class: 'form-control', rows: 5 %>
+</div>
+<div class="form-group">
+  <%= f.label :it01, '注射容量01' %><%= f.text_area :it01, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :io02, :い無０２, checked: "checked" %><%= f.label :無, class: "io02_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :io02, :い有０２ %><%= f.label :有, class: "io02_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :io02, :い未実施０２ %><%= f.label :未実施, class: "io02_label" %>
+  </div>
+</div>
+<div class="ity02_field">
+  <%= f.label :ity02, '予定年月日' %>
+  <%= f.datetime_select(:ity02, start_year: 2018, end_year: (Time.now.year - 19), default: Date.new(2018, 1,15)) %>
+</div>
+<div class="itj02_field">
+  <%= f.label :itj02, '実施年月日' %>
+  <%= f.datetime_select(:itj02, start_year: 2018, end_year: (Time.now.year - 19), default: Date.new(2018, 1,15)) %>
+ </div>
+<div class="form-group">
+  <%= f.label :ii02, '注射名02' %><%= f.text_area :ii02, class: 'form-control', rows: 5 %>
+</div>
+<div class="form-group">
+  <%= f.label :it02, '注射容量02' %><%= f.text_area :it02, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :io03, :い無０３, checked: "checked" %><%= f.label :無, class: "io03_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :io03, :い有０３ %><%= f.label :有, class: "io03_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :io03, :い未実施０３ %><%= f.label :未実施, class: "io03_label" %>
+  </div>
+</div>
+<div class="ity03_field">
+  <%= f.label :ity03, '予定年月日' %>
+  <%= f.datetime_select(:ity03, start_year: 2018, end_year: (Time.now.year - 19), default: Date.new(2018, 1,15)) %>
+</div>
+<div class="itj03_field">
+  <%= f.label :itj03, '実施年月日' %>
+  <%= f.datetime_select(:itj03, start_year: 2018, end_year: (Time.now.year - 19), default: Date.new(2018, 1,15)) %>
+ </div>
+<div class="form-group">
+  <%= f.label :ii03, '注射名03' %><%= f.text_area :ii03, class: 'form-control', rows: 5 %>
+</div>
+<div class="form-group">
+  <%= f.label :it03, '注射容量03' %><%= f.text_area :it03, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :io04, :い無０４, checked: "checked" %><%= f.label :無, class: "io04_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :io04, :い有０４ %><%= f.label :有, class: "io04_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :io04, :い未実施０４ %><%= f.label :未実施, class: "io04_label" %>
+  </div>
+</div>
+<div class="ity04_field">
+  <%= f.label :ity04, '予定年月日' %>
+  <%= f.datetime_select(:ity04, start_year: 2018, end_year: (Time.now.year - 19), default: Date.new(2018, 1,15)) %>
+</div>
+<div class="itj04_field">
+  <%= f.label :itj04, '実施年月日' %>
+  <%= f.datetime_select(:itj04, start_year: 2018, end_year: (Time.now.year - 19), default: Date.new(2018, 1,15)) %>
+ </div>
+<div class="form-group">
+  <%= f.label :ii04, '注射名04' %><%= f.text_area :ii04, class: 'form-control', rows: 5 %>
+</div>
+<div class="form-group">
+  <%= f.label :it04, '注射容量04' %><%= f.text_area :it04, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :io05, :い無０５, checked: "checked" %><%= f.label :無, class: "io05_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :io05, :い有０５ %><%= f.label :有, class: "io05_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :io05, :い未実施０５ %><%= f.label :未実施, class: "io05_label" %>
+  </div>
+</div>
+<div class="ity05_field">
+  <%= f.label :ity05, '予定年月日' %>
+  <%= f.datetime_select(:ity05, start_year: 2018, end_year: (Time.now.year - 19), default: Date.new(2018, 1,15)) %>
+</div>
+<div class="itj05_field">
+  <%= f.label :itj05, '実施年月日' %>
+  <%= f.datetime_select(:itj05, start_year: 2018, end_year: (Time.now.year - 19), default: Date.new(2018, 1,15)) %>
+ </div>
+<div class="form-group">
+  <%= f.label :ii05, '注射名05' %><%= f.text_area :ii05, class: 'form-control', rows: 5 %>
+</div>
+<div class="form-group">
+  <%= f.label :it05, '注射容量05' %><%= f.text_area :it05, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :io06, :い無０６, checked: "checked" %><%= f.label :無, class: "io06_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :io06, :い有０６ %><%= f.label :有, class: "io06_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :io06, :い未実施０６ %><%= f.label :未実施, class: "io06_label" %>
+  </div>
+</div>
+<div class="ity06_field">
+  <%= f.label :ity06, '予定年月日' %>
+  <%= f.datetime_select(:ity06, start_year: 2018, end_year: (Time.now.year - 19), default: Date.new(2018, 1,15)) %>
+</div>
+<div class="itj06_field">
+  <%= f.label :itj06, '実施年月日' %>
+  <%= f.datetime_select(:itj06, start_year: 2018, end_year: (Time.now.year - 19), default: Date.new(2018, 1,15)) %>
+ </div>
+<div class="form-group">
+  <%= f.label :ii06, '注射名06' %><%= f.text_area :ii06, class: 'form-control', rows: 5 %>
+</div>
+<div class="form-group">
+  <%= f.label :it06, '注射容量06' %><%= f.text_area :it06, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :io07, :い無０７, checked: "checked" %><%= f.label :無, class: "io07_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :io07, :い有０７ %><%= f.label :有, class: "io07_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :io07, :い未実施０７ %><%= f.label :未実施, class: "io07_label" %>
+  </div>
+</div>
+<div class="ity07_field">
+  <%= f.label :ity07, '予定年月日' %>
+  <%= f.datetime_select(:ity07, start_year: 2018, end_year: (Time.now.year - 19), default: Date.new(2018, 1,15)) %>
+</div>
+<div class="itj07_field">
+  <%= f.label :itj07, '実施年月日' %>
+  <%= f.datetime_select(:itj07, start_year: 2018, end_year: (Time.now.year - 19), default: Date.new(2018, 1,15)) %>
+ </div>
+<div class="form-group">
+  <%= f.label :ii07, '注射名07' %><%= f.text_area :ii07, class: 'form-control', rows: 5 %>
+</div>
+<div class="form-group">
+  <%= f.label :it07, '注射容量07' %><%= f.text_area :it07, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :io08, :い無０８, checked: "checked" %><%= f.label :無, class: "io08_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :io08, :い有０８ %><%= f.label :有, class: "io08_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :io08, :い未実施０８ %><%= f.label :未実施, class: "io08_label" %>
+  </div>
+</div>
+<div class="ity08_field">
+  <%= f.label :ity08, '予定年月日' %>
+  <%= f.datetime_select(:ity08, start_year: 2018, end_year: (Time.now.year - 19), default: Date.new(2018, 1,15)) %>
+</div>
+<div class="itj08_field">
+  <%= f.label :itj08, '実施年月日' %>
+  <%= f.datetime_select(:itj08, start_year: 2018, end_year: (Time.now.year - 19), default: Date.new(2018, 1,15)) %>
+ </div>
+<div class="form-group">
+  <%= f.label :ii08, '注射名08' %><%= f.text_area :ii08, class: 'form-control', rows: 5 %>
+</div>
+<div class="form-group">
+  <%= f.label :it08, '注射容量08' %><%= f.text_area :it08, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :io09, :い無０９, checked: "checked" %><%= f.label :無, class: "io09_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :io09, :い有０９ %><%= f.label :有, class: "io09_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :io09, :い未実施０９ %><%= f.label :未実施, class: "io09_label" %>
+  </div>
+</div>
+<div class="ity09_field">
+  <%= f.label :ity09, '予定年月日' %>
+  <%= f.datetime_select(:ity09, start_year: 2018, end_year: (Time.now.year - 19), default: Date.new(2018, 1,15)) %>
+</div>
+<div class="itj09_field">
+  <%= f.label :itj09, '実施年月日' %>
+  <%= f.datetime_select(:itj09, start_year: 2018, end_year: (Time.now.year - 19), default: Date.new(2018, 1,15)) %>
+ </div>
+<div class="form-group">
+  <%= f.label :ii09, '注射名09' %><%= f.text_area :ii09, class: 'form-control', rows: 5 %>
+</div>
+<div class="form-group">
+  <%= f.label :it09, '注射容量09' %><%= f.text_area :it09, class: 'form-control', rows: 3 %>
+</div>
+
+<div class="field">
+  <span class="job_type_engine">実施の有無</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :io10, :い無１０, checked: "checked" %><%= f.label :無, class: "io10_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :io10, :い有１０ %><%= f.label :有, class: "io10_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :io10, :い未実施１０ %><%= f.label :未実施, class: "io10_label" %>
+  </div>
+</div>
+<div class="ity10_field">
+  <%= f.label :ity10, '予定年月日' %>
+  <%= f.datetime_select(:ity10, start_year: 2018, end_year: (Time.now.year - 19), default: Date.new(2018, 1,15)) %>
+</div>
+<div class="itj10_field">
+  <%= f.label :itj10, '実施年月日' %>
+  <%= f.datetime_select(:itj10, start_year: 2018, end_year: (Time.now.year - 19), default: Date.new(2018, 1,15)) %>
+ </div>
+<div class="form-group">
+  <%= f.label :ii10, '注射名10' %><%= f.text_area :ii10, class: 'form-control', rows: 5 %>
+</div>
+<div class="form-group">
+  <%= f.label :it10, '注射容量10' %><%= f.text_area :it10, class: 'form-control', rows: 3 %>
+</div>
+
+
+
+  <%= f.submit '入力', class: 'btn btn-primary btn-xs' %>
+<% end %>
+
+</div></div>

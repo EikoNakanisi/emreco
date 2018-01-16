@@ -1,4 +1,5 @@
 class Dreport < ApplicationRecord
+
   validates :drs01, length: { maximum: 900 }
   validates :dro01, length: { maximum: 900 }
   validates :dra01, length: { maximum: 900 }
@@ -18,11 +19,12 @@ class Dreport < ApplicationRecord
   validates :drs05, length: { maximum: 900 }
   validates :dro05, length: { maximum: 900 }
   validates :dra05, length: { maximum: 900 }
-  validates :drp05, length: { maximum: 900 }
-
+  validates :drp05, length: { maximum: 900 } 
   validates :drt01, length: { maximum: 100 }
   validates :drt02, length: { maximum: 100 }
   validates :drt03, length: { maximum: 100 }
   validates :drt04, length: { maximum: 100 }
   validates :drt05, length: { maximum: 100 }
+
+
 end

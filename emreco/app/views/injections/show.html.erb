@@ -1,2 +1,411 @@
-<h1>Injections#show</h1>
-<p>Find me in app/views/injections/show.html.erb</p>
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+      <div class="navbar-header">
+        <p><font size="+1" color="#000000">注射指示伝票詳細</font>  ID : <%= @injection.id %><br>
+        <%= @injection.ity01.strftime("%Y年%m月%d日(%a)") %></p>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+
+  <% if @injection.id > 20 %>
+    <a href="../users/<%= @injection.id-@hensu2 %>#a3"><img src="../images/close_btn.png" border="0"></a>
+  <% elsif @injection.id > 10 %>
+    <a href="../users/<%= @injection.id-@hensu1 %>#a3"><img src="../images/close_btn.png" border="0"></a>
+  <% else %>
+    <a href="../users/<%= @injection.id %>#a3"><img src="../images/close_btn.png" border="0"></a>
+  <% end %>
+        </ul>
+      </div>
+  </div>
+</nav>
+</header>
+
+  <h5><font color="#FFFFFF">0</font></h5><BR>
+<% 1.upto(25) do |num| %>
+<font color="#FFFFFF"><% num = "%02d" % num %></font>
+<%= num %>
+<% end %>
+<BR>
+
+<% unless @injection.ii01.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @injection.io01 == 'い無０１' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @injection.io01 == 'い未実施０１' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">入院一般注射<br>
+    <%= @injection.ity01.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @injection.itj01.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="2" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@injection.ii01) %></font></td>
+    <td bgcolor="#FFFFFF" valign="top"><font size="+1"><br><%= simple_format(@injection.it01) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+<% unless @injection.ii02.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @injection.io02 == 'い無０２' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @injection.io02 == 'い未実施０２' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">入院一般注射<br>
+    <%= @injection.ity02.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @injection.itj02.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="2" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@injection.ii02) %></font></td>
+    <td bgcolor="#FFFFFF" valign="top"><font size="+1"><br><%= simple_format(@injection.it02) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+<% unless @injection.ii03.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @injection.io03 == 'い無０３' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @injection.io03 == 'い未実施０３' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">入院一般注射<br>
+    <%= @injection.ity03.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @injection.itj03.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="2" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@injection.ii03) %></font></td>
+    <td bgcolor="#FFFFFF" valign="top"><font size="+1"><br><%= simple_format(@injection.it03) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+<% unless @injection.ii04.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @injection.io04 == 'い無０４' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @injection.io04 == 'い未実施０４' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">入院一般注射<br>
+    <%= @injection.ity04.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @injection.itj04.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="2" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@injection.ii04) %></font></td>
+    <td bgcolor="#FFFFFF" valign="top"><font size="+1"><br><%= simple_format(@injection.it04) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+<% unless @injection.ii05.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @injection.io05 == 'い無０５' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @injection.io05 == 'い未実施０５' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">入院一般注射<br>
+    <%= @injection.ity05.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @injection.itj05.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="2" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@injection.ii05) %></font></td>
+    <td bgcolor="#FFFFFF" valign="top"><font size="+1"><br><%= simple_format(@injection.it05) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+<% unless @injection.ii06.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @injection.io06 == 'い無０６' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @injection.io06 == 'い未実施０６' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">入院一般注射<br>
+    <%= @injection.ity06.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @injection.itj06.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="2" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@injection.ii06) %></font></td>
+    <td bgcolor="#FFFFFF" valign="top"><font size="+1"><br><%= simple_format(@injection.it06) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+<% unless @injection.ii07.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @injection.io07 == 'い無０７' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @injection.io07 == 'い未実施０７' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">入院一般注射<br>
+    <%= @injection.ity07.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @injection.itj07.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="2" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@injection.ii07) %></font></td>
+    <td bgcolor="#FFFFFF" valign="top"><font size="+1"><br><%= simple_format(@injection.it07) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+<% unless @injection.ii08.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @injection.io08 == 'い無０８' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @injection.io08 == 'い未実施０８' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">入院一般注射<br>
+    <%= @injection.ity08.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @injection.itj08.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="2" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@injection.ii08) %></font></td>
+    <td bgcolor="#FFFFFF" valign="top"><font size="+1"><br><%= simple_format(@injection.it08) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+
+
+
+
+
+<% unless @injection.ii09.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @injection.io09 == 'い無０９' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @injection.io09 == 'い未実施０９' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">入院一般注射<br>
+    <%= @injection.ity09.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @injection.itj09.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="2" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@injection.ii09) %></font></td>
+    <td bgcolor="#FFFFFF" valign="top"><font size="+1"><br><%= simple_format(@injection.it09) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+<% unless @injection.ii10.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+  <% if @injection.io10 == 'い無１０' %>
+    <font size="7" color="#0000FF">○</font>
+  <% elsif @injection.io10 == 'い未実施１０' %>
+    <font size="7" color="#FF0000">×</font>
+  <% else %>
+    <font size="7" color="#FF00FF">●</font>
+  <% end %>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">入院一般注射<br>
+    <%= @injection.ity10.strftime("%Y/%m/%d %H:%M") %><br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">  指示開始日時:2018/01/15(月) 10:00<br>
+    指示終了日時:<br>
+    指示受け日時:<br>
+    指示確認日時:<br>
+    実施日時:<%= @injection.itj10.strftime("%Y/%m/%d %H:%M") %><br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="2" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@injection.ii10) %></font></td>
+    <td bgcolor="#FFFFFF" valign="top"><font size="+1"><br><%= simple_format(@injection.it10) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+
+
+
+<%= link_to 'この注射指示簿を編集する', edit_injection_path(@injection) %>
+<%= link_to 'この注射指示簿を削除する', @injection, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+<%= link_to '新規注射指示簿の投稿', new_injection_path %>

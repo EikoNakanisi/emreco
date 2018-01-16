@@ -7,7 +7,15 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <%= link_to '× 閉じる', user_path, class: 'btn btn-warning' %>
+
+  <% if @dreport.id > 20 %>
+    <a href="../users/<%= @dreport.id-@hensu2 %>#a5"><img src="../images/close_btn.png" border="0"></a>
+  <% elsif @dreport.id > 10 %>
+    <a href="../users/<%= @dreport.id-@hensu1 %>#a5"><img src="../images/close_btn.png" border="0"></a>
+  <% else %>
+    <a href="../users/<%= @dreport.id %>#a5"><img src="../images/close_btn.png" border="0"></a>
+  <% end %>
+
         </ul>
       </div>
   </div>

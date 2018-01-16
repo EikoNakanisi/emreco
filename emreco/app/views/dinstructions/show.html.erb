@@ -2,349 +2,426 @@
   <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
       <div class="navbar-header">
-        <p><font size="+1" color="#000000">医師指示伝票詳細</font><BR>
-        ID : <%= @dinstruction.id %></p>
+        <p><font size="+1" color="#000000">医師指示伝票詳細</font>  ID : <%= @dinstruction.id %><br>
+        2018/01/15 10:00</p>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <%= link_to '× 閉じる', user_path, class: 'btn btn-warning' %>
+          <a href="../users/<%= @dinstruction.id %>#a2"><img src="../images/close_btn.png" border="0"></a>
         </ul>
       </div>
   </div>
 </nav>
 </header>
 
-  <h5><font color="#FFFFFF">0</font></h5><BR>
-<% 1.upto(25) do |num| %>
-<font color="#FFFFFF"><% num = "%02d" % num %></font>
-<%= num %>
-<% end %>
-<BR>
+<br><br><br><br>
 
-<% truncate("長い文字列", :length =>32) %>
-
-
-<table border="3" width="750" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <% unless @dinstruction.di01.blank? %>
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250"><%= @dinstruction.di01 %><br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：<%= @dinstruction.di01 %><br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
-<%= simple_format(@dinstruction.di02) %></td>
-</tr>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@dinstruction.di02) %></font></td>
+  </tr>
+  </tbody>
+</table>
 <% end %>
-
 <% unless @dinstruction.di03.blank? %>
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250"><%= @dinstruction.di03 %><br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：<%= @dinstruction.di03 %><br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
-<%= simple_format(@dinstruction.di04) %></td>
-</tr>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@dinstruction.di04) %></font></td>
+  </tr>
+  </tbody>
+</table>
 <% end %>
 
 <% unless @dinstruction.di05.blank? %>
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250"><%= @dinstruction.di05 %><br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：<%= @dinstruction.di05 %><br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
-<%= simple_format(@dinstruction.di06) %></td>
-</tr>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@dinstruction.di06) %></font></td>
+  </tr>
+  </tbody>
+</table>
 <% end %>
-
-
 <% unless @dinstruction.di07.blank? %>
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250"><%= @dinstruction.di07 %><br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：<%= @dinstruction.di07 %><br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
-<%= simple_format(@dinstruction.di08) %></td>
-</tr>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@dinstruction.di08) %></font></td>
+  </tr>
+  </tbody>
+</table>
 <% end %>
 
 <% unless @dinstruction.di09.blank? %>
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250"><%= @dinstruction.di09 %><br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：<%= @dinstruction.di09 %><br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
-<%= simple_format(@dinstruction.di10) %></td>
-</tr>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@dinstruction.di10) %></font></td>
+  </tr>
+  </tbody>
+</table>
 <% end %>
-
 <% unless @dinstruction.di11.blank? %>
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250"><%= @dinstruction.di11 %><br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：<%= @dinstruction.di11 %><br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
-<%= simple_format(@dinstruction.di12) %></td>
-</tr>
-<% end %>
-<% unless @dinstruction.di13.blank? %>
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250"><%= @dinstruction.di13 %><br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
-  指示開始日時:2018/01/15 10:00<br>
-  指示終了日時:<br>
-  指示受け日時:2018/01/15 10:00<br>
-  指示確認日時:<br>
-  実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
-<%= simple_format(@dinstruction.di14) %></td>
-</tr>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@dinstruction.di12) %></font></td>
+  </tr>
+  </tbody>
+</table>
 <% end %>
 
-<% unless @dinstruction.di15.blank? %>
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250"><%= @dinstruction.di15 %><br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+
+<% unless @dinstruction.di13.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：<%= @dinstruction.di13 %><br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
-<%= simple_format(@dinstruction.di16) %></td>
-</tr>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@dinstruction.di14) %></font></td>
+  </tr>
+  </tbody>
+</table>
+<% end %>
+<% unless @dinstruction.di15.blank? %>
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：<%= @dinstruction.di15 %><br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
+  指示開始日時:2018/01/15 10:00<br>
+  指示終了日時:<br>
+  指示受け日時:2018/01/15 10:00<br>
+  指示確認日時:<br>
+  実施日時:<br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@dinstruction.di16) %></font></td>
+  </tr>
+  </tbody>
+</table>
 <% end %>
 
 <% unless @dinstruction.di17.blank? %>
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250"><%= @dinstruction.di17 %><br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：<%= @dinstruction.di17 %><br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
-<%= simple_format(@dinstruction.di18) %></td>
-</tr>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@dinstruction.di18) %></font></td>
+  </tr>
+  </tbody>
+</table>
 <% end %>
 <% unless @dinstruction.di19.blank? %>
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250"><%= @dinstruction.di19 %><br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：<%= @dinstruction.di19 %><br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
-<%= simple_format(@dinstruction.di20) %></td>
-</tr>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@dinstruction.di20) %></font></td>
+  </tr>
+  </tbody>
+</table>
 <% end %>
 
 <% unless @dinstruction.di21.blank? %>
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250"><%= @dinstruction.di21 %><br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：<%= @dinstruction.di21 %><br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
-<%= simple_format(@dinstruction.di22) %></td>
-</tr>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@dinstruction.di22) %></font></td>
+  </tr>
+  </tbody>
+</table>
 <% end %>
-
 <% unless @dinstruction.di23.blank? %>
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250"><%= @dinstruction.di23 %><br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：<%= @dinstruction.di23 %><br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
-<%= simple_format(@dinstruction.di24) %></td>
-</tr>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
+      <%= simple_format(@dinstruction.di24) %></font></td>
+  </tr>
+  </tbody>
+</table>
 <% end %>
 
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：疼痛時<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：疼痛時<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 ◆カロナール(500)2錠内服<br>
 (麻)フェンタニル注(0.1)0.15ml【舌下】<br>
 (事後処方依頼必要）<br>
@@ -356,82 +433,102 @@
 0.05mlずつ減量可<br>
 0.05-0.80ml/hrで調節<br>
 早送りは1時間量
-</td>
-</tr>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：疼痛時<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：疼痛時<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
-発熱時・苦痛時クーリング<br>
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 ◆疼痛（腹痛）時、ブスコパン注(20)0.5A【皮下注】<br>
 ◆モーラステープL40mg貼付　1袋<br>
 胸痛時,ECG施行
-</td>
-</tr>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：発熱時<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：発熱時<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 発熱時・苦痛時クーリング<br>
 ◆カロナール(500)1錠、可能なら2錠内服<br>
 ◆アセリオ(1000)1V 15min div
-</td>
-</tr>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：不眠時<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：不眠時<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 ◆クエチアピン(100)1錠 内服<br>
 ◆ミタゾラム(10)0.6ml【舌下】積極的にクエチアピンと併用<br>
 ◆ミタゾラム(10)0.4ml【舌下】積極的にクエチアピンと併用<br>
@@ -442,58 +539,72 @@
 0.20ml/hrで開始、0.1mlずつ増減可、0.80ml/hrまで可<br>
 早送りは1時間量<br>
 ◆クエチアピン(25)1錠 内服
-</td>
-</tr>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：せん妄時<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：せん妄時<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 ◆リスペリドン内用液(0.5mg)1包内服、日中第一選択<br>
 ◆セレネース(5)0.5A【皮下注】<br>
 ◆セレネース(5)0.5A+生食10ml【iv】<br>
 ◆コントミン注(25)0.5A+生食50ml【div】<br>
 ◆ピコスルファートNa内用液1本適量/回<br>
 ◆クエチアピン(50)1錠 内服
-</td>
-</tr>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：呼吸困難時<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：呼吸困難時<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 ◆ミタゾラム(10)0.4ml【舌下】<br>
 (麻)フェンタニル注(0.1)0.15ml【舌下】<br>
 (事後処方依頼必要）<br>
@@ -508,29 +619,36 @@
 ◆ミタゾラム(10)5A【CSI】<br>
 0.20ml/hrで開始、0.1mlずつ増減可、0.80ml/hrまで可<br>
 早送りは1時間量
-</td>
-</tr>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：便秘時<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：便秘時<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 ◆ピアーレシロップ10ml<br>
 ◆ピアーレシロップ20ml<br>
 ◆ラグノスゼリー1包<br>
@@ -539,389 +657,497 @@
 ◆ピコスルファートNa内用液1本適量/回<br>
 ◆新レシカルボン坐剤1個<br>
 ◆グリセリン浣腸60ml
-</td>
-</tr>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：下痢時<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：下痢時<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 下痢時、下剤の減量・スキップ可
-</td>
-</tr>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：不安時、倦怠感時<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：不安時、倦怠感時<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 ◆ミタゾラム(10)0.4ml【舌下】<br>
 ◆ミタゾラム(10)0.4ml【皮下注】<br>
 ◆セルシン注(5)0.5A【舌下】
-</td>
-</tr>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：去痰困難時<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：去痰困難時<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 ◆ブスコパン(20)0.5A【皮下注】<br>
 ◆ブスコパン(20)1A【皮下注】
-</td>
-</tr>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：喘息発作時<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：喘息発作時<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 ◆【吸入】ﾋﾞｿﾙﾎﾞﾝ2ml+生食8ml<br>
 ◆【吸入】ﾋﾞｿﾙﾎﾞﾝ2ml+ﾍﾞﾈﾄﾘﾝ0.3ml+生食20ml<br>
-</td>
-</tr>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：嘔気・嘔吐時<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：嘔気・嘔吐時<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 ◆セレネース注(5)0.5A【皮下注】<br>
 ◆セレネース注(5)0.5A+生食10ml【iv】<br>
-</td>
-</tr>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：痙攣時<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：痙攣時<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 ◆セルシン注(5)0.5A【舌下】<br>
 ◆セルシン注(5)1A+生食50ml【div】(15分で)<br>
 ◆フェノバール(100)1A【皮下注】<br>
 痙攣時、静脈ルートキープ（可能ならば）
-</td>
-</tr>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：アカシジア時<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：アカシジア時<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 ◆リボトリール錠(1)1錠内服、内服後ミタゾラム皮下注も同時に<br>
 ◆ミタゾラム(10)0.4ml【皮下注】
-</td>
-</tr>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：外用薬指示<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：外用薬指示<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 かゆみ時レスタミン軟膏塗布<br>
 ◆アズノール軟膏１本<br>
 発赤、びらん、皮膚保護必要時<br>
 ◆アズレンうがい液4%「ケンエー」1本<br>
 口腔乾燥、舌苔、口内炎出現時<br>
 1日3回、含嗽
-</td>
-</tr>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：酸素<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：酸素<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 呼吸困難時経鼻酸素1Lより開始、5Lまで順次UP可
-</td>
-</tr>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：食事<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：食事<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 制限なし
-</td>
-</tr>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：安静度<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：安静度<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 （安静度）制限なし<br>
 （安静度）鎮静時ベッド上安静
-</td>
-</tr>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：排泄<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：排泄<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 ◆尿閉時導尿可<br>
 膀胱留置ｶﾃｰﾃﾙ適時挿入
-</td>
-</tr>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：清潔<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：清潔<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 入浴可
-</td>
-</tr>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：外出・外泊<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：外出・外泊<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 外出・外泊、付き添いあれば可
-</td>
-</tr>
+  </font></td>
+  </tr>
+  </tbody>
+</table>
 
-<tr>
-  <td bgcolor="#C0C0C0" valign="top" width="30"><font size="7" color="#0000FF">○</font></td>
-  <td bgcolor="#FFFFFF" valign="top" width="250">指示：バイタル・観察<br>
-  2018/01/15(月)<br>
-  ｵｰﾀﾞｰ番号:0000000 文書版数:01版
-  </td>
-  <td bgcolor="#FFFFFF" width="220">
+<table border=1 frame="box"rules="none">
+  <thead style="background-color: #CCCCCC;" border=1 frame="box"rules="none">
+  <tr>
+  <th>
+    <font size="7" color="#0000FF">○</font>
+  </th>
+  <th style="width:350px;" bgcolor="#F5F5F5" valign="top"><font size="+1">指示：バイタル・観察<br>
+    2018/01/15(月)<br>
+    ｵｰﾀﾞｰ番号:0000000 文書版数:01版</font>
+  </th>
+  <th style="width:250px;" bgcolor="#F5F5F5" valign="top">
   指示開始日時:2018/01/15 10:00<br>
   指示終了日時:<br>
   指示受け日時:2018/01/15 10:00<br>
   指示確認日時:<br>
   実施日時:<br>
-  </td>
-  <td bgcolor="#FFFFFF" width="200">
-  依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
-  </td>
-</tr>
-<tr>
-<td></td>
-<td colspan="3" bgcolor="#FFFFFF">
+  </th>
+  <th style="width:200px;" bgcolor="#F5F5F5" valign="top">依頼者:○○○○○○<br><br>指示受け者:○○○○○○<br>指示確認者:<br>  実施者:<br>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td colspan="3" bgcolor="#FFFFFF" valign="top"><font size="+1">
 血圧測定 1日1検<br>
 体温測定 1日1検<br>
 脈拍 1日1検<br>
 呼吸数 1日1検
-</td>
-</tr>
-
+  </font></td>
+  </tr>
+  </tbody>
 </table>
+
+
+
 
 
 <%= link_to 'この医師指示簿を編集する', edit_dinstruction_path(@dinstruction) %>

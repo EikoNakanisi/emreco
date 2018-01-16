@@ -1,0 +1,30 @@
+<div class="row">
+
+<%= form_for(result) do |f| %>
+  <%= render 'layouts/error_messages', model: f.object %>
+
+<div class="col-md-3 col-md-offset-2">
+<div class="form-group">
+  <%= f.label :rday01, '検査結果01-11' %><%= f.text_area :rday01, class: 'form-control', rows: 11 %>
+</div>
+</div>
+<div class="col-md-3 col-md-offset-2">
+<div class="form-group">
+  <%= f.label :rday02, '検査結果12-22' %><%= f.text_area :rday02, class: 'form-control', rows: 11 %>
+</div>
+</div>
+<div class="col-md-3 col-md-offset-2">
+<div class="form-group">
+  <%= f.label :rday03, '検査結果23-33' %><%= f.text_area :rday03, class: 'form-control', rows: 11 %>
+</div>
+</div>
+<div class="col-md-3 col-md-offset-2">
+<div class="form-group">
+  <%= f.label :rday04, '検査結果34-43' %><%= f.text_area :rday04, class: 'form-control', rows: 11 %>
+</div>
+</div>
+
+  <%= f.submit '入力', class: 'btn btn-primary btn-xs' %>
+<% end %>
+
+</div>

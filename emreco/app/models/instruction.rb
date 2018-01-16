@@ -1,7 +1,22 @@
 class Instruction < ApplicationRecord
-  belongs_to :user
-  validates :instruct_day, presence: true
-  validates :user_id, presence: true
-  validates :content, length: { maximum: 255 }
-  enum execution: {未:0, 済:1}
+
+  validates :tna01, length: { maximum: 50 }
+  validates :tna02, length: { maximum: 50 }
+  validates :tna03, length: { maximum: 50 }
+  validates :tna04, length: { maximum: 50 }
+  validates :tna05, length: { maximum: 50 }
+  validates :tna06, length: { maximum: 50 }
+  validates :tna07, length: { maximum: 50 }
+  validates :tna08, length: { maximum: 50 }
+  validates :tna09, length: { maximum: 50 }
+
+  validates :tcon01, length: { maximum: 900 }
+  validates :tcon02, length: { maximum: 900 }
+  validates :tcon03, length: { maximum: 900 }
+  validates :tcon04, length: { maximum: 900 }
+  validates :tcon05, length: { maximum: 900 }
+  validates :tcon06, length: { maximum: 900 }
+  validates :tcon07, length: { maximum: 900 }
+  validates :tcon08, length: { maximum: 900 }
+  validates :tcon09, length: { maximum: 900 }
 end

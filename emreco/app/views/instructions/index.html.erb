@@ -1,0 +1,9 @@
+<h1>テンプレート一覧</h1>
+
+<ul>
+  <% @instructions.each do |instruction| %>
+    <li><%= link_to instruction.id, instruction %><%= link_to '編集する', edit_instruction_path(instruction) %> :<%= instruction.id %></li>
+  <% end %>
+</ul>
+
+    <a href="/" class="btn btn-default">bedmap</a>

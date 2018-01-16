@@ -7,7 +7,16 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <%= link_to '× 閉じる', user_path, class: 'btn btn-warning' %>
+
+
+  <% if @nreport.id > 20 %>
+    <a href="../users/<%= @nreport.id-@hensu2 %>#a6"><img src="../images/close_btn.png" border="0"></a>
+  <% elsif @nreport.id > 10 %>
+    <a href="../users/<%= @nreport.id-@hensu1 %>#a6"><img src="../images/close_btn.png" border="0"></a>
+  <% else %>
+    <a href="../users/<%= @nreport.id %>#a6"><img src="../images/close_btn.png" border="0"></a>
+  <% end %>
+
         </ul>
       </div>
   </div>
@@ -22,6 +31,7 @@
 <BR>
 
 <div class="col-sm-5">
+  
 <% unless @nreport.nro01.blank? %>
 <div class="panel panel-primary">
   <!-- Default panel contents -->
@@ -65,7 +75,8 @@
   <tr>
     <td>（＃）</td>
     <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrm02) %></font></td>
-  </tr>  <tr>
+  </tr>
+  <tr>
     <td>（S）</td>
     <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrs02) %></font></td>
   </tr>
@@ -96,7 +107,8 @@
   <tr>
     <td>（＃）</td>
     <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrm03) %></font></td>
-  </tr>  <tr>
+  </tr>
+  <tr>
     <td>（S）</td>
     <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrs03) %></font></td>
   </tr>
@@ -127,7 +139,8 @@
   <tr>
     <td>（＃）</td>
     <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrm04) %></font></td>
-  </tr>  <tr>
+  </tr>
+  <tr>
     <td>（S）</td>
     <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrs04) %></font></td>
   </tr>
@@ -158,7 +171,8 @@
   <tr>
     <td>（＃）</td>
     <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrm05) %></font></td>
-  </tr>  <tr>
+  </tr>
+  <tr>
     <td>（S）</td>
     <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrs05) %></font></td>
   </tr>
@@ -176,7 +190,7 @@
   </tr>
   </table>
   </div>
-
+<% end %>
 
 <% unless @nreport.nro06.blank? %>
 <div class="panel panel-primary">
@@ -221,7 +235,8 @@
   <tr>
     <td>（＃）</td>
     <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrm07) %></font></td>
-  </tr>  <tr>
+  </tr>
+  <tr>
     <td>（S）</td>
     <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrs07) %></font></td>
   </tr>
@@ -252,7 +267,8 @@
   <tr>
     <td>（＃）</td>
     <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrm08) %></font></td>
-  </tr>  <tr>
+  </tr>
+  <tr>
     <td>（S）</td>
     <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrs08) %></font></td>
   </tr>
@@ -283,7 +299,8 @@
   <tr>
     <td>（＃）</td>
     <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrm09) %></font></td>
-  </tr>  <tr>
+  </tr>
+  <tr>
     <td>（S）</td>
     <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrs09) %></font></td>
   </tr>
@@ -314,7 +331,8 @@
   <tr>
     <td>（＃）</td>
     <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrm10) %></font></td>
-  </tr>  <tr>
+  </tr>
+  <tr>
     <td>（S）</td>
     <td class="text-left"><font size="+1"><%= simple_format(@nreport.nrs10) %></font></td>
   </tr>
@@ -332,13 +350,16 @@
   </tr>
   </table>
   </div>
-
-
 <% end %>
+
+
+
+
 
 
 <%= link_to 'この看護SOAPを編集する', edit_nreport_path(@nreport) %>
 <%= link_to 'この看護師SOAPを削除する', @nreport, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
 <%= link_to '新規看護SOAPの投稿', new_nreport_path %>
-
 </div>
+
+

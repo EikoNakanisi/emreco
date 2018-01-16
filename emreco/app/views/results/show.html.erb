@@ -1,2 +1,312 @@
-<h1>Results#show</h1>
-<p>Find me in app/views/results/show.html.erb</p>
+<div class="boxContainer">
+<div class="page-header">
+        <div class="headbox01">入院 病棟<br>緩和ケア</div>
+        <div class="headbox02">
+          <p class="sample1">ID : <%= @result.id %><br>
+
+
+        ②後期　本人（30%）</p>
+        </div>
+        
+        <div class="headbox03">
+          <%= image_tag 'women.png', :title => '女性', :size => '100x50', :style=>"float:left;" %><br>
+          <font size="6"><u>患者名前</u></font></div>
+        <div class="headbox05">
+          <%= image_tag 'alrt_n.png', :title => '感染症未確認', :size => '40x40', :style=>"float:left;" %><br>
+        </div>
+        <div class="headbox05">
+          <%= image_tag 'arg_n.png', :size => '40x40', :style=>"float:left;" %><br>
+        </div>
+        <div class="headbox04">
+          00歳00ヶ月&ensp;&ensp;&ensp;00型Rh(+)&ensp;&ensp;<u>000cm&ensp;000Kg</u></div>
+        <div class="headbox05">
+          <p class="sample1">
+          <button type="button" name="aaa" value="aaa">
+          <font size="2" color="#333399">Prof</font></button><br>
+          <button type="button" name="aaa" value="aaa">
+          <font size="2" color="#333399">病名</font></button>
+          </p></div>
+<div class="headbox05">
+<ul class="nav">
+  <li><a href="/">カルテ<br>閉じる</a></li>
+</ul>
+</div>
+</div>
+
+  <aside id="sidebar">
+<div class="space5">
+<a href="/users/1 %>"><font size="2">北海タラ</font></a><br>
+<a href="/users/2 %>"><font size="2">青森りんご</font></a><br>
+<a href="/users/3 %>"><font size="2">秋田よしお</font></a><br>
+<a href="/users/4 %>"><font size="2">岩手なおみ</font></a><br>
+<a href="/users/5 %>"><font size="2">福島たけし</font></a><br>
+<br>
+<br>
+<br><br>
+
+
+</div>
+</aside>
+
+
+<body>
+<div class="space8">
+<a href="../users/<%= @result.id %>#a10"><img src="../images/close_btn.png" border="0"></a>
+<div class="row">
+<div class="col-sm-offset-1 col-md-6">
+  <h3>採取日時：2018／01／15(月)</h3>
+<table class="table table-bordered">
+  <tr>
+    <th class="text-center"><h3>No.</h3></th>
+    <th class="text-center"><h3>検査項目</h3></th>
+    <th class="text-center"><h3>結果</h3></th>
+    <th class="text-center"><h3>上限値</h3></th>
+    <th class="text-center"><h3>下限値</h3></th>
+    <th class="text-center"><h3>単位名称</h3></th>
+  </tr>
+  <tr>
+    <td><h3>
+      01<br>02<br>03<br>04<br>05<br>06<br>07<br>08<br>09<br>10<br>11
+    </h3></td>
+    <td><h3>
+      白血球数<br>
+      赤血球数<br>
+      ヘモグロビン(HB) <br>
+      ヘマトクリット<br>
+      MCV<br>
+      MCH<br>
+      MCHC<br>
+      血小板数<br>
+      白血球像<br>
+      &ensp;好塩基球<br>
+      &ensp;好酸球
+    </h3></td>
+    <td class="text-right"><h3><%= simple_format(@result.rday01) %></h3></td>
+    <td class="text-right"><h3>
+      3900<br>
+      427<br>
+      13.5<br>
+      39.8<br>
+      83<br>
+      28.0<br> 
+      31.6<br> 
+      13.0<br> 
+      <br>
+      0.0<br> 
+      0.0 
+    </h3></td>
+    <td class="text-right"><h3>
+      9800<br>
+      570<br>
+      17.6<br>
+      51.8<br>
+      102<br>
+      34.6 <br>
+      36.6 <br>
+      36.9 <br>
+      <br>
+      3.0 <br>
+      10.0 
+    </h3></td>
+    <td><h3>
+      /μL<br>
+      10000/uL<br>
+      g/dL<br>
+      %<br>
+      fL<br>
+      pg<br>
+      %<br>
+      10000/uL<br>
+      <br>
+      %<br>
+      %
+    </h3></td>
+  </tr>
+
+  <tr>
+    <td><h3>
+      12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22
+    </h3></td>
+    <td><h3>
+      &ensp;好中球<br>
+      &ensp;桿状核球<br>
+      &ensp;分葉核球<br>
+      &ensp;リンパ球<br>
+      &ensp;単球<br>
+      &ensp;後骨髄球<br>
+      &ensp;骨髄球<br>
+      &ensp;異型リンパ<br>
+      &ensp;赤芽球<br>
+      総蛋白(T-P)<br>
+      アルブミン
+    </h3></td>
+    <td class="text-right"><h3><%= simple_format(@result.rday02) %></h3></td>
+    <td class="text-right"><h3>
+35.0 <br>
+0.0 <br>
+27.0 <br>
+20.0 <br>
+2.0 <br>
+0.0 <br>
+0.0 <br>
+0.0 <br>
+0.0 <br>
+6.7 <br>
+3.8 
+    </h3></td>
+    <td class="text-right"><h3>
+73.0 <br>
+18.0 <br>
+72.0 <br>
+51.0 <br>
+12.0 <br>
+0.0 <br>
+0.0 <br>
+0.0 <br>
+0.0 <br>
+8.3 <br>
+5.3 
+    </h3></td>
+    <td><h3>
+%<br>
+%<br>
+%<br>
+%<br>
+%<br>
+%<br>
+%<br>
+%<br>
+/100WBC<br>
+g/dL<br>
+g/dL
+    </h3></td>
+  </tr>
+
+
+
+
+  <tr>
+    <td><h3>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33</h3></td>
+    <td><h3>
+      A/G比<br>
+      総ビリルビン<br>
+      直接ビリルビン<br>
+      AST(GOT) <br>
+      ALT(GOT) <br>
+      ALP<br>
+      γ-GT<br>
+      コリンエステラーゼ(CHE) <br>
+      LD(LDH) <br>
+      CK(CPK) <br>
+      血糖
+    </h3></td>
+    <td class="text-right"><h3><%= simple_format(@result.rday03) %></h3></td>
+    <td class="text-right"><h3>
+1.20 <br>
+0.2 <br>
+0.0 <br>
+10 <br>
+5 <br>
+110 <br>
+0 <br>
+235 <br>
+115 <br>
+50 <br>
+70 
+
+    </h3></td>
+    <td class="text-right"><h3>
+2.00 <br>
+1.1 <br>
+0.4 <br>
+40 <br>
+45 <br>
+360 <br>
+75 <br>
+494 <br>
+245 <br>
+250 <br>
+109 
+    </h3></td>
+    <td><h3>
+mg/dL<br>
+mg/dL<br>
+U/L<br>
+U/L<br>
+U/L<br>
+U/L<br>
+U/L<br>
+U/L<br>
+U/L<br>
+U/L<br>
+mg/dL
+
+    </h3></td>
+  </tr>
+
+
+  <tr>
+    <td><h3>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43</h3></td>
+    <td><h3>
+      尿素窒素(UN)<br>
+      クレアチニン<br>
+      尿酸(UA)<br>
+      ナトリウム(Na)<br>
+      クロール(Cl)<br>
+      カルシウム(Ca)<br>
+      カリウム(K)<br>
+      血中アンモニア<br>
+      CRP定量<br>
+      CRP
+    </h3></td>
+    <td class="text-right"><h3><%= simple_format(@result.rday04) %></h3></td>
+    <td class="text-right"><h3>
+8 <br>
+0.61 <br>
+3.7 <br>
+135<br>
+98<br>
+8.6<br>
+3.6<br>
+30<br>
+0.00 
+
+    </h3></td>
+    <td class="text-right"><h3>
+22 <br>
+1.04 <br>
+7.0 <br>
+147<br>
+108<br>
+10.1<br>
+5<br>
+86<br>
+0.30 
+
+    </h3></td>
+    <td><h3>
+mg/dL<br>
+mg/dL<br>
+mg/dL<br>
+mEq/dL<br>
+mEq/dL<br>
+mg/dL<br>
+mEq/dL<br>
+μg/dL<br>
+mg/dL
+
+    </h3></td>
+  </tr>
+</table>
+
+
+</div>
+</div>
+</div>
+
+<%= link_to 'この検査結果を編集する', edit_result_path(@result) %>
+<%= link_to 'この検査結果を削除する', @result, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+<%= link_to '新規検査結果の投稿', new_result_path %>
+
+
+</body>

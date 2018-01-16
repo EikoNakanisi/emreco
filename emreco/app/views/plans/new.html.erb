@@ -1,2 +1,8 @@
-<h1>Plans#new</h1>
-<p>Find me in app/views/plans/new.html.erb</p>
+<h1>看護計画新規作成ページ</h1>
+
+<%= render 'form', plan: @plan %>
+
+
+
+  <%= link_to '一覧に戻る',users_path, class: 'btn btn-primary btn-xs' %>
+

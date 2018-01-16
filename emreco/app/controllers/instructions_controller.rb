@@ -1,24 +1,27 @@
 class InstructionsController < ApplicationController
   def index
+    @instructions = Instruction.all
   end
 
   def show
+    @instruction = Instruction.find(params[:id])
+    @hensu1 = 10
+    @hensu2 = 20
   end
 
   def new
-    @user = User.find(params[:id])
-    @instruction = @user.instructions.build #フォーム用の新規instructionインスタンス
+    @instruction = Instruction.new
   end
 
   def create
-    @user = User.find(params[:follow_id])
-    @instruction = @user.instructions.build(instruction_params)
+    @instruction = Instruction.new(message_params)
+
     if @instruction.save
-      flash[:success] = '指示簿が正常に登録されました'
-      redirect_to @user
+      flash[:success] = '正常に投稿されました'
+      redirect_to @instruction
     else
-      flash.now[:danger] = '指示簿が正常に登録されませんでした'
-      redirect_to @user
+      flash.now[:danger] = '投稿されませんでした'
+      render :new
     end
   end
 
@@ -29,11 +32,11 @@ class InstructionsController < ApplicationController
   def update
     @instruction = Instruction.find(params[:id])
 
-    if @instruction.update(instruction_params)
-      flash[:success] = '指示簿登録は正常に更新されました'
-      render :edit
+    if @instruction.update(message_params)
+      flash[:success] = '正常に更新されました'
+      redirect_to @instruction
     else
-      flash.now[:danger] = '指示簿登録は更新されませんでした'
+      flash.now[:danger] = '更新されませんでした'
       render :edit
     end
   end
@@ -41,14 +44,19 @@ class InstructionsController < ApplicationController
   def destroy
     @instruction = Instruction.find(params[:id])
     @instruction.destroy
-    flash[:success] = '指示簿を削除しました。'
-    redirect_back(fallback_location: root_path)
+
+    flash[:success] = '正常に削除されました'
+    redirect_to @instruction
   end
+
+  private
 
   # Strong Parameter
-  def instruction_params
-    params.require(:instruction).permit(:instruct_day, :content, :execution )
+  def message_params
+    params.require(:instruction).permit(
+    :tday01,:tday02,:tday03,:tday04,:tday05,:tday06,:tday07,:tday08,:tday09,
+    :tna01,:tna02,:tna03,:tna04,:tna05,:tna06,:tna07,:tna08,:tna09,
+    :tcon01,:tcon02,:tcon03,:tcon04,:tcon05,:tcon06,:tcon07,:tcon08,:tcon09)
   end
-
 
 end
