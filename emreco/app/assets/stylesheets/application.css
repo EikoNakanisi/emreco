@@ -54,7 +54,7 @@ header {
   float: left;
   padding: 5px;
   width: 80px;
-  height: 85px;
+  height: 87px;
   background: bisque;
   border-left: solid 1px #000000;
 
@@ -96,7 +96,7 @@ header {
   float: left;
   padding: 5px;
   width: 122px;
-  height: 85px;
+  height: 87px;
   background: cornsilk;
   border-top: solid 1px #000000;
   border-left: solid 1px #000000;
@@ -110,7 +110,7 @@ header {
   float: left;
   padding: 5px;
   width: 122px;
-  height: 85px;
+  height: 87px;
   background: cornsilk;
   border-left: solid 1px #000000;
 }
@@ -136,24 +136,7 @@ header {
 }
 
 
-.box1{
-    padding: 2px;
-  margin: 3px 10px;
-    width: 90px;
-    height: 23px;
-    color: #2c2c2f;
-    text-align: center;
-    background: deepskyblue;
-    border-top: solid 1px white;
-    border-left: solid 1px white;
-    border-right: solid 1px lightslategray;
-    border-bottom: solid 1px lightslategray;
-  
-}
-.box1 p {
-    margin: 0; 
-    padding: 0;
-}
+
 
 .box2{
     padding: 2px;
@@ -210,51 +193,28 @@ header {
     padding: 0;
 }
 
-.box5{
-    padding: 2px;
-    margin: 3px 10px;
-    width: 90px;
-    height: 23px;
-    color: #2c2c2f;
-    text-align: center;
-    background: pink;
-    border-top: solid 1px white;
-    border-left: solid 1px white;
-    border-right: solid 1px lightslategray;
-    border-bottom: solid 1px lightslategray;
-}
-.box5 p {
-    margin: 0; 
-    padding: 0;
-}
-
-
-.box6{
-    padding: 2px;
-    margin: 3px 10px;
-    width: 90px;
-    height: 23px;
-    color: #2c2c2f;
-    text-align: center;
-    background: silver;
-    border-top: solid 1px white;
-    border-left: solid 1px white;
-    border-right: solid 1px lightslategray;
-    border-bottom: solid 1px lightslategray;
-}
-.box6 p {
-    margin: 0; 
-    padding: 0;
-}
-
-
-#sidebar {
-    width: 12%;
-    height: 980px;
+.sidebar {
+  width: 145px;
+    height: 914px;
     background-image:url("/images/sidebar01.png");
     background-size:100% auto;
     float: right;
+  position: fixed;
+}
 
+
+
+
+
+
+#sidebar {
+  margin-left: 1200px;
+  width: 145px;
+    height: 914px;
+    background-image:url("/images/sidebar01.png");
+    background-size:100% auto;
+    float: right;
+  position: fixed;
 }
 
 
@@ -287,14 +247,13 @@ header {
 .cover0201 {
   float: left;
   width: 1200px;
-  height: 6000px;
+
   background-image:url("/images/kenon_body.png");
   background-size:100% auto;
   line-height: 0;
 }
 .aside {
   margin-left: 1200px;
-  position:fixed;
   float: right;
   width: 145px;
   height: 6000px;
@@ -360,7 +319,7 @@ p.sample2 {text-align: right; }
 
 .headbox05{
   float: left;
-  margin-top: 20px;
+  margin-top: 15px;
   padding: 0px;
   width: 4%;
   height: 80px;
@@ -439,11 +398,104 @@ div.ao {color: #FFFFFF; background-color:royalblue;}
   background-size:100% auto;
 }
 
+.sougou {
+  position: fixed;
+  top: 170px;
+  margin: 0px;
+  float: left;
+  width: 1042px;
+  height: 753px;
+  background-image:url("/images/sougou.png");
+  background-size:100% auto;
+}
 
+.prof01 {
+  position: fixed;
+  top: 170px;
+  margin: 0px;
+  float: left;
+  width: 1042px;
+  height: 753px;
+  background-image:url("/images/prof01.png");
+  background-size:100% auto;
+}
 
+.prof02 {
+  position: fixed;
+  top: 170px;
+  margin: 0px;
+  float: left;
+  width: 1042px;
+  height: 753px;
+  background-image:url("/images/prof02.png");
+  background-size:100% auto;
+}
 
+.prof03 {
+  position: fixed;
+  top: 170px;
+  margin: 0px;
+  float: left;
+  width: 1042px;
+  height: 753px;
+  background-image:url("/images/prof03.png");
+  background-size:100% auto;
+}
 
+.prof04 {
+  position: fixed;
+  top: 170px;
+  margin: 0px;
+  float: left;
+  width: 1042px;
+  height: 753px;
+  background-image:url("/images/prof04.png");
+  background-size:100% auto;
+}
 
+.prof05 {
+  position: fixed;
+  top: 170px;
+  margin: 0px;
+  float: left;
+  width: 1042px;
+  height: 753px;
+  background-image:url("/images/prof05.png");
+  background-size:100% auto;
+}
+
+.prof06 {
+  position: fixed;
+  top: 170px;
+  margin: 0px;
+  float: left;
+  width: 1042px;
+  height: 753px;
+  background-image:url("/images/prof06.png");
+  background-size:100% auto;
+}
+
+.prof07 {
+  position: fixed;
+  top: 170px;
+  margin: 0px;
+  float: left;
+  width: 1042px;
+  height: 753px;
+  background-image:url("/images/prof07.png");
+  background-size:100% auto;
+}
+
+.prof08 {
+  position: fixed;
+  top: 170px;
+  margin: 0px;
+  float: left;
+  width: 1042px;
+  height: 753px;
+  background-image:url("/images/prof08.png");
+  background-size:100% auto;
+}
 
 .id {
   margin: 5px;
@@ -515,7 +567,7 @@ div.ao {color: #FFFFFF; background-color:royalblue;}
 }
 
 .space5 {
-  margin-top: 140px;
+  margin-top: 120px;
   margin-left: 10px;
 }
 
@@ -533,6 +585,31 @@ div.ao {color: #FFFFFF; background-color:royalblue;}
   margin-top: 80px;
 }
 
+.space9 {
+  margin-left: 10px;
+}
+
+.space10 {
+  float: right;
+  margin-right: 10px;
+}
+
+.space11 {
+  margin-left: 50px;
+  margin-top:115px;
+}
+
+.space12 {
+  margin-left: 90px;
+  margin-top: 15px;
+}
+
+.space13 {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+
 .kenon01 {
   margin-top: 200px;
 }
@@ -540,5 +617,211 @@ div.ao {color: #FFFFFF; background-color:royalblue;}
 .kenon {
   line-height: 0;
 }
+
+.cover02 {
+  position: fixed;
+  top: 200px;
+  margin: 0px;
+  float: left;
+  width: 1050px;
+  height: 680px;
+  background-image:url("/images/nprof02.png");
+  background-size:100% auto;
+}
+
+.kenon02 {
+  margin-top: 150px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.cover03 {
+  position: fixed;
+  top: 200px;
+  margin: 0px;
+  float: left;
+  width: 1050px;
+  height: 680px;
+  background-image:url("/images/nprof01.png");
+  background-size:100% auto;
+}
+
+/* 外枠部分 */
+div.y_data_area {
+  width: 500px;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  border-left: 1px solid #CCC;
+}
+ 
+/* タイトル部分 */
+table.y_data_title {
+  width: 500px;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0; /* tableのcellspacing="0"の代わり */
+}
+ 
+table.y_data_title th {
+  border-top: 1px solid #CCC;
+  background: #E6E6FA;
+}
+ 
+table.y_data_title th,
+table.y_data_title td {
+  padding: 2px;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+}
+ 
+table.y_data_title th.r_none,
+table.y_data_title td.r_none {
+  border-right: none; /* 右ボーダーの重なりを防止 */
+}
+ 
+/* データ部分 */
+div.y_scroll_box {
+  width: 500px;
+  max-height: 150px;
+  height: auto !important; /* IE6 max-height対応 */
+  height: 100px;　/* IE6 max-height対応 */
+  overflow-x: hidden; /* 横スクロール非表示 */
+  overflow-y: scroll; /* 縦スクロール */
+}
+ 
+div.y_hidden {
+  overflow: hidden; /* IE系でデータ部分のテーブルをドラッグした際のズレを防止 */
+  padding: 0 0 10px; /* スクロール仕切った際の下ボーダーの重なりを防止 */
+}
+ 
+table.y_data {
+  width: 500px;
+  border-collapse: separate;
+  border-spacing: 0; /* tableのcellspacing="0"の代わり */
+  table-layout: fixed;　/* 内容を固定 */
+}
+ 
+table.y_data th,
+table.y_data td {
+  padding: 2px;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+}
+ 
+table.y_data td {
+/*  overflow: hidden; /* データが幅を超えたとき非表示に */
+/*  white-space: nowrap; /* データの折り返しを防止 */
+}
+ 
+table.y_data td p {
+  margin: 0; /* 余分なマージンを消去 */
+}
+ 
+/* IE6 */
+table.y_data_title,
+table.y_data {
+  _border-collapse: collapse; /* IE6がborder-spacing: 0;に対応していないので */
+}
+ 
+/* IE7 */
+*:first-child+html table.y_data_title,
+*:first-child+html table.y_data {
+  border-collapse: collapse; /* IE7がborder-spacing: 0;に対応していないので */
+}
+
+
+/* 外枠部分 */
+div.y_data_area2 {
+  width: 500px;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  border-left: 1px solid #CCC;
+}
+ 
+/* タイトル部分 */
+table.y_data_title2 {
+  width: 500px;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0; /* tableのcellspacing="0"の代わり */
+}
+ 
+table.y_data_title2 th {
+  border-top: 1px solid #CCC;
+  background: #E6E6FA;
+}
+ 
+table.y_data_title2 th,
+table.y_data_title2 td {
+  padding: 2px;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+}
+ 
+table.y_data_title2 th.r_none,
+table.y_data_title2 td.r_none {
+  border-right: none; /* 右ボーダーの重なりを防止 */
+}
+ 
+/* データ部分 */
+div.y_scroll_box2 {
+  width: 500px;
+  max-height: 400px;
+  height: auto !important; /* IE6 max-height対応 */
+  height: 100px;　/* IE6 max-height対応 */
+  overflow-x: hidden; /* 横スクロール非表示 */
+  overflow-y: scroll; /* 縦スクロール */
+}
+ 
+div.y_hidden2 {
+  overflow: hidden; /* IE系でデータ部分のテーブルをドラッグした際のズレを防止 */
+  padding: 0 0 10px; /* スクロール仕切った際の下ボーダーの重なりを防止 */
+}
+ 
+table.y_data2 {
+  width: 500px;
+  border-collapse: separate;
+  border-spacing: 0; /* tableのcellspacing="0"の代わり */
+  table-layout: fixed;　/* 内容を固定 */
+}
+ 
+table.y_data2 th,
+table.y_data2 td {
+  padding: 2px;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+}
+ 
+table.y_data2 td {
+/*  overflow: hidden; /* データが幅を超えたとき非表示に */
+/*  white-space: nowrap; /* データの折り返しを防止 */
+}
+ 
+table.y_data2 td p {
+  margin: 0; /* 余分なマージンを消去 */
+}
+ 
+/* IE6 */
+table.y_data_title2,
+table.y_data2 {
+  _border-collapse: collapse; /* IE6がborder-spacing: 0;に対応していないので */
+}
+ 
+/* IE7 */
+*:first-child+html table.y_data_title2,
+*:first-child+html table.y_data2 {
+  border-collapse: collapse; /* IE7がborder-spacing: 0;に対応していないので */
+}
+
+
+
+
+
+
+
+
+
+
+
 
 

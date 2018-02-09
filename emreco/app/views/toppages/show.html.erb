@@ -1,3 +1,4 @@
+<!-- 患者掲示板 -->
 
 
 
@@ -26,7 +27,7 @@
 
 <div class="space1"></div>
 <div class="space2">
-<br><br><br><a href="../users/<%= @user.id %>"><img src="../images/close_btn.png" border="0"></a>
+<br><br><br><a href="../sitemaps/<%= @user.id %>"><img src="../images/close_btn.png" border="0"></a>
 </div>
 
 <div class="space3"></div>
@@ -59,11 +60,11 @@
 <aside id="sidebar">
 <div class="space5">
 
-<a href="/toppages/1 %>"><font size="2">北海タラ</font></a><br>
-<a href="/toppages/2 %>"><font size="2">青森りんご</font></a><br>
-<a href="/toppages/3 %>"><font size="2">秋田よしお</font></a><br>
-<a href="/toppages/4 %>"><font size="2">岩手なおみ</font></a><br>
-<a href="/toppages/5 %>"><font size="2">福島たけし</font></a><br>
+<a href="/users/1 %>"><font size="2">北海スエ</font></a><br>
+<a href="/users/3 %>"><font size="2">秋田義男</font></a><br>
+<a href="/users/4 %>"><font size="2">岩手智子</font></a><br>
+<a href="/users/5 %>"><font size="2">福島武</font></a><br>
+<a href="/users/7 %>"><font size="2">青森林檎</font></a><br>
 <br>
 <br>
 <br>
@@ -72,12 +73,10 @@
 <a href="../dinstructions/<%= @user.id %>">指示簿一覧</a><br>
 <a href="../plans/<%= @user.id %>">看護計画</a><br>
 患者ｽｹｼﾞｭｰﾙ<br>
-看護プロファイル<br>
-移動食事カレンダ<br>
-入院処置<br>
-<a href="../instructions/<%= @user.id %>">テンプレー</a><br>
-SOAP&フォーカス<br>
-患者認証業務<br>
+<a href="../nprofs/<%= @user.id %>">看護プロファイル</a><br>
+<a href="../toppages/<%= @user.id %>/foods/<%= @user.id %>">移動食事カレンダ</a><br>
+<a href="../instructions/<%= @user.id %>">テンプレート</a><br>
+
 </div>
   </aside>
         

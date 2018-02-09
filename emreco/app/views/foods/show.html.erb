@@ -1,0 +1,180 @@
+<!-- 移動食事カレンダー -->
+
+    <style>
+      .row div {
+        background-color: #FFFFFF;
+      }
+    </style>
+
+<div class="row">
+<div class="col-md-1">
+<button type="button" class="btn btn-default active">最新表示</button>
+</div>
+<div class="col-md-10">
+<button type="button" class="btn btn-default active">入院申込</button>
+<button type="button" class="btn btn-default active">退院許可</button>
+<button type="button" class="btn btn-default active">転棟申込</button>
+<button type="button" class="btn btn-default active">転室・転床</button>
+<button type="button" class="btn btn-default active">外出泊・帰院</button>
+<button type="button" class="btn btn-default active">食事変更</button>
+<br>
+<button type="button" class="btn btn-default active">&emsp;入院&emsp;</button>
+<button type="button" class="btn btn-default active">&emsp;退院&emsp;</button>
+<button type="button" class="btn btn-default active">&emsp;転棟&emsp;</button>
+<button type="button" class="btn btn-default active">&nbsp;&nbsp;&emsp;転科&nbsp;&emsp;</button>
+<button type="button" class="btn btn-default active">&emsp;担当変更&emsp;</button>
+<button type="button" class="btn btn-default active">セット食</button>
+<button type="button" class="btn btn-default active">食事一括指示</button>
+</div>
+
+<div class="col-md-1">
+&emsp;</div>
+<div class="col-md-1">
+&emsp;</div>
+
+
+<div class="col-md-1">
+<a href="/users/<%= @user.id %>" class="btn btn-default active" role="button">閉じる</a>
+
+</div>
+
+<div class="col-md-12">&emsp;</div>
+<div class="col-md-12">
+<table class="table table-bordered table-condensed">
+  <tr>
+    <th class="text-center">2018年</th>
+    <th class="text-center">00/00(月)</th>
+    <th class="text-center">00/00(月)</th>
+    <th class="text-center">00/00(月)</th>
+    <th class="text-center">00/00(月)</th>
+    <th class="text-center">00/00(月)</th>
+    <th class="text-center">00/00(月)</th>
+    <th class="text-center">00/00(月)</th>
+    <th class="text-center">00/00(月)</th>
+    <th class="text-center">00/00(月)</th>
+    <th class="text-center">00/00(月)</th>
+    <th class="text-center">00/00(月)</th>
+    <th class="text-center">00/00(月)</th>
+  </tr>
+  <tr>
+    <td  rowspan="4" class="text-center">移動情報</td>
+    <td class="danger">&emsp;</td><td class="danger"></td><td class="danger"></td><td class="danger"></td>
+    <td class="danger"></td><td class="danger"></td><td class="danger"></td><td class="danger"></td>
+    <td class="danger"></td><td class="danger"></td><td class="danger"></td><td class="danger"></td>
+  </tr>
+  <tr>
+    <td class="danger">&emsp;</td><td class="danger"></td><td class="danger"></td><td class="danger"></td>
+    <td class="danger"></td><td class="danger"></td><td class="danger"></td><td class="danger"></td>
+    <td class="danger"></td><td class="danger"></td><td class="danger"></td><td class="danger"></td>
+  </tr>
+  <tr>
+    <td class="danger">&emsp;</td><td class="danger"></td><td class="danger"></td><td class="danger"></td>
+    <td class="danger"></td><td class="danger"></td><td class="danger"></td><td class="danger"></td>
+    <td class="danger"></td><td class="danger"></td><td class="danger"></td><td class="danger"></td>
+  </tr>
+  <tr>
+    <td class="danger">&emsp;</td><td class="danger"></td><td class="danger"></td><td class="danger"></td>
+    <td class="danger"></td><td class="danger"></td><td class="danger"></td><td class="danger"></td>
+    <td class="danger"></td><td class="danger"></td><td class="danger"></td><td class="danger"></td>
+  </tr>
+
+  <tr>
+    <td class="text-center">食事(朝)</td>
+    <td class="warning text-center">■</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td>
+    <td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td>
+    <td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td>
+  </tr>
+  <tr>
+    <td class="text-center">食事(昼)</td>
+    <td class="warning text-center">軟･一口大<br>･副食1/2</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td>
+    <td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td>
+    <td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td>
+  </tr>
+    <td class="text-center">食事(夕)</td>
+    <td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td>
+    <td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td>
+    <td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td>
+  </tr>
+
+  <tr>
+    <td class="text-center">診療科</td>
+    <td class="success">→緩和ケア</td><td class="success text-center">→</td><td class="success text-center">→</td><td class="success text-center">→</td>
+    <td class="success text-center">→</td><td class="success text-center">→</td><td class="success text-center">→</td><td class="success text-center">→</td>
+    <td class="success text-center">→</td><td class="success text-center">→</td><td class="success text-center">→</td><td class="success text-center">→</td>
+  </tr>
+  <tr>
+    <td class="text-center">病棟</td>
+    <td class="success">→病棟</td><td class="success text-center">→</td><td class="success text-center">→</td><td class="success text-center">→</td>
+    <td class="success text-center">→</td><td class="success text-center">→</td><td class="success text-center">→</td><td class="success text-center">→</td>
+    <td class="success text-center">→</td><td class="success text-center">→</td><td class="success text-center">→</td><td class="success text-center">→</td>
+  </tr>
+  <tr>
+    <td class="text-center">病室</td>
+    <td class="success">→１－１号</td><td class="success text-center">→</td><td class="success text-center">→</td><td class="success text-center">→</td>
+    <td class="success text-center">→</td><td class="success text-center">→</td><td class="success text-center">→</td><td class="success text-center">→</td>
+    <td class="success text-center">→</td><td class="success text-center">→</td><td class="success text-center">→</td><td class="success text-center">→</td>
+  </tr>
+
+  <tr>
+    <td class="text-center">主担当医</td>
+    <td class="info">→主担当医</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
+    <td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
+    <td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
+  </tr>
+  <tr>
+    <td class="text-center">担当医</td>
+    <td class="info">→担当医</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
+    <td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
+    <td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
+  </tr>
+  <tr>
+    <td class="text-center">担当医</td>
+    <td class="info">→担当医</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
+    <td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
+    <td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
+  </tr>
+  <tr>
+    <td class="text-center">担当看護</td>
+    <td class="info">→中西永子</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
+    <td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
+    <td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
+  </tr>
+  <tr>
+    <td class="text-center">副担当看</td>
+    <td class="info">→中西永子</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
+    <td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
+    <td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
+  </tr>
+  <tr>
+    <td class="text-center">チーム</td>
+    <td class="info">→なし</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
+    <td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
+    <td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
+  </tr>
+  </table>
+</div>
+<div class="col-md-4">
+  移動情報
+<table class="table table-bordered table-condensed">
+  <tr><th class="info">診療科</th><th class="info">緩和ケア内科</th></tr>
+  <tr><td class="info">病棟</td><td class="info">病棟</td></tr>
+  <tr><td class="info">病室</td><td class="info">１号室</td></tr>
+  <tr><td class="info">病床</td><td class="info">１－１</td></tr>
+  <tr><td class="info">主担当医</td><td class="info">主担当医</td></tr>
+  <tr><td class="info">担当医</td><td class="info">担当医</td></tr>
+  <tr><td class="info">担当医</td><td class="info">担当医</td></tr>
+
+</table>
+</div>
+<div class="col-md-4">
+  看護師･チーム情報
+<table class="table table-bordered table-condensed">
+  <tr><td class="info">担当看護師</td><td class="info">中西永子</td></tr>
+  <tr><td class="info">副担当看護師</td><td class="info">中西永子</td></tr>
+  <tr><td class="info">チーム</td><td class="info">なし</td></tr>
+
+</table>
+</div>
+
+</div>
+

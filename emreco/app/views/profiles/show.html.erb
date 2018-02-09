@@ -1,0 +1,99 @@
+<!-- プロファイル -->
+
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+
+
+<table border="1" width="1100" cellspacing="0" cellpadding="5" bordercolor="#CCCCFF">
+<tr>
+<th bgcolor="#CCCCFF"><u>&nbsp;入院 病棟<br>&nbsp;緩和ケア</u></th>
+<th bgcolor="#CCCCFF">ID: <%= @user.id %><br><u>国保30本人(30%)</u></th>
+<th bgcolor="#CCCCFF">
+        <% if @user.gender == '男' %>
+          <%= image_tag 'men.png', :title => '男性', :size => '100x50', :style=>"float:left;" %><br>
+        <% else %>
+          <%= image_tag 'women.png', :title => '女性', :size => '100x50', :style=>"float:left;" %><br>
+        <% end %>
+</th>
+<th bgcolor="#CCCCFF"><font size="6"><u><%= @user.name %></u></font></th>
+<th bgcolor="#CCCCFF">
+        <% if @user.infection == '有' %>
+          <%= image_tag 'alrt_y.png', :title => '感染症：HCV(+)', :size => '40x40', :style=>"float:left;" %><br>
+        <% else %>
+          <%= image_tag 'alrt_n.png', :title => '感染症未確認', :size => '40x40', :style=>"float:left;" %><br>
+        <% end %>
+</th>
+<th bgcolor="#CCCCFF">
+        <% if @user.id == '3' %>
+          <%= image_tag 'arg_y.png', :title => '青魚禁', :size => '40x40', :style=>"float:left;" %><br>
+        <% else %>
+          <%= image_tag 'arg_n.png', :size => '40x40', :style=>"float:left;" %><br>
+        <% end %>
+</th>
+<th bgcolor="#CCCCFF"><%= @user.age %>歳00ヶ月&ensp;&ensp;&ensp;<%= @user.bloodtype %>型Rh(*)&ensp;&ensp;&ensp;<u><%= @user.height %>cm&ensp;<%= @user.weight %>Kg</u></th>
+<th bgcolor="#CCCCFF">
+  <a href="/profiles/<%= @user.id %>" class="btn btn-default btn-sm active" role="button">Prof</a><br>
+  <a href="#" class="btn btn-default btn-sm active" role="button" disabled="disabled">病名</a>
+</th>
+<th bgcolor="#CCCCFF">
+<button type="button" class="btn btn-default btn-sm active" disabled="disabled">確定</button>
+<a href="javascript:history.back()" class="btn btn-default btn-sm active">戻る</a>
+</th>
+</table>
+
+<div class="ao">&ensp;プロファイルメニュー</div>
+
+
+
+<div role="tabpanel">
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li role="presentation" class="page-item active"><a href="#sougou" aria-controls="sougou" role="tab" data-toggle="tab">総合情報</a></li>
+    <li role="presentation" class="page-item"><a href="#prof01" aria-controls="prof01" role="tab" data-toggle="tab">基本&#9312;</a></li>
+    <li role="presentation" class="page-item"><a href="#prof02" aria-controls="prof02" role="tab" data-toggle="tab">基本&#9313;</a></li>
+    <li role="presentation" class="page-item"><a href="#prof03" aria-controls="prof03" role="tab" data-toggle="tab">既往情報</a></li>
+    <li role="presentation" class="page-item"><a href="#prof04" aria-controls="prof04" role="tab" data-toggle="tab">ｱﾚﾙｷﾞｰ</a></li>
+    <li role="presentation" class="page-item"><a href="#prof05" aria-controls="prof05" role="tab" data-toggle="tab">障害,生活</a></li>
+    <li role="presentation" class="page-item"><a href="#prof06" aria-controls="prof06" role="tab" data-toggle="tab">身体情報</a></li>
+    <li role="presentation" class="page-item"><a href="#prof07" aria-controls="prof07" role="tab" data-toggle="tab">家族構成</a></li>
+    <li role="presentation" class="page-item"><a href="#prof08" aria-controls="prof08" role="tab" data-toggle="tab">その他</a></li>
+  </ul>
+</nav>
+
+
+<!--Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="sougou"><div class="sougou"></div></div>
+    <div role="tabpanel" class="tab-pane" id="prof01"><div class="prof01"></div></div>
+    <div role="tabpanel" class="tab-pane" id="prof02"><div class="prof02"></div></div>
+    <div role="tabpanel" class="tab-pane" id="prof03"><div class="prof03"></div></div>
+    <div role="tabpanel" class="tab-pane" id="prof04"><div class="prof04"></div></div>
+    <div role="tabpanel" class="tab-pane" id="prof05"><div class="prof05"></div></div>
+    <div role="tabpanel" class="tab-pane" id="prof06"><div class="prof06"></div></div>
+<!--家族構成 -->
+<div role="tabpanel" class="tab-pane" id="prof07">
+<div class="prof07">
+<div class="space8"><br>
+&emsp;&emsp;<%= @user.gender %>&emsp;&emsp;&emsp;&emsp;<%= @user.birthday %>&emsp;&emsp;<%= @user.age %>
+</div>
+<div class="space6"><br><br>
+<font size="2">
+&nbsp;&emsp;配偶者&emsp;&emsp;男&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&#10004;<br>
+&nbsp;&emsp;子&emsp;&emsp;&emsp;&emsp;女&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;氏名名前&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;キーパーソン
+</font>
+</div>
+      <div class="space11"><br><br><img border="0" src="../images/fa01.png" alt="系図"></div>
+
+
+</div></div>
+
+<!--その他 -->
+<div role="tabpanel" class="tab-pane" id="prof08"><div class="prof08"></div></div>
+  </div>
+
+</div>
+
+</div>
+</div>
+</div>

@@ -1,3 +1,5 @@
+<!-- 看護問題リスト -->
+
 <div class="boxContainer">
 <div class="page-header">
         <div class="headbox01">入院 病棟<br>緩和ケア</div>
@@ -21,17 +23,12 @@
           00歳00ヶ月&ensp;&ensp;&ensp;00型Rh(+)&ensp;&ensp;<u>000cm&ensp;000Kg</u></div>
         <div class="headbox05">
           <p class="sample1">
-          <button type="button" name="aaa" value="aaa">
-          <font size="2" color="#333399">Prof</font></button><br>
-          <button type="button" name="aaa" value="aaa">
-          <font size="2" color="#333399">病名</font></button>
+<a href="/profiles/<%= @plan.id %>" class="btn btn-default btn-sm active" role="button">Prof</a><br>
+<a href="/profiles/<%= @plan.id %>" class="btn btn-default btn-sm active" role="button" disabled="disabled">病名</a>
           </p></div>
 <div class="headbox05">
-<ul class="nav">
+<a href="/" class="btn btn-warning btn-sm active" role="button">カルテ<br>閉じる</a>
 
-  <li><a href="/">カルテ<br>閉じる</a></li>
-
-</ul>
 </div>
 </div>
 
@@ -56,6 +53,7 @@
 <a href="../instructions/<%= @plan.id %>">テンプレート</a><br>
 SOAP&フォーカス<br>
 患者認証業務<br>
+
 
 </div>
 </aside>
@@ -91,7 +89,7 @@ SOAP&フォーカス<br>
 <table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <% unless @plan.npn01.blank? %>
 <tr>
-<td bgcolor="gainsboro" width="45"><b>#01</b></td>
+<td bgcolor="gainsboro" width="45"><b><a href="/plans/<%= @plan.id %>/books/1">#01</a></b></td>
 <td bgcolor="#FFFFFF" width="850"><%= simple_format(@plan.npn01) %></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/15</td>
 <td bgcolor="#FFFFFF" width="120">中西 永子</td>
@@ -113,7 +111,7 @@ SOAP&フォーカス<br>
 <table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <% unless @plan.npn02.blank? %>
 <tr>
-<td bgcolor="gainsboro" width="45"><b>#02</b></td>
+<td bgcolor="gainsboro" width="45"><b><a href="/plans/<%= @plan.id %>/books/2">#02</a></b></td>
 <td bgcolor="#FFFFFF" width="850"><%= simple_format(@plan.npn02) %></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/15</td>
 <td bgcolor="#FFFFFF" width="120">中西 永子</td>
@@ -135,7 +133,7 @@ SOAP&フォーカス<br>
 <table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <% unless @plan.npn03.blank? %>
 <tr>
-<td bgcolor="gainsboro" width="45"><b>#03</b></td>
+<td bgcolor="gainsboro" width="45"><b><a href="/plans/<%= @plan.id %>/books/3">#03</a></b></td>
 <td bgcolor="#FFFFFF" width="850"><%= simple_format(@plan.npn03) %></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/15</td>
 <td bgcolor="#FFFFFF" width="120">中西 永子</td>
@@ -157,7 +155,7 @@ SOAP&フォーカス<br>
 <table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <% unless @plan.npn04.blank? %>
 <tr>
-<td bgcolor="gainsboro" width="45"><b>#04</b></td>
+<td bgcolor="gainsboro" width="45"><b><a href="/plans/<%= @plan.id %>/books/4">#04</a></b></td>
 <td bgcolor="#FFFFFF" width="850"><%= simple_format(@plan.npn04) %></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/15</td>
 <td bgcolor="#FFFFFF" width="120">中西 永子</td>
@@ -179,7 +177,7 @@ SOAP&フォーカス<br>
 <table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <% unless @plan.npn05.blank? %>
 <tr>
-<td bgcolor="gainsboro" width="45"><b>#05</b></td>
+<td bgcolor="gainsboro" width="45"><b><a href="/plans/<%= @plan.id %>/books/5">#05</a></b></td>
 <td bgcolor="#FFFFFF" width="850"><%= simple_format(@plan.npn05) %></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/15</td>
 <td bgcolor="#FFFFFF" width="120">中西 永子</td>
@@ -200,7 +198,7 @@ SOAP&フォーカス<br>
 </table>
 <table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <tr>
-<td bgcolor="gainsboro" width="45"><b>#06</b></td>
+<td bgcolor="gainsboro" width="45"><b><a href="/plans/<%= @plan.id %>/books/6">#06</a></b></td>
 <td bgcolor="#FFFFFF" width="850">4-2転倒・転落の危険性</td>
 <td bgcolor="#FFFFFF" width="120">2018/01/15</td>
 <td bgcolor="#FFFFFF" width="120">中西 永子</td>
@@ -238,7 +236,7 @@ SOAP&フォーカス<br>
 </table>
 <table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <tr>
-<td bgcolor="gainsboro" width="45"><b>#07</b></td>
+<td bgcolor="gainsboro" width="45"><b><a href="/plans/<%= @plan.id %>/books/7">#07</a></b></td>
 <td bgcolor="#FFFFFF" width="850">4-3褥創(瘡)の危険性</td>
 <td bgcolor="#FFFFFF" width="120">2018/01/15</td>
 <td bgcolor="#FFFFFF" width="120">中西 永子</td>

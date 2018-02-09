@@ -14,7 +14,6 @@ enum bloodtype: {Ａ:0, Ｂ:1, Ｏ:2, ＡＢ:3}
 enum infection: {無:0, 有:1}
 enum aid: {独歩:0, 護送:1, 担送:2}
 
-  has_many :observations
-  has_many :instructions
+
 
 end

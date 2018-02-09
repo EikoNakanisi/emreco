@@ -1,0 +1,341 @@
+<!-- 看護プロファイル -->
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+
+<table border="1" width="1100" cellspacing="0" cellpadding="5" bordercolor="#CCCCFF">
+<tr>
+<th bgcolor="#CCCCFF"><u>&nbsp;入院 病棟<br>&nbsp;緩和ケア</u></th>
+<th bgcolor="#CCCCFF">ID: <%= @user.id %><br><u>国保30本人(30%)</u></th>
+<th bgcolor="#CCCCFF">
+        <% if @user.gender == '男' %>
+          <%= image_tag 'men.png', :title => '男性', :size => '100x50', :style=>"float:left;" %><br>
+        <% else %>
+          <%= image_tag 'women.png', :title => '女性', :size => '100x50', :style=>"float:left;" %><br>
+        <% end %>
+</th>
+<th bgcolor="#CCCCFF"><font size="6"><u><%= @user.name %></u></font></th>
+<th bgcolor="#CCCCFF">
+        <% if @user.infection == '有' %>
+          <%= image_tag 'alrt_y.png', :title => '感染症：HCV(+)', :size => '40x40', :style=>"float:left;" %><br>
+        <% else %>
+          <%= image_tag 'alrt_n.png', :title => '感染症未確認', :size => '40x40', :style=>"float:left;" %><br>
+        <% end %>
+</th>
+<th bgcolor="#CCCCFF">
+        <% if @user.id == '3' %>
+          <%= image_tag 'arg_y.png', :title => '青魚禁', :size => '40x40', :style=>"float:left;" %><br>
+        <% else %>
+          <%= image_tag 'arg_n.png', :size => '40x40', :style=>"float:left;" %><br>
+        <% end %>
+</th>
+<th bgcolor="#CCCCFF"><%= @user.age %>歳00ヶ月&ensp;&ensp;&ensp;<%= @user.bloodtype %>型Rh(*)&ensp;&ensp;&ensp;<u><%= @user.height %>cm&ensp;<%= @user.weight %>Kg</u></th>
+<th bgcolor="#CCCCFF">
+  <a href="/profiles/<%= @user.id %>" class="btn btn-default btn-sm active" role="button">Prof</a><br>
+  <a href="#" class="btn btn-default btn-sm active" role="button" disabled="disabled">病名</a>
+</th>
+<th bgcolor="#CCCCFF">
+<button type="button" class="btn btn-default btn-sm active" disabled="disabled">歴一覧</button>
+<a href="javascript:history.back()" class="btn btn-default btn-sm active">戻る</a></tr>
+</th>
+</table>
+
+<div class="ao">&ensp;看護プロファイルメニュー</div>
+
+
+<div role="tabpanel">
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination" role="tablist">
+    <li role="presentation" class="page-item active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">プロフィール</a></li>
+    <li role="presentation" class="page-item"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">パターン要約</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">ﾍﾙｽﾌﾟﾛﾓ&#9312;</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">ﾍﾙｽﾌﾟﾛﾓ&#9313;</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">ﾍﾙｽﾌﾟﾛﾓ&#9314;</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">栄養&#9312;</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">栄養&#9313;</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">排泄</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">活動/休息&#9312;</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">活動/休息&#9313;</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">知覚/認知</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">自己知覚</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">役割関係&#9312;</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">役割関係&#9313;</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">ｾｸｼｭｱﾘﾃｨ</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">ｺｰﾋﾟﾝｸﾞ</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">生活原理</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">安全/防御</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">安楽</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">成長/発達</a></li>
+  </ul>
+</nav>
+
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+  <!-- プロフィール -->
+    <div role="tabpanel" class="tab-pane active" id="home"><div class="cover03">
+<div class="space6">
+<div class="row">
+
+<div class="space11"><%= @user.id %>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;<%= @user.name %>&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;カナ氏名カナ氏名
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<%= @user.gender %>
+&emsp;&emsp;&emsp;&emsp;<%= @user.birthday %>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<%= @user.bloodtype %>
+&emsp;&emsp;&emsp;&emsp;&emsp;＋<br></div>
+<div class="space6">
+<br>&emsp;&emsp;&emsp;2018/01/15
+&emsp;&emsp;&emsp;10&emsp;&emsp;&emsp;00&emsp;&emsp;&emsp;&emsp;00&emsp;&emsp;&emsp;&emsp;日本
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;城陽市寺田
+<br></div>
+<br><div class="space6">
+&emsp;&emsp;&emsp;&emsp;0800001234<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;氏名名前<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;娘<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;自宅
+<br></div>
+<div class="space6">
+<br>&emsp;&emsp;&emsp;結婚(死別)&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;キーパーソン
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;娘<br><br></div>
+<div class="space6">&emsp;&emsp;&emsp;ストレッチャー
+<br><br><br><br><br><br></div><div class="space6">&emsp;&emsp;&emsp;入院経過
+</div>
+
+</div>
+</div>
+
+</div></div>
+
+
+
+
+  <!-- パターン要約 -->
+    <div role="tabpanel" class="tab-pane" id="profile"><div class="cover02">
+<div class="space8">
+<div class="row">
+
+<div class="col-md-4">
+  
+<div class="panel panel-default">
+  <div class="panel-heading">領域1＜呼吸＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域2＜呼吸＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域3＜呼吸＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域4＜呼吸＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域5＜呼吸＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域6＜呼吸＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small></small>
+
+  </div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域7＜呼吸＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域8＜呼吸＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域9＜呼吸＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域10＜呼吸＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域11＜呼吸＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域12＜呼吸＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small></small>
+
+  </div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="panel panel-default">
+  <div class="panel-heading">領域13＜呼吸＞&emsp;&emsp;問題
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
+</label>
+<label class="radio-inline">
+<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
+</label>
+  </div>
+  <div class="panel-body"><small></small>
+
+  </div>
+</div>
+</div>
+<div class="col-md-7">
+<div class="panel panel-default">
+  <div class="panel-heading">総合評価&emsp;&emsp;記載日2018/01/15
+  </div>
+  <div class="panel-body"><small></small>
+
+  </div>
+</div>
+</div>
+
+</div></div>
+
+
+
+
+
+  </div>
+
+</div>
+
+
+
+
+
+</div></div></div>

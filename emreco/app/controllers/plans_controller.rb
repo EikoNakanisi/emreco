@@ -1,4 +1,7 @@
 class PlansController < ApplicationController
+  
+
+
   def index
     @plans = Plan.all
     @hensu1 = 10

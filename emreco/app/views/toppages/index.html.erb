@@ -3,26 +3,58 @@
 
 <div class="cover">
 <% (1..15).each do |number| %>
-  <h6><%= number %></h6>
+  <h6>&ensp;</h6>
 <% end %>
 
 
 <% @users.each do |user| %>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal<%= user.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"><%= user.roomno %></h4>
+      </div>
+      <div class="modal-body"><h4>
+        ID:<%= user.id %><br>
+        カナ氏名：<br>
+        氏名：<%= user.name %><br>
+        年齢：<%= user.age %>歳00ヶ月<br>
+        生年月日：<%= user.birthday %><br>
+        性別：<%= user.gender %><br>
+        診療科：緩和ケア内科<br>
+        入院日：2018/01/15<br>
+        在院日数：3日<br>
+        主担当医：<br>
+        担当医1：<br>
+        担当医2：<br>
+        担当看護師：中西　永子<br>
+        副担当看護師：
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
       <% if user.roomno == '２' %>
         <% if user.name== '空室' %>
           <div class="box"><font size="2">
-          <div class="box6"><p>２号室</p></div>
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&nbsp;&emsp;２号室&emsp;&nbsp;</button></div>
           <div class="box2"></div>
           <div class="box3"><font size="2">2</font></div>
           </div>
         <% else %>
       <div class="box"><font size="2">
-        <% if user.gender == '男' %>
-        <div class="box1"><p>２号室</p></div>
-        <% else %>
-        <div class="box5"><p>２号室</p></div>
-        <% end %>
-
+<div class="space9">
+<!-- Button trigger modal -->
+<% if user.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&nbsp;&emsp;２号室&emsp;&nbsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&nbsp;&emsp;２号室&emsp;&nbsp;</button>
+<% end %>
+</div>
     <% if user.infection == '有' %>
       <div class="box4"><font size="2">
     <% else %>
@@ -44,18 +76,20 @@
       <% if user.roomno == '３' %>
         <% if user.name== '空室' %>
           <div class="box">
-          <div class="box6"><p>３号室</p></div>
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&nbsp;&emsp;３号室&emsp;&nbsp;</button></div>
           <div class="box2"></div>
           <div class="box3"><font size="2">3</font></div>
           </div>
         <% else %>
       <div class="box">
-        <% if user.gender == '男' %>
-        <div class="box1"><p>３号室</p></div>
-        <% else %>
-        <div class="box5"><p>３号室</p></div>
-        <% end %>
-
+<div class="space9">
+<!-- Button trigger modal -->
+<% if user.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&nbsp;&emsp;３号室&emsp;&nbsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&nbsp;&emsp;３号室&emsp;&nbsp;</button>
+<% end %>
+</div>
     <% if user.infection == '有' %>
       <div class="box4"><font size="2">
     <% else %>
@@ -77,17 +111,20 @@
       <% if user.roomno == '６' %>
         <% if user.name== '空室' %>
           <div class="box">
-          <div class="box6"><p>６号室</p></div>
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&nbsp;&emsp;６号室&emsp;&nbsp;</button></div>
           <div class="box2"></div>
           <div class="box3"><font size="2">6</font></div>
           </div>
         <% else %>
       <div class="box">
-        <% if user.gender == '男' %>
-        <div class="box1"><p>６号室</p></div>
-        <% else %>
-        <div class="box5"><p>６号室</p></div>
-        <% end %>
+<div class="space9">
+<!-- Button trigger modal -->
+<% if user.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&nbsp;&emsp;６号室&emsp;&nbsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&nbsp;&emsp;６号室&emsp;&nbsp;</button>
+<% end %>
+</div>
     <% if user.infection == '有' %>
       <div class="box4"><font size="2">
     <% else %>
@@ -109,17 +146,20 @@
       <% if user.roomno == '７' %>
         <% if user.name== '空室' %>
           <div class="box">
-          <div class="box6"><p>７号室</p></div>
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&nbsp;&emsp;７号室&emsp;&nbsp;</button></div>
           <div class="box2"></div>
           <div class="box3"><font size="2">7</font></div>
           </div>
         <% else %>
       <div class="box">
-        <% if user.gender == '男' %>
-        <div class="box1"><p>７号室</p></div>
-        <% else %>
-        <div class="box5"><p>７号室</p></div>
-        <% end %>
+<div class="space9">
+<!-- Button trigger modal -->
+<% if user.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&nbsp;&emsp;７号室&emsp;&nbsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&nbsp;&emsp;７号室&emsp;&nbsp;</button>
+<% end %>
+</div>
     <% if user.infection == '有' %>
       <div class="box4"><font size="2">
     <% else %>
@@ -143,17 +183,20 @@
   <div class="boxs">食堂</div>
         <% if user.name== '空室' %>
           <div class="box">
-          <div class="box6"><p>１０号室</p></div>
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&emsp;１０号室&emsp;</button></div>
           <div class="box2"></div>
           <div class="box3"><font size="2">10</font></div>
           </div>
         <% else %>
       <div class="box">
-        <% if user.gender == '男' %>
-        <div class="box1"><p>１０号室</p></div>
-        <% else %>
-        <div class="box5"><p>１０号室</p></div>
-        <% end %>
+<div class="space9">
+<!-- Button trigger modal -->
+<% if user.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&emsp;１０号室&emsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&emsp;１０号室&emsp;</button>
+<% end %>
+</div>
     <% if user.infection == '有' %>
       <div class="box4"><font size="2">
     <% else %>
@@ -176,17 +219,20 @@
       <% if user.roomno == '１１' %>
         <% if user.name== '空室' %>
           <div class="box">
-          <div class="box6"><p>１１号室</p></div>
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&emsp;１１号室&emsp;</button></div>
           <div class="box2"></div>
           <div class="box3"><font size="2">11</font></div>
           </div>
         <% else %>
       <div class="box">
-        <% if user.gender == '男' %>
-        <div class="box1"><p>１１号室</p></div>
-        <% else %>
-        <div class="box5"><p>１１号室</p></div>
-        <% end %>
+<div class="space9">
+<!-- Button trigger modal -->
+<% if user.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&emsp;１１号室&emsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&emsp;１１号室&emsp;</button>
+<% end %>
+</div>
     <% if user.infection == '有' %>
       <div class="box4"><font size="2">
     <% else %>
@@ -209,17 +255,20 @@
       <% if user.roomno == '１３－１' %>
         <% if user.name== '空室' %>
           <div class="box">
-          <div class="box6"><p>１３号室</p></div>
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&emsp;１３号室&emsp;</button></div>
           <div class="box2"></div>
           <div class="box3"><font size="2">13-1</font></div>
           </div>
         <% else %>
       <div class="box">
-        <% if user.gender == '男' %>
-        <div class="box1"><p>１３号室</p></div>
-        <% else %>
-        <div class="box5"><p>１３号室</p></div>
-        <% end %>
+<div class="space9">
+<!-- Button trigger modal -->
+<% if user.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&emsp;１３号室&emsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&emsp;１３号室&emsp;</button>
+<% end %>
+</div>
     <% if user.infection == '有' %>
       <div class="box4"><font size="2">
     <% else %>
@@ -242,17 +291,20 @@
       <% if user.roomno == '１４－１' %>
         <% if user.name== '空室' %>
           <div class="box">
-          <div class="box6"><p>１４号室</p></div>
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&emsp;１４号室&emsp;</button></div>
           <div class="box2"></div>
           <div class="box3"><font size="2">14-1</font></div>
           </div>
         <% else %>
       <div class="box">
-        <% if user.gender == '男' %>
-        <div class="box1"><p>１４号室</p></div>
-        <% else %>
-        <div class="box5"><p>１４号室</p></div>
-        <% end %>
+<div class="space9">
+<!-- Button trigger modal -->
+<% if user.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&emsp;１４号室&emsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&emsp;１４号室&emsp;</button>
+<% end %>
+</div>
     <% if user.infection == '有' %>
       <div class="box4"><font size="2">
     <% else %>
@@ -278,17 +330,20 @@
       <% if user.roomno == '１－１' %>
         <% if user.name== '空室' %>
           <div class="boxl">
-          <div class="box6"><p>１号室</p></div>
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&nbsp;&emsp;１号室&emsp;&nbsp;</button></div>
           <div class="box2"></div>
           <div class="box3"><font size="2">1-1</font></div>
           </div>
         <% else %>
       <div class="boxl">
-        <% if user.gender == '男' %>
-        <div class="box1"><p>１号室</p></div>
-        <% else %>
-        <div class="box5"><p>１号室</p></div>
-        <% end %>
+<div class="space9">
+<!-- Button trigger modal -->
+<% if user.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&nbsp;&emsp;１号室&emsp;&nbsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&nbsp;&emsp;１号室&emsp;&nbsp;</button>
+<% end %>
+</div>
     <% if user.infection == '有' %>
       <div class="box4"><font size="2">
     <% else %>
@@ -311,17 +366,20 @@
       <% if user.roomno == '４－１' %>
         <% if user.name== '空室' %>
           <div class="boxl">
-          <div class="box6"><p>４号室</p></div>
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&nbsp;&emsp;４号室&emsp;&nbsp;</button></div>
           <div class="box2"></div>
           <div class="box3"><font size="2">4-1</font></div>
           </div>
         <% else %>
       <div class="boxl">
-        <% if user.gender == '男' %>
-        <div class="box1"><p>４号室</p></div>
-        <% else %>
-        <div class="box5"><p>４号室</p></div>
-        <% end %>
+<div class="space9">
+<!-- Button trigger modal -->
+<% if user.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&nbsp;&emsp;４号室&emsp;&nbsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&nbsp;&emsp;４号室&emsp;&nbsp;</button>
+<% end %>
+</div>
     <% if user.infection == '有' %>
       <div class="box4"><font size="2">
     <% else %>
@@ -344,17 +402,20 @@
       <% if user.roomno == '５－１' %>
         <% if user.name== '空室' %>
           <div class="boxl">
-          <div class="box6"><p>５号室</p></div>
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&nbsp;&emsp;５号室&emsp;&nbsp;</button></div>
           <div class="box2"></div>
           <div class="box3"><font size="2">5-1</font></div>
           </div>
         <% else %>
       <div class="boxl">
-        <% if user.gender == '男' %>
-        <div class="box1"><p>５号室</p></div>
-        <% else %>
-        <div class="box5"><p>５号室</p></div>
-        <% end %>
+<div class="space9">
+<!-- Button trigger modal -->
+<% if user.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&nbsp;&emsp;５号室&emsp;&nbsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&nbsp;&emsp;５号室&emsp;&nbsp;</button>
+<% end %>
+</div>
     <% if user.infection == '有' %>
       <div class="box4"><font size="2">
     <% else %>
@@ -377,17 +438,20 @@
       <% if user.roomno == '８' %>
         <% if user.name== '空室' %>
           <div class="boxl">
-          <div class="box6"><p>８号室</p></div>
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&nbsp;&emsp;８号室&emsp;&nbsp;</button></div>
           <div class="box2"></div>
           <div class="box3"><font size="2">8-1</font></div>
           </div>
         <% else %>
       <div class="boxl">
-        <% if user.gender == '男' %>
-        <div class="box1"><p>８号室</p></div>
-        <% else %>
-        <div class="box5"><p>８号室</p></div>
-        <% end %>
+<div class="space9">
+<!-- Button trigger modal -->
+<% if user.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&nbsp;&emsp;８号室&emsp;&nbsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&nbsp;&emsp;８号室&emsp;&nbsp;</button>
+<% end %>
+</div>
     <% if user.infection == '有' %>
       <div class="box4"><font size="2">
     <% else %>
@@ -411,17 +475,20 @@
   <div class="boxs2"></div>
         <% if user.name== '空室' %>
           <div class="boxl">
-          <div class="box6"><p>９号室</p></div>
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&nbsp;&emsp;９号室&emsp;&nbsp;</button></div>
           <div class="box2"></div>
           <div class="box3"><font size="2">9</font></div>
           </div>
         <% else %>
       <div class="boxl">
-        <% if user.gender == '男' %>
-        <div class="box1"><p>９号室</p></div>
-        <% else %>
-        <div class="box5"><p>９号室</p></div>
-        <% end %>
+<div class="space9">
+<!-- Button trigger modal -->
+<% if user.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&nbsp;&emsp;９号室&emsp;&nbsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&nbsp;&emsp;９号室&emsp;&nbsp;</button>
+<% end %>
+</div>
     <% if user.infection == '有' %>
       <div class="box4"><font size="2">
     <% else %>
@@ -444,17 +511,20 @@
       <% if user.roomno == '１２' %>
         <% if user.name== '空室' %>
           <div class="boxl">
-          <div class="box6"><p>１２号室</p></div>
+          <div class="space9"><button type="button" class="btn btn-default btn-sm active">&emsp;１２号室&emsp;</button></div>
           <div class="box2"></div>
           <div class="box3"><font size="2">12</font></div>
           </div>
         <% else %>
       <div class="boxl">
-        <% if user.gender == '男' %>
-        <div class="box1"><p>１２号室</p></div>
-        <% else %>
-        <div class="box5"><p>１２号室</p></div>
-        <% end %>
+<div class="space9">
+<!-- Button trigger modal -->
+<% if user.gender == '男' %>
+<button type="button" class="btn btn-info btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&emsp;１２号室&emsp;</button>
+<% else %>
+<button type="button" class="btn btn-danger btn-sm active" data-toggle="modal" data-target="#myModal<%= user.id %>">&emsp;１２号室&emsp;</button>
+<% end %>
+</div>
     <% if user.infection == '有' %>
       <div class="box4"><font size="2">
     <% else %>
@@ -652,25 +722,22 @@
     <aside id="sidebar">
 <div class="space5">
 
-<a href="/users/1 %>"><font size="2">北海タラ</font></a><br>
-<a href="/users/2 %>"><font size="2">青森りんご</font></a><br>
-<a href="/users/3 %>"><font size="2">秋田よしお</font></a><br>
-<a href="/users/4 %>"><font size="2">岩手なおみ</font></a><br>
-<a href="/users/5 %>"><font size="2">福島たけし</font></a><br>
+<a href="/users/1 %>"><font size="2">北海スエ</font></a><br>
+<a href="/users/3 %>"><font size="2">秋田義男</font></a><br>
+<a href="/users/4 %>"><font size="2">岩手智子</font></a><br>
+<a href="/users/5 %>"><font size="2">福島武</font></a><br>
+<a href="/users/7 %>"><font size="2">青森林檎</font></a><br>
 <br>
 <br>
-<br><br>
-経過表<br>
-看護指示<br>
-指示簿一覧<br>
-看護計画<br>
+<br>
+<a href="#">経過表</a><br>
+<a href="#">看護指示</a><br>
+<a href="#">指示簿一覧</a><br>
+<a href="#">看護計画</a><br>
 患者ｽｹｼﾞｭｰﾙ<br>
-看護プロファイル<br>
-移動食事カレンダ<br>
-入院処置<br>
-テンプレート<br>
-SOAP&フォーカス<br>
-患者認証業務<br>
+<a href="#">看護プロファイル</a><br>
+<a href="#">移動食事カレンダ</a><br>
+<a href="#">テンプレート</a><br>
 
 
 
