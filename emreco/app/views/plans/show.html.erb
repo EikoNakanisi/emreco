@@ -10,11 +10,22 @@
         ②後期　本人（30%）</p>
         </div>
         
-        <div class="headbox03">
-          <%= image_tag 'women.png', :title => '女性', :size => '100x50', :style=>"float:left;" %><br>
-          <font size="6"><u>患者名前</u></font></div>
+<div class="headbox03">
+<font size="6"><u>
+<% if @plan.id == 1 %>
+  <%= @name1 %>
+<% elsif @plan.id == 3 %>
+  <%= @name3 %>
+<% elsif @plan.id == 4 %>
+  <%= @name4 %>
+<% elsif @plan.id == 5 %>
+  <%= @name5 %>
+<% else %>
+  <%= @name7 %>
+<% end %>
+</u></font></div>
         <div class="headbox05">
-          <%= image_tag 'alrt_n.png', :title => '感染症未確認', :size => '40x40', :style=>"float:left;" %><br>
+          <%= image_tag 'arg_n.png', :size => '40x40', :style=>"float:left;" %><br>
         </div>
         <div class="headbox05">
           <%= image_tag 'arg_n.png', :size => '40x40', :style=>"float:left;" %><br>
@@ -34,11 +45,11 @@
 
   <aside id="sidebar">
 <div class="space5">
-<a href="/users/1 %>"><font size="2">北海タラ</font></a><br>
-<a href="/users/2 %>"><font size="2">青森りんご</font></a><br>
-<a href="/users/3 %>"><font size="2">秋田よしお</font></a><br>
-<a href="/users/4 %>"><font size="2">岩手なおみ</font></a><br>
-<a href="/users/5 %>"><font size="2">福島たけし</font></a><br>
+<a href="/users/1"><font size="2"><%= @name1 %></font></a><br>
+<a href="/users/3"><font size="2"><%= @name3 %></font></a><br>
+<a href="/users/4"><font size="2"><%= @name4 %></font></a><br>
+<a href="/users/5"><font size="2"><%= @name5 %></font></a><br>
+<a href="/users/7"><font size="2"><%= @name7 %></font></a><br>
 <br>
 <br>
 <br><br>
@@ -61,10 +72,7 @@ SOAP&フォーカス<br>
 
 <div class="plan">
         <div class="ao">&ensp;&ensp;看護問題リスト</div>
-
-
-      <a href="../users/<%= @plan.id %>#a9"><img src="../images/close_btn.png" border="0"></a>
-
+<a href="javascript:history.back()" class="btn btn-default btn-sm active">戻る</a>
 <div class="space1"></div>
 <div class="space2">
 <br><br><br>
@@ -89,10 +97,10 @@ SOAP&フォーカス<br>
 <table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <% unless @plan.npn01.blank? %>
 <tr>
-<td bgcolor="gainsboro" width="45"><b><a href="/plans/<%= @plan.id %>/books/1">#01</a></b></td>
+<td bgcolor="gainsboro" width="45"><b><a href="/books/1">#01</a></b></td>
 <td bgcolor="#FFFFFF" width="850"><%= simple_format(@plan.npn01) %></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/15</td>
-<td bgcolor="#FFFFFF" width="120">中西 永子</td>
+<td bgcolor="#FFFFFF" width="120">看護 花子</td>
 <td bgcolor="#FFFFFF" width="120"></td>
 <td bgcolor="#FFFFFF" width="80"></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/22</td>
@@ -101,7 +109,7 @@ SOAP&フォーカス<br>
 <td bgcolor="gainsboro" valign="top" width="45">患者目標</td>
 <td bgcolor="#FFFFFF" valign="top" width="850"><%= simple_format(@plan.np01) %></td>
 <td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
-<td bgcolor="#FFFFFF" valign="top" width="120">中西 永子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
 <td bgcolor="#FFFFFF" valign="top" width="80"></td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
@@ -111,10 +119,10 @@ SOAP&フォーカス<br>
 <table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <% unless @plan.npn02.blank? %>
 <tr>
-<td bgcolor="gainsboro" width="45"><b><a href="/plans/<%= @plan.id %>/books/2">#02</a></b></td>
+<td bgcolor="gainsboro" width="45"><b><a href="/books/2">#02</a></b></td>
 <td bgcolor="#FFFFFF" width="850"><%= simple_format(@plan.npn02) %></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/15</td>
-<td bgcolor="#FFFFFF" width="120">中西 永子</td>
+<td bgcolor="#FFFFFF" width="120">看護 花子</td>
 <td bgcolor="#FFFFFF" width="120"></td>
 <td bgcolor="#FFFFFF" width="80"></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/22</td>
@@ -123,7 +131,7 @@ SOAP&フォーカス<br>
 <td bgcolor="gainsboro" valign="top" width="45">患者目標</td>
 <td bgcolor="#FFFFFF" valign="top" width="850"><%= simple_format(@plan.np02) %></td>
 <td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
-<td bgcolor="#FFFFFF" valign="top" width="120">中西 永子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
 <td bgcolor="#FFFFFF" valign="top" width="80"></td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
@@ -133,10 +141,10 @@ SOAP&フォーカス<br>
 <table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <% unless @plan.npn03.blank? %>
 <tr>
-<td bgcolor="gainsboro" width="45"><b><a href="/plans/<%= @plan.id %>/books/3">#03</a></b></td>
+<td bgcolor="gainsboro" width="45"><b><a href="/books/3">#03</a></b></td>
 <td bgcolor="#FFFFFF" width="850"><%= simple_format(@plan.npn03) %></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/15</td>
-<td bgcolor="#FFFFFF" width="120">中西 永子</td>
+<td bgcolor="#FFFFFF" width="120">看護 花子</td>
 <td bgcolor="#FFFFFF" width="120"></td>
 <td bgcolor="#FFFFFF" width="80"></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/22</td>
@@ -145,7 +153,7 @@ SOAP&フォーカス<br>
 <td bgcolor="gainsboro" valign="top" width="45">患者目標</td>
 <td bgcolor="#FFFFFF" valign="top" width="850"><%= simple_format(@plan.np03) %></td>
 <td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
-<td bgcolor="#FFFFFF" valign="top" width="120">中西 永子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
 <td bgcolor="#FFFFFF" valign="top" width="80"></td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
@@ -155,10 +163,10 @@ SOAP&フォーカス<br>
 <table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <% unless @plan.npn04.blank? %>
 <tr>
-<td bgcolor="gainsboro" width="45"><b><a href="/plans/<%= @plan.id %>/books/4">#04</a></b></td>
+<td bgcolor="gainsboro" width="45"><b><a href="/books/4">#04</a></b></td>
 <td bgcolor="#FFFFFF" width="850"><%= simple_format(@plan.npn04) %></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/15</td>
-<td bgcolor="#FFFFFF" width="120">中西 永子</td>
+<td bgcolor="#FFFFFF" width="120">看護 花子</td>
 <td bgcolor="#FFFFFF" width="120"></td>
 <td bgcolor="#FFFFFF" width="80"></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/22</td>
@@ -167,7 +175,7 @@ SOAP&フォーカス<br>
 <td bgcolor="gainsboro" valign="top" width="45">患者目標</td>
 <td bgcolor="#FFFFFF" valign="top" width="850"><%= simple_format(@plan.np04) %></td>
 <td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
-<td bgcolor="#FFFFFF" valign="top" width="120">中西 永子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
 <td bgcolor="#FFFFFF" valign="top" width="80"></td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
@@ -177,10 +185,10 @@ SOAP&フォーカス<br>
 <table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <% unless @plan.npn05.blank? %>
 <tr>
-<td bgcolor="gainsboro" width="45"><b><a href="/plans/<%= @plan.id %>/books/5">#05</a></b></td>
+<td bgcolor="gainsboro" width="45"><b><a href="/books/5">#05</a></b></td>
 <td bgcolor="#FFFFFF" width="850"><%= simple_format(@plan.npn05) %></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/15</td>
-<td bgcolor="#FFFFFF" width="120">中西 永子</td>
+<td bgcolor="#FFFFFF" width="120">看護 花子</td>
 <td bgcolor="#FFFFFF" width="120"></td>
 <td bgcolor="#FFFFFF" width="80"></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/22</td>
@@ -189,7 +197,7 @@ SOAP&フォーカス<br>
 <td bgcolor="gainsboro" valign="top" width="45">患者目標</td>
 <td bgcolor="#FFFFFF" valign="top" width="850"><%= simple_format(@plan.np05) %></td>
 <td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
-<td bgcolor="#FFFFFF" valign="top" width="120">中西 永子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
 <td bgcolor="#FFFFFF" valign="top" width="80"></td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
@@ -198,10 +206,10 @@ SOAP&フォーカス<br>
 </table>
 <table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <tr>
-<td bgcolor="gainsboro" width="45"><b><a href="/plans/<%= @plan.id %>/books/6">#06</a></b></td>
+<td bgcolor="gainsboro" width="45"><b><a href="/books/6">#06</a></b></td>
 <td bgcolor="#FFFFFF" width="850">4-2転倒・転落の危険性</td>
 <td bgcolor="#FFFFFF" width="120">2018/01/15</td>
-<td bgcolor="#FFFFFF" width="120">中西 永子</td>
+<td bgcolor="#FFFFFF" width="120">看護 花子</td>
 <td bgcolor="#FFFFFF" width="120"></td>
 <td bgcolor="#FFFFFF" width="80"></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/22</td>
@@ -210,7 +218,7 @@ SOAP&フォーカス<br>
 <td bgcolor="gainsboro" valign="top" width="45">診断指標</td>
 <td bgcolor="#FFFFFF" valign="top" width="850">起立・歩行に必要な筋力が不足している</td>
 <td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
-<td bgcolor="#FFFFFF" valign="top" width="120">中西 永子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
 <td bgcolor="#FFFFFF" valign="top" width="80"></td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
@@ -219,7 +227,7 @@ SOAP&フォーカス<br>
 <td bgcolor="gainsboro" valign="top" width="45">関連因子</td>
 <td bgcolor="#FFFFFF" valign="top" width="850">倦怠感</td>
 <td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
-<td bgcolor="#FFFFFF" valign="top" width="120">中西 永子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
 <td bgcolor="#FFFFFF" valign="top" width="80"></td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
@@ -228,7 +236,7 @@ SOAP&フォーカス<br>
 <td bgcolor="gainsboro" valign="top" width="45">患者目標</td>
 <td bgcolor="#FFFFFF" valign="top" width="850">転倒・転落なくすごすことができる</td>
 <td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
-<td bgcolor="#FFFFFF" valign="top" width="120">中西 永子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
 <td bgcolor="#FFFFFF" valign="top" width="80"></td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
@@ -236,10 +244,10 @@ SOAP&フォーカス<br>
 </table>
 <table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <tr>
-<td bgcolor="gainsboro" width="45"><b><a href="/plans/<%= @plan.id %>/books/7">#07</a></b></td>
+<td bgcolor="gainsboro" width="45"><b><a href="/books/7">#07</a></b></td>
 <td bgcolor="#FFFFFF" width="850">4-3褥創(瘡)の危険性</td>
 <td bgcolor="#FFFFFF" width="120">2018/01/15</td>
-<td bgcolor="#FFFFFF" width="120">中西 永子</td>
+<td bgcolor="#FFFFFF" width="120">看護 花子</td>
 <td bgcolor="#FFFFFF" width="120"></td>
 <td bgcolor="#FFFFFF" width="80"></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/22</td>
@@ -248,7 +256,7 @@ SOAP&フォーカス<br>
 <td bgcolor="gainsboro" valign="top" width="45">診断指標</td>
 <td bgcolor="#FFFFFF" valign="top" width="850">圧迫・ずれ・摩擦・湿潤が生じやすい<br>重症度が高く、栄養状態が不良である状態</td>
 <td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
-<td bgcolor="#FFFFFF" valign="top" width="120">中西 永子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
 <td bgcolor="#FFFFFF" valign="top" width="80"></td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
@@ -257,7 +265,7 @@ SOAP&フォーカス<br>
 <td bgcolor="gainsboro" valign="top" width="45">関連因子</td>
 <td bgcolor="#FFFFFF" valign="top" width="850">全身状態の低下(低アルブミン血症、耐糖能障害、貧血、発熱、低血圧、るいそう)</td>
 <td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
-<td bgcolor="#FFFFFF" valign="top" width="120">中西 永子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
 <td bgcolor="#FFFFFF" valign="top" width="80"></td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
@@ -266,7 +274,7 @@ SOAP&フォーカス<br>
 <td bgcolor="gainsboro" valign="top" width="45">患者目標</td>
 <td bgcolor="#FFFFFF" valign="top" width="850">皮膚を性状に保つことができ、褥瘡形成がない</td>
 <td bgcolor="#FFFFFF" valign="top" width="120">2018/01/15</td>
-<td bgcolor="#FFFFFF" valign="top" width="120">中西 永子</td>
+<td bgcolor="#FFFFFF" valign="top" width="120">看護 花子</td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
 <td bgcolor="#FFFFFF" valign="top" width="80"></td>
 <td bgcolor="#FFFFFF" valign="top" width="120"></td>
@@ -274,9 +282,11 @@ SOAP&フォーカス<br>
 </table>
 
 
+
 <%= link_to 'この看護計画を編集する', edit_plan_path(@plan) %>
 <%= link_to 'この看護計画を削除する', @plan, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
 <%= link_to '新規看護計画の投稿', new_plan_path %>
+<%= link_to 'plan_index', plans_path %>
 
 </div>
 

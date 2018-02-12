@@ -1,45 +1,55 @@
-<div class="boxContainer">
-<div class="page-header">
-        <div class="headbox01">入院 病棟<br>緩和ケア</div>
-        <div class="headbox02">
-          <p class="sample1">ID : <%= @result.id %><br>
+<!-- 検査結果 -->
 
+<div class="container">
+<div class="row">
+<div class="col-md-12">
 
-        ②後期　本人（30%）</p>
-        </div>
-        
-        <div class="headbox03">
-          <%= image_tag 'women.png', :title => '女性', :size => '100x50', :style=>"float:left;" %><br>
-          <font size="6"><u>患者名前</u></font></div>
-        <div class="headbox05">
-          <%= image_tag 'alrt_n.png', :title => '感染症未確認', :size => '40x40', :style=>"float:left;" %><br>
-        </div>
-        <div class="headbox05">
+<table border="1" width="1100" cellspacing="0" cellpadding="5" bordercolor="#CCCCFF">
+<tr>
+<th bgcolor="#CCCCFF"><u>&nbsp;入院 病棟<br>&nbsp;緩和ケア</u></th>
+<th bgcolor="#CCCCFF">ID:<%= @result.id %> <br><u>国保30本人(30%)</u></th>
+<th bgcolor="#CCCCFF">
+
+</th>
+<th bgcolor="#CCCCFF"><font size="6"><u>
+<% if @result.id == 1 %>
+  <%= @name1 %>
+<% elsif @result.id == 3 %>
+  <%= @name3 %>
+<% elsif @result.id == 4 %>
+  <%= @name4 %>
+<% elsif @result.id == 5 %>
+  <%= @name5 %>
+<% else %>
+  <%= @name7 %>
+<% end %>
+</u></font></th>
+<th bgcolor="#CCCCFF">
+
           <%= image_tag 'arg_n.png', :size => '40x40', :style=>"float:left;" %><br>
-        </div>
-        <div class="headbox04">
-          00歳00ヶ月&ensp;&ensp;&ensp;00型Rh(+)&ensp;&ensp;<u>000cm&ensp;000Kg</u></div>
-        <div class="headbox05">
-          <p class="sample1">
-          <button type="button" name="aaa" value="aaa">
-          <font size="2" color="#333399">Prof</font></button><br>
-          <button type="button" name="aaa" value="aaa">
-          <font size="2" color="#333399">病名</font></button>
-          </p></div>
-<div class="headbox05">
-<ul class="nav">
-  <li><a href="/">カルテ<br>閉じる</a></li>
-</ul>
-</div>
+
+</th>
+<th bgcolor="#CCCCFF">
+          <%= image_tag 'arg_n.png', :size => '40x40', :style=>"float:left;" %><br>
+</th>
+<th bgcolor="#CCCCFF">00歳00ヶ月&ensp;&ensp;&ensp;00型Rh(*)&ensp;&ensp;&ensp;<u>000.0cm&ensp;000.000Kg</u></th>
+<th bgcolor="#CCCCFF">
+<a href="javascript:history.back()" class="btn btn-default btn-sm active">戻る</a>
+<a href="#" class="btn btn-default btn-sm active" role="button" disabled="disabled">病名</a>
+</th>
+<th bgcolor="#CCCCFF"><a href="/" class="btn btn-warning btn-sm active" role="button">カルテ<br>閉じる</a></th>
+</tr>
+</table>
+
 </div>
 
-  <aside id="sidebar">
+<aside id="sidebar">
 <div class="space5">
-<a href="/users/1 %>"><font size="2">北海タラ</font></a><br>
-<a href="/users/2 %>"><font size="2">青森りんご</font></a><br>
-<a href="/users/3 %>"><font size="2">秋田よしお</font></a><br>
-<a href="/users/4 %>"><font size="2">岩手なおみ</font></a><br>
-<a href="/users/5 %>"><font size="2">福島たけし</font></a><br>
+<a href="/users/1"><font size="2"><%= @name1 %></font></a><br>
+<a href="/users/3"><font size="2"><%= @name3 %></font></a><br>
+<a href="/users/4"><font size="2"><%= @name4 %></font></a><br>
+<a href="/users/5"><font size="2"><%= @name5 %></font></a><br>
+<a href="/users/7"><font size="2"><%= @name7 %></font></a><br>
 <br>
 <br>
 <br><br>
@@ -49,11 +59,10 @@
 </aside>
 
 
-<body>
+
 <div class="space8">
-<a href="../users/<%= @result.id %>#a10"><img src="../images/close_btn.png" border="0"></a>
 <div class="row">
-<div class="col-sm-offset-1 col-md-6">
+<div class="col-sm-offset-1 col-md-8">
   <h3>採取日時：2018／01／15(月)</h3>
 <table class="table table-bordered">
   <tr>
@@ -304,9 +313,11 @@ mg/dL
 </div>
 </div>
 
+</div>
+</div>
+
 <%= link_to 'この検査結果を編集する', edit_result_path(@result) %>
 <%= link_to 'この検査結果を削除する', @result, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
 <%= link_to '新規検査結果の投稿', new_result_path %>
 
 
-</body>

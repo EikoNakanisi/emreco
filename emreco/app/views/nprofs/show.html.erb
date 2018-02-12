@@ -14,7 +14,14 @@
           <%= image_tag 'women.png', :title => '女性', :size => '100x50', :style=>"float:left;" %><br>
         <% end %>
 </th>
-<th bgcolor="#CCCCFF"><font size="6"><u><%= @user.name %></u></font></th>
+
+<th bgcolor="#CCCCFF"><font size="6"><u>
+              <ruby>
+            <rb><%= @user.name %></rb>
+            <rp>（</rp><rt><%= @user.kana %></rt><rp>）</rp>
+            </ruby>
+            </u></font></th>
+            
 <th bgcolor="#CCCCFF">
         <% if @user.infection == '有' %>
           <%= image_tag 'alrt_y.png', :title => '感染症：HCV(+)', :size => '40x40', :style=>"float:left;" %><br>
@@ -72,41 +79,98 @@
 
 
   <!-- Tab panes -->
-  <div class="tab-content">
+<div class="tab-content">
   <!-- プロフィール -->
-    <div role="tabpanel" class="tab-pane active" id="home"><div class="cover03">
+<div role="tabpanel" class="tab-pane active" id="home"><div class="cover03">
 <div class="space6">
 <div class="row">
 
-<div class="space11"><%= @user.id %>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-&emsp;&emsp;<%= @user.name %>&emsp;&emsp;&emsp;
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;カナ氏名カナ氏名
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<%= @user.gender %>
-&emsp;&emsp;&emsp;&emsp;<%= @user.birthday %>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<%= @user.bloodtype %>
-&emsp;&emsp;&emsp;&emsp;&emsp;＋<br></div>
-<div class="space6">
-<br>&emsp;&emsp;&emsp;2018/01/15
-&emsp;&emsp;&emsp;10&emsp;&emsp;&emsp;00&emsp;&emsp;&emsp;&emsp;00&emsp;&emsp;&emsp;&emsp;日本
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;城陽市寺田
-<br></div>
-<br><div class="space6">
-&emsp;&emsp;&emsp;&emsp;0800001234<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;氏名名前<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;娘<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;自宅
-<br></div>
-<div class="space6">
-<br>&emsp;&emsp;&emsp;結婚(死別)&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;キーパーソン
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;娘<br><br></div>
-<div class="space6">&emsp;&emsp;&emsp;ストレッチャー
-<br><br><br><br><br><br></div><div class="space6">&emsp;&emsp;&emsp;入院経過
-</div>
+<div class="space11">
+<table border="3" bordercolor="#C0C0C0" width="1000" cellspacing="5">
+<tr>
+<th bgcolor="#C0C0C0"><font color="#0000CD">ID</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">氏名</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">カナ氏名</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">性別</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">生年月日</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">血液</font></th>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="150"><%= @user.id %></td>
+<td bgcolor="#FFFFFF" width="150"><%= @user.name %></td>
+<td bgcolor="#FFFFFF" width="150"><%= @user.kana %></td>
+<td bgcolor="#FFFFFF" width="50"><%= @user.gender %></td>
+<td bgcolor="#FFFFFF" width="150"><%= @user.birthday %></td>
+<td bgcolor="#FFFFFF" width="150">ABO型<%= @user.bloodtype %>型　RH型+</td>
+</tr>
+</table>
+
+<table border="3" bordercolor="#C0C0C0" width="1000" cellspacing="5">
+<tr>
+<th bgcolor="#C0C0C0"><font color="#0000CD">入院日</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">入院時間</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">入院時年齢</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">国籍</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">現住所</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">自宅電話番号</font></th>
+<th bgcolor="#C0C0C0"><font color="#0000CD">緊急（医事課登録）</font></th>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="100"><%= @user.hospitalization %></td>
+<td bgcolor="#FFFFFF" width="100">10時00分</td>
+<td bgcolor="#FFFFFF" width="100"><%= @user.age %></td>
+<td bgcolor="#FFFFFF" width="100">日本</td>
+<td bgcolor="#FFFFFF" width="300"><%= @user.address %></td>
+<td bgcolor="#FFFFFF" width="150">000-000-0000</td>
+<td bgcolor="#FFFFFF" width="150">000-000-0000</td>
+</tr>
+</table>
+
+<table border="4" bordercolor="#C0C0C0" width="630" cellspacing="5">
+<tr><th bgcolor="#C0C0C0" colspan="6"><font color="#0000CD">緊急連絡先</font></th></tr>
+<tr>
+<td bgcolor="#C0C0C0" align="right">&#9312;&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;000-000-0000</td>
+<td bgcolor="#C0C0C0" align="right">&#9313;&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;000-000-0000</td>
+<td bgcolor="#C0C0C0" align="right">&#9314;&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;000-000-0000</td>
+</tr>
+
+<tr>
+<td bgcolor="#C0C0C0" align="right">氏名&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;鍵内一子</td>
+<td bgcolor="#C0C0C0" align="right">氏名&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;鍵内二子</td>
+<td bgcolor="#C0C0C0" align="right">氏名&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;鍵内一夫</td>
+</tr>
+
+<tr>
+<td bgcolor="#C0C0C0" align="right">本人との関係&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;<%= @user.keyp1 %></td>
+<td bgcolor="#C0C0C0" align="right">本人との関係&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;<%= @user.keyp2 %></td>
+<td bgcolor="#C0C0C0" align="right">本人との関係&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;<%= @user.keyp3 %></td>
+</tr>
+
+<tr>
+<td bgcolor="#C0C0C0" align="right">連絡先場所&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;携帯電話</td>
+<td bgcolor="#C0C0C0" align="right">連絡先場所&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;携帯電話</td>
+<td bgcolor="#C0C0C0" align="right">連絡先場所&nbsp;</td>
+<td bgcolor="#FFFFE0">&nbsp;携帯電話</td>
+</tr>
+
+</table>
+
 
 </div>
-</div>
 
-</div></div>
+
+</div></div></div></div>
 
 
 

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :ereports
   resources :instructions
 
-  resources :plans do
+  resources :plans, :shallow => true do
     resources :books
   end
   resources :results

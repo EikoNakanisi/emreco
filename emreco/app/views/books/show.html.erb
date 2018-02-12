@@ -21,11 +21,11 @@
 <table class="table table-condensed table-bordered">
   <tr>
     <td bgcolor="#dedede">問題番号</td>
-    <td>001</td>
+    <td><%= @book.plan.id %></td>
     <td bgcolor="#dedede">登録日</td>
     <td>2018/01/15</td>
     <td bgcolor="#dedede">登録者</td>
-    <td>中西永子</td>
+    <td>看護 花子</td>
   </tr>
   <tr>
     <td bgcolor="#dedede"></td>
@@ -40,7 +40,7 @@
 <table class="table table-condensed table-bordered">
   <tr>
     <td bgcolor="#dedede" width="70">看護問題</td>
-    <td width="400"></td>
+    <td width="400"><%= @book.plan.npn01 %></td>
   </tr>
   <tr>
     <td bgcolor="#dedede" width="70">Nursing<br>problem</td>
@@ -81,40 +81,40 @@
                 <col style="width: 50%;" />
                 <col style="width: 50%;" />                    
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="sihyou1"><%= @book.sihyou1 %></p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="sihyou2"><%= @book.sihyou2 %></p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="sihyou3"><%= @book.sihyou3 %></p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
             </table>
         </div>
@@ -143,40 +143,40 @@
                 <col style="width: 50%;" />
                 <col style="width: 50%;" />                    
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="kanren1"><%= @book.kanren1 %></p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="kanren2"><%= @book.kanren2 %></p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="kanren3"><%= @book.kanren3 %></p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
             </table>
         </div>
@@ -230,49 +230,49 @@
                 <col style="width: 20%;" />                    
                 <col style="width: 10%;" />                    
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="endpoint1"><%= @book.endpoint1 %></p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="endpoint2"><%= @book.endpoint2 %></p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="endpoint3"><%= @book.endpoint3 %></p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
                 <tr>
-                    <td><p title="データ">データ</p></td>
-                    <td><p title="データ">データ</p></td>
-                    <td class="r_none"><p title="データ">データ</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td><p title="データ">&ensp;</p></td>
+                    <td class="r_none"><p title="データ">&ensp;</p></td>
                 </tr>
             </table>
         </div>
@@ -328,69 +328,151 @@
                 <col style="width: 65%;" />
                 <col style="width: 5%;" />
                 <col style="width: 20%;" />                    
-                <tr>
-                    <td><p title="OP">OP</p></td>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p>痛みの原因の評価身体所見、画像所見、血液検査所見（貧血の有無）</td>
-                    <td><p title=""></p></td>
-                    <td class="r_none"><p title="">2018/01/15</p></td>
-                </tr>
-                <tr>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td class="r_none"><p title=""></p></td>
-                </tr>
-                <tr>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td class="r_none"><p title=""></p></td>
-                </tr>
-                <tr>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td class="r_none"><p title=""></p></td>
-                </tr>
-                <tr>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td class="r_none"><p title=""></p></td>
-                </tr>
-                <tr>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td class="r_none"><p title=""></p></td>
-                </tr>
-                <tr>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td class="r_none"><p title=""></p></td>
-                </tr>
-                <tr>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td class="r_none"><p title=""></p></td>
-                </tr>
-                <tr>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td><p title=""></p></td>
-                    <td class="r_none"><p title=""></p></td>
-                </tr>
+
+
+    <tr>
+      <td><p title="nno"><%= @book.nno01 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @book.nplan01 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/15</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @book.nno02 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @book.nplan02 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/15</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @book.nno03 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @book.nplan03 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/15</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @book.nno04 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @book.nplan04 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/15</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @book.nno05 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @book.nplan05 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/15</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @book.nno06 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @book.nplan06 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/15</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @book.nno07 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @book.nplan07 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/15</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @book.nno08 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @book.nplan08 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/15</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @book.nno09 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @book.nplan09 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/15</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @book.nno10 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @book.nplan10 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/15</p></td>
+    </tr>
+
+    <tr>
+      <td><p title="nno"><%= @book.nno11 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @book.nplan11 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/15</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @book.nno12 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @book.nplan12 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/15</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @book.nno13 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @book.nplan13 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/15</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @book.nno14 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @book.nplan14 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/15</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @book.nno15 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @book.nplan15 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/15</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @book.nno16 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @book.nplan16 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/15</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @book.nno17 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @book.nplan17 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/15</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @book.nno18 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @book.nplan18 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/15</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @book.nno19 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @book.nplan19 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/15</p></td>
+    </tr>
+    <tr>
+      <td><p title="nno"><%= @book.nno20 %></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="nplan"></p><%= @book.nplan20 %></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">2018/01/15</p></td>
+    </tr>
+
+
             </table>
         </div>
     </div>
@@ -406,7 +488,7 @@
 </div>
 </div>
 
-
+<%= link_to 'Edit', edit_book_path %>
 
 
 

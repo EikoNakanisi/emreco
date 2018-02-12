@@ -9,6 +9,11 @@
     <%= f.text_field :name, class: 'form-control' %>
   </div>
 
+  <div class="form-group">
+    <%= f.label :kana, 'カナ' %>
+    <%= f.text_field :kana, class: 'form-control' %>
+  </div>
+  
   <div class="hospitalization_field">
     <%= f.label :hospitalization, '入院日' %>
     <%= f.date_select(:hospitalization,
@@ -55,6 +60,16 @@
     <%= f.text_field :weight, class: 'form-control' %>
   </div>
 
+  <div class="form-group">
+    <%= f.label :address, '住所' %>
+    <%= f.text_field :address, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :food, '食種' %>
+    <%= f.text_field :food, class: 'form-control' %>
+  </div>
+
   <div class="field">
     <%= f.label :infection, '感染症' %>
     <%= f.select :infection, User.infections.keys, {prompt: '選択してください'}, class: 'form-control btn btn-info' %>
@@ -74,6 +89,32 @@
     <%= f.label :post, '掲示板' %>
     <%= f.text_area :post, class: 'form-control', rows: 3 %>
   </div>
+
+  <div class="form-group">
+    <%= f.label :keyp1, 'キーパーソン関連1' %>
+    <%= f.text_field :keyp1, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :keyg1, 'キーパーソン1性別' %>
+    <%= f.select :keyg1, User.keyg1s.keys, {prompt: '選択してください'}, class: 'form-control btn btn-info' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :keyp2, 'キーパーソン関連2' %>
+    <%= f.text_field :keyp2, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :keyg2, 'キーパーソン2性別' %>
+    <%= f.select :keyg2, User.keyg2s.keys, {prompt: '選択してください'}, class: 'form-control btn btn-info' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :keyp3, 'キーパーソン関連3' %>
+    <%= f.text_field :keyp3, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :keyg3, 'キーパーソン3性別' %>
+    <%= f.select :keyg3, User.keyg3s.keys, {prompt: '選択してください'}, class: 'form-control btn btn-info' %>
+  </div>
+
 
     <%= f.submit '入力', class: 'btn btn-primary btn-block' %>
     <% end %>

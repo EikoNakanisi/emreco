@@ -10,7 +10,7 @@
 <div class="col-md-1">
 <button type="button" class="btn btn-default active">最新表示</button>
 </div>
-<div class="col-md-10">
+<div class="col-md-9">
 <button type="button" class="btn btn-default active">入院申込</button>
 <button type="button" class="btn btn-default active">退院許可</button>
 <button type="button" class="btn btn-default active">転棟申込</button>
@@ -27,34 +27,32 @@
 <button type="button" class="btn btn-default active">食事一括指示</button>
 </div>
 
-<div class="col-md-1">
-&emsp;</div>
-<div class="col-md-1">
-&emsp;</div>
 
-
-<div class="col-md-1">
+<div class="col-md-2">
 <a href="/users/<%= @user.id %>" class="btn btn-default active" role="button">閉じる</a>
-
+<a href="javascript:history.back()" class="btn btn-default active">戻る</a>
 </div>
+
+
+
 
 <div class="col-md-12">&emsp;</div>
 <div class="col-md-12">
 <table class="table table-bordered table-condensed">
   <tr>
     <th class="text-center">2018年</th>
-    <th class="text-center">00/00(月)</th>
-    <th class="text-center">00/00(月)</th>
-    <th class="text-center">00/00(月)</th>
-    <th class="text-center">00/00(月)</th>
-    <th class="text-center">00/00(月)</th>
-    <th class="text-center">00/00(月)</th>
-    <th class="text-center">00/00(月)</th>
-    <th class="text-center">00/00(月)</th>
-    <th class="text-center">00/00(月)</th>
-    <th class="text-center">00/00(月)</th>
-    <th class="text-center">00/00(月)</th>
-    <th class="text-center">00/00(月)</th>
+    <th class="text-center">01/15(月)</th>
+    <th class="text-center">01/16(火)</th>
+    <th class="text-center">01/17(水)</th>
+    <th class="text-center">01/18(木)</th>
+    <th class="text-center">01/19(金)</th>
+    <th class="text-center">01/20(土)</th>
+    <th class="text-center">01/21(日)</th>
+    <th class="text-center">01/22(月)</th>
+    <th class="text-center">01/23(火)</th>
+    <th class="text-center">01/24(水)</th>
+    <th class="text-center">01/25(木)</th>
+    <th class="text-center">01/26(金)</th>
   </tr>
   <tr>
     <td  rowspan="4" class="text-center">移動情報</td>
@@ -63,7 +61,7 @@
     <td class="danger"></td><td class="danger"></td><td class="danger"></td><td class="danger"></td>
   </tr>
   <tr>
-    <td class="danger">&emsp;</td><td class="danger"></td><td class="danger"></td><td class="danger"></td>
+    <td class="danger">&#9679;10入院</td><td class="danger"></td><td class="danger"></td><td class="danger"></td>
     <td class="danger"></td><td class="danger"></td><td class="danger"></td><td class="danger"></td>
     <td class="danger"></td><td class="danger"></td><td class="danger"></td><td class="danger"></td>
   </tr>
@@ -80,13 +78,13 @@
 
   <tr>
     <td class="text-center">食事(朝)</td>
-    <td class="warning text-center">■</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td>
+    <td class="warning text-center">&#9632;</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td>
     <td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td>
     <td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td>
   </tr>
   <tr>
     <td class="text-center">食事(昼)</td>
-    <td class="warning text-center">軟･一口大<br>･副食1/2</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td>
+    <td class="warning text-center"><%= @user.food %></td><td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td>
     <td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td>
     <td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td><td class="warning text-center">↓</td>
   </tr>
@@ -117,7 +115,7 @@
 
   <tr>
     <td class="text-center">主担当医</td>
-    <td class="info">→主担当医</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
+    <td class="info">→医者太郎</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
     <td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
     <td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
   </tr>
@@ -135,13 +133,13 @@
   </tr>
   <tr>
     <td class="text-center">担当看護</td>
-    <td class="info">→中西永子</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
+    <td class="info">→看護花子</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
     <td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
     <td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
   </tr>
   <tr>
     <td class="text-center">副担当看</td>
-    <td class="info">→中西永子</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
+    <td class="info">→看護良子</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
     <td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
     <td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td><td class="info text-center">→</td>
   </tr>
@@ -153,28 +151,87 @@
   </tr>
   </table>
 </div>
-<div class="col-md-4">
+<div class="col-md-2">
   移動情報
 <table class="table table-bordered table-condensed">
-  <tr><th class="info">診療科</th><th class="info">緩和ケア内科</th></tr>
+  <tr><td class="info">診療科</td><td class="info">緩和ケア内科</td></tr>
   <tr><td class="info">病棟</td><td class="info">病棟</td></tr>
   <tr><td class="info">病室</td><td class="info">１号室</td></tr>
   <tr><td class="info">病床</td><td class="info">１－１</td></tr>
-  <tr><td class="info">主担当医</td><td class="info">主担当医</td></tr>
+  <tr><td class="info">主担当医</td><td class="info">医者太郎</td></tr>
   <tr><td class="info">担当医</td><td class="info">担当医</td></tr>
   <tr><td class="info">担当医</td><td class="info">担当医</td></tr>
-
 </table>
 </div>
-<div class="col-md-4">
+<div class="col-md-2">
   看護師･チーム情報
 <table class="table table-bordered table-condensed">
-  <tr><td class="info">担当看護師</td><td class="info">中西永子</td></tr>
-  <tr><td class="info">副担当看護師</td><td class="info">中西永子</td></tr>
+  <tr><td class="info">担当看護師</td><td class="info">看護花子</td></tr>
+  <tr><td class="info">副担当看護師</td><td class="info">看護良子</td></tr>
   <tr><td class="info">チーム</td><td class="info">なし</td></tr>
-
 </table>
 </div>
+
+<% if @user.food == '欠食' %>
+<div class="col-md-4">
+  食事情報
+<table class="table table-bordered table-condensed">
+  <tr><td class="info">食種</td><td class="info"><%= @user.food %></td></tr>
+  <tr><td class="info">主食/飲み物 朝</td><td class="info">主食なし</td></tr>
+  <tr><td class="info">主食/飲み物 昼</td><td class="info">主食なし</td></tr>
+  <tr><td class="info">主食/飲み物 夕</td><td class="info">主食なし</td></tr>
+  <tr><td class="info">コメント</td><td class="info">&emsp;</td></tr>
+  <tr><td class="info">&emsp;</td><td class="info">&emsp;</td></tr>
+  <tr><td class="info">&emsp;</td><td class="info">&emsp;</td></tr>
+</table>
+</div>
+<div class="col-md-3">
+  栄養量
+<table class="table table-bordered table-condensed">
+  <tr><td class="info">エネルギー</td><td class="info">0</td><td class="info">Kcal</td></tr>
+  <tr><td class="info">蛋白質</td><td class="info">0</td><td class="info">g</td></tr>
+  <tr><td class="info">脂質</td><td class="info">0</td><td class="info">g</td></tr>
+  <tr><td class="info">炭水化物</td><td class="info">0</td><td class="info">g</td></tr>
+  <tr><td class="info">カリウム</td><td class="info">0</td><td class="info">mg</td></tr>
+  <tr><td class="info">カルシウム</td><td class="info">0</td><td class="info">mg</td></tr>
+  <tr><td class="info">リン</td><td class="info">0</td><td class="info">mg</td></tr>
+  <tr><td class="info">鉄</td><td class="info">0</td><td class="info">mg</td></tr>
+  <tr><td class="info">亜鉛</td><td class="info">0</td><td class="info">mg</td></tr>
+  <tr><td class="info">ビタミンＡ</td><td class="info">0</td><td class="info">μg</td></tr>
+</table>
+</div>
+<% else %>
+<div class="col-md-4">
+  食事情報
+<table class="table table-bordered table-condensed">
+  <tr><td class="info">食種</td><td class="info"><%= @user.food %></td></tr>
+  <tr><td class="info">主食/飲み物 朝</td><td class="info">パン色々/牛乳（ホット）</td></tr>
+  <tr><td class="info">主食/飲み物 昼</td><td class="info">ご飯1/3</td></tr>
+  <tr><td class="info">主食/飲み物 夕</td><td class="info">麺色々1/3</td></tr>
+  <tr><td class="info">コメント</td><td class="info">納豆禁</td></tr>
+  <tr><td class="info">&emsp;</td><td class="info">山芋オクラ禁</td></tr>
+  <tr><td class="info">&emsp;</td><td class="info">果物毎食付</td></tr>
+</table>
+</div>
+<div class="col-md-3">
+  栄養量
+<table class="table table-bordered table-condensed">
+  <tr><td class="info">エネルギー</td><td class="info">854</td><td class="info">Kcal</td></tr>
+  <tr><td class="info">蛋白質</td><td class="info">32.3</td><td class="info">g</td></tr>
+  <tr><td class="info">脂質</td><td class="info">22.9</td><td class="info">g</td></tr>
+  <tr><td class="info">炭水化物</td><td class="info">128</td><td class="info">g</td></tr>
+  <tr><td class="info">カリウム</td><td class="info">1200</td><td class="info">mg</td></tr>
+  <tr><td class="info">カルシウム</td><td class="info">267.0</td><td class="info">mg</td></tr>
+  <tr><td class="info">リン</td><td class="info">480.1</td><td class="info">mg</td></tr>
+  <tr><td class="info">鉄</td><td class="info">4.248</td><td class="info">mg</td></tr>
+  <tr><td class="info">亜鉛</td><td class="info">14.09</td><td class="info">mg</td></tr>
+  <tr><td class="info">ビタミンＡ</td><td class="info">263.3</td><td class="info">μg</td></tr>
+</table>
+</div>
+<% end %>
+
+
+
 
 </div>
 

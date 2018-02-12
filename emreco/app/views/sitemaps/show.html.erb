@@ -16,7 +16,12 @@
           <%= image_tag 'women.png', :title => '女性', :size => '100x50', :style=>"float:left;" %><br>
         <% end %>
 </th>
-<th bgcolor="#CCCCFF"><font size="6"><u><%= @user.name %></u></font></th>
+<th bgcolor="#CCCCFF"><font size="6"><u>
+              <ruby>
+            <rb><%= @user.name %></rb>
+            <rp>（</rp><rt><%= @user.kana %></rt><rp>）</rp>
+            </ruby>
+            </u></font></th>
 <th bgcolor="#CCCCFF">
         <% if @user.infection == '有' %>
           <%= image_tag 'alrt_y.png', :title => '感染症：HCV(+)', :size => '40x40', :style=>"float:left;" %><br>
@@ -54,8 +59,8 @@
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">入18/01/15(月)</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">入18/01/16(火)</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="../dreports/<%= @user.id %>">入18/01/15(月)</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="../dreports/<%= @hensu1 + @user.id %>">入18/01/16(火)</a></li>
     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">入18/01/17(水)</a></li>
   </ul>
 </div>
@@ -69,7 +74,7 @@
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">18/01/15(月)血</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="../results/<%= @user.id %>">18/01/15(月)血液</a></li>
     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">全科</a></li>
   </ul>
 </div>
@@ -82,9 +87,9 @@
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">18/01/15(月)</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">18/01/16(火)</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">18/01/17(水)</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="../nreports/<%= @user.id %>">18/01/15(月)</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="../nreports/<%= @hensu1 + @user.id %>">18/01/16(火)</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="../nreports/<%= @hensu2 + @user.id %>">18/01/17(水)</a></li>
   </ul>
 </div>
 
@@ -94,9 +99,9 @@
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">18/01/15(月)</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">18/01/16(火)</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">18/01/17(水)</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">18/01/15(月)</a></li><!--../prescriptions/<%= @user.id %>">18/01/15(月)</a></li> -->
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">18/01/16(火)</a></li><!--../prescriptions/<%= @hensu1 + @user.id %>">18/01/16(火)</a></li> -->
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">18/01/17(水)</a></li><!--../prescriptions/<%= @hensu2 + @user.id %>">18/01/17(水)</a></li> -->
   </ul>
 </div>
 
@@ -106,9 +111,9 @@
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">18/01/15(月)</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">18/01/16(火)</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">18/01/17(水)</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="../injections/<%= @user.id %>">18/01/15(月)</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="../injections/<%= @hensu1 + @user.id %>">18/01/16(火)</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="../injections/<%= @hensu2 + @user.id %>">18/01/17(水)</a></li>
   </ul>
 </div>
 
@@ -124,9 +129,9 @@
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">18/01/15(月)</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">18/01/16(火)</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">18/01/17(水)</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="../instructions/<%= @user.id %>">18/01/15(月)</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="../instructions/<%= @hensu1 + @user.id %>">18/01/16(火)</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="../instructions/<%= @hensu2 + @user.id %>">18/01/17(水)</a></li>
   </ul>
 </div>
 
@@ -182,11 +187,12 @@
   <div class="sidebar">
 <div class="space5">
 
-<a href="/users/1 %>"><font size="2">北海スエ</font></a><br>
-<a href="/users/3 %>"><font size="2">秋田義男</font></a><br>
-<a href="/users/4 %>"><font size="2">岩手智子</font></a><br>
-<a href="/users/5 %>"><font size="2">福島武</font></a><br>
-<a href="/users/7 %>"><font size="2">青森林檎</font></a><br>
+<a href="/users/1"><font size="2"><%= @name1 %></font></a><br>
+<a href="/users/3"><font size="2"><%= @name3 %></font></a><br>
+<a href="/users/4"><font size="2"><%= @name4 %></font></a><br>
+<a href="/users/5"><font size="2"><%= @name5 %></font></a><br>
+<a href="/users/7"><font size="2"><%= @name7 %></font></a><br>
+<br>
 <br>
 <br>
 <br>

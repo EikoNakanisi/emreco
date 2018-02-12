@@ -3,6 +3,7 @@
 <ul>
   <% @plans.each do |plan| %>
     <li><%= link_to plan.id, plan %><%= link_to '編集する', edit_plan_path(plan) %> :<%= plan.id %></li>
+    <li><%= link_to 'Show Books', plan_books_path(plan) %></li>
   <% end %>
 </ul>
 

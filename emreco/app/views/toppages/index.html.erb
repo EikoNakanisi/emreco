@@ -19,7 +19,7 @@
       </div>
       <div class="modal-body"><h4>
         ID:<%= user.id %><br>
-        カナ氏名：<br>
+        カナ氏名：<%= user.kana %><br>
         氏名：<%= user.name %><br>
         年齢：<%= user.age %>歳00ヶ月<br>
         生年月日：<%= user.birthday %><br>
@@ -27,11 +27,11 @@
         診療科：緩和ケア内科<br>
         入院日：2018/01/15<br>
         在院日数：3日<br>
-        主担当医：<br>
+        主担当医：医者　太郎<br>
         担当医1：<br>
         担当医2：<br>
-        担当看護師：中西　永子<br>
-        副担当看護師：
+        担当看護師：看護　花子<br>
+        副担当看護師：看護　良子
         </h4>
       </div>
     </div>
@@ -755,7 +755,7 @@
 <%= link_to '新規計画の投稿', new_plan_path %><br>
 <%= link_to '新規検査結果の投稿', new_result_path %><br>
 <a href="../results/1">検査結果</a><br>
-
+<a href="../plans/1/books">看護計画詳細</a><br>
 </div>
     </aside>
 

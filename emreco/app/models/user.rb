@@ -14,6 +14,13 @@ enum bloodtype: {Ａ:0, Ｂ:1, Ｏ:2, ＡＢ:3}
 enum infection: {無:0, 有:1}
 enum aid: {独歩:0, 護送:1, 担送:2}
 
-
-
+  validates :kana, length: { maximum: 50 }
+  validates :address, length: { maximum: 100 }
+  validates :food, length: { maximum: 100 }
+  validates :keyp1, length: { maximum: 50 }
+  validates :keyp2, length: { maximum: 50 }
+  validates :keyp3, length: { maximum: 50 }
+  enum keyg1: {男１:0, 女１:1}
+  enum keyg2: {男２:0, 女２:1}
+  enum keyg3: {男３:0, 女３:1}
 end

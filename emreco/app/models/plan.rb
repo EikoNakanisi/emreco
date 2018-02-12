@@ -10,4 +10,6 @@ class Plan < ApplicationRecord
   validates :npn03, length: { maximum: 100 }
   validates :npn04, length: { maximum: 100 }
   validates :npn05, length: { maximum: 100 }
+  
+  has_many :books
 end

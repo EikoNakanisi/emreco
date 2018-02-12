@@ -14,7 +14,14 @@
           <% else %>
           <%= image_tag 'women.png', :title => '女性', :size => '100x50', :style=>"float:left;" %><br>
           <% end %>
-          <font size="6"><u><%= @user.name %></u></font></div>
+   
+<!--        <%= @user.kana %><br>  -->
+          <font size="5"><u>
+            <ruby>
+            <rb><%= @user.name %></rb>
+            <rp>（</rp><rt><%= @user.kana %></rt><rp>）</rp>
+            </ruby>
+          </u></font></div>
         <div class="headbox05">
           <% if @user.infection == '有' %>
           <%= image_tag 'alrt_y.png', :title => '感染症：HCV(+)', :size => '40x40', :style=>"float:left;" %><br>
@@ -23,7 +30,7 @@
           <% end %>
         </div>
         <div class="headbox05">
-          <% if @user.id == '3' %>
+          <% if @user.id == 3 %>
           <%= image_tag 'arg_y.png', :title => '青魚禁', :size => '40x40', :style=>"float:left;" %><br>
           <% else %>
           <%= image_tag 'arg_n.png', :size => '40x40', :style=>"float:left;" %><br>
@@ -44,11 +51,12 @@
 
   <aside id="sidebar">
 <div class="space5">
-<a href="/users/1 %>"><font size="2">北海スエ</font></a><br>
-<a href="/users/3 %>"><font size="2">秋田義男</font></a><br>
-<a href="/users/4 %>"><font size="2">岩手智子</font></a><br>
-<a href="/users/5 %>"><font size="2">福島武</font></a><br>
-<a href="/users/7 %>"><font size="2">青森林檎</font></a><br>
+<a href="/users/1"><font size="2"><%= @name1 %></font></a><br>
+<a href="/users/3"><font size="2"><%= @name3 %></font></a><br>
+<a href="/users/4"><font size="2"><%= @name4 %></font></a><br>
+<a href="/users/5"><font size="2"><%= @name5 %></font></a><br>
+<a href="/users/7"><font size="2"><%= @name7 %></font></a><br>
+<br>
 <br>
 <br>
 <br>
@@ -60,11 +68,9 @@
 <a href="../nprofs/<%= @user.id %>">看護プロファイル</a><br>
 <a href="../toppages/<%= @user.id %>/foods/<%= @user.id %>">移動食事カレンダ</a><br>
 <a href="../instructions/<%= @user.id %>">テンプレート</a><br>
+<a href="../toppages/<%= @user.id %>">掲示板</a><br>
 
 
-
-<p><%= @hensu1 + @user.id %></p>
-<p><%= @hensu2 + @user.id %></p>
 </div>
 </aside>
 

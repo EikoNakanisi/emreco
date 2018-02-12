@@ -1,0 +1,116 @@
+<%= form_for([@book]) do |f| %>
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "Plan Id" %><%= f.text_field :plan_id, disabled: true %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :sihyou1 %><%= f.text_field :sihyou1 %>
+  </div>
+  <div class="field">
+    <%= f.label :sihyou2 %><%= f.text_field :sihyou2 %>
+  </div>
+  <div class="field">
+    <%= f.label :sihyou3 %><%= f.text_field :sihyou3 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :kanren1 %><%= f.text_field :kanren1 %>
+  </div>
+  <div class="field">
+    <%= f.label :kanren2 %><%= f.text_field :kanren2 %>
+  </div>
+  <div class="field">
+    <%= f.label :kanren3 %><%= f.text_field :kanren3 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :endpoint1 %><%= f.text_field :endpoint1 %>
+  </div>
+  <div class="field">
+    <%= f.label :endpoint2 %><%= f.text_field :endpoint2 %>
+  </div>
+  <div class="field">
+    <%= f.label :endpoint3 %><%= f.text_field :endpoint3 %>
+  </div>
+
+
+
+  <div class="field">
+    <%= f.label :nno01 %><%= f.text_field :nno01 %><%= f.label :nplan01 %><%= f.text_area :nplan01 %>
+  </div>
+  <div class="field">
+    <%= f.label :nno02 %><%= f.text_field :nno02 %><%= f.label :nplan02 %><%= f.text_area :nplan02 %>
+  </div>
+  <div class="field">
+    <%= f.label :nno03 %><%= f.text_field :nno03 %><%= f.label :nplan03 %><%= f.text_area :nplan03 %>
+  </div>
+  <div class="field">
+    <%= f.label :nno04 %><%= f.text_field :nno04 %><%= f.label :nplan04 %><%= f.text_area :nplan04 %>
+  </div>
+  <div class="field">
+    <%= f.label :nno05 %><%= f.text_field :nno05 %><%= f.label :nplan05 %><%= f.text_area :nplan05 %>
+  </div>
+  <div class="field">
+    <%= f.label :nno06 %><%= f.text_field :nno06 %><%= f.label :nplan06 %><%= f.text_area :nplan06 %>
+  </div>
+  <div class="field">
+    <%= f.label :nno07 %><%= f.text_field :nno07 %><%= f.label :nplan07 %><%= f.text_area :nplan07 %>
+  </div>
+  <div class="field">
+    <%= f.label :nno08 %><%= f.text_field :nno08 %><%= f.label :nplan08 %><%= f.text_area :nplan08 %>
+  </div>
+  <div class="field">
+    <%= f.label :nno09 %><%= f.text_field :nno09 %><%= f.label :nplan09 %><%= f.text_area :nplan09 %>
+  </div>
+  <div class="field">
+    <%= f.label :nno10 %><%= f.text_field :nno10 %><%= f.label :nplan10 %><%= f.text_area :nplan10 %>
+  </div>
+  <div class="field">
+    <%= f.label :nno11 %><%= f.text_field :nno11 %><%= f.label :nplan11 %><%= f.text_area :nplan11 %>
+  </div>
+  <div class="field">
+    <%= f.label :nno12 %><%= f.text_field :nno12 %><%= f.label :nplan12 %><%= f.text_area :nplan12 %>
+  </div>
+  <div class="field">
+    <%= f.label :nno13 %><%= f.text_field :nno13 %><%= f.label :nplan13 %><%= f.text_area :nplan13 %>
+  </div>
+  <div class="field">
+    <%= f.label :nno14 %><%= f.text_field :nno14 %><%= f.label :nplan14 %><%= f.text_area :nplan14 %>
+  </div>
+  <div class="field">
+    <%= f.label :nno15 %><%= f.text_field :nno15 %><%= f.label :nplan15 %><%= f.text_area :nplan15 %>
+  </div>
+  <div class="field">
+    <%= f.label :nno16 %><%= f.text_field :nno16 %><%= f.label :nplan16 %><%= f.text_area :nplan16 %>
+  </div>
+  <div class="field">
+    <%= f.label :nno17 %><%= f.text_field :nno17 %><%= f.label :nplan17 %><%= f.text_area :nplan17 %>
+  </div>
+  <div class="field">
+    <%= f.label :nno18 %><%= f.text_field :nno18 %><%= f.label :nplan18 %><%= f.text_area :nplan18 %>
+  </div>
+  <div class="field">
+    <%= f.label :nno19 %><%= f.text_field :nno19 %><%= f.label :nplan19 %><%= f.text_area :nplan19 %>
+  </div>
+  <div class="field">
+    <%= f.label :nno20 %><%= f.text_field :nno20 %><%= f.label :nplan20 %><%= f.text_area :nplan20 %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

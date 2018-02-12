@@ -16,7 +16,12 @@
           <%= image_tag 'women.png', :title => '女性', :size => '100x50', :style=>"float:left;" %><br>
         <% end %>
 </th>
-<th bgcolor="#CCCCFF"><font size="6"><u><%= @user.name %></u></font></th>
+<th bgcolor="#CCCCFF"><font size="6"><u>
+              <ruby>
+            <rb><%= @user.name %></rb>
+            <rp>（</rp><rt><%= @user.kana %></rt><rp>）</rp>
+            </ruby>
+</u></font></th>
 <th bgcolor="#CCCCFF">
         <% if @user.infection == '有' %>
           <%= image_tag 'alrt_y.png', :title => '感染症：HCV(+)', :size => '40x40', :style=>"float:left;" %><br>
@@ -64,8 +69,152 @@
 
 <!--Tab panes -->
   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="sougou"><div class="sougou"></div></div>
-    <div role="tabpanel" class="tab-pane" id="prof01"><div class="prof01"></div></div>
+<!--総合 -->
+<div role="tabpanel" class="tab-pane active" id="sougou"><div class="sougou">
+<div class="space5">
+<table border="3" bordercolor="#C0C0C0" width="950" cellspacing="5">
+<tr><th bgcolor="#C0C0C0" colspan="13"><font color="#0000CD">身体的情報</font></th></tr>
+<tr><th bgcolor="#C0C0C0" rowspan="6" width="20"><button type="button" class="btn btn-default btn-sm active"><br>&nbsp;<br>&nbsp;<br>新規<br>登録<br>&nbsp;<br><br>&nbsp;<br></button></tr>
+
+<tr>
+<td bgcolor="#C0C0C0" align="right" width="80">身長&nbsp;</td>
+<td bgcolor="#FFFFFF" width="70">&nbsp;<%= @user.height %></td>
+<td bgcolor="#C0C0C0" width="80">cm&emsp;測定日&nbsp;</td>
+<td bgcolor="#FFFFFF">&nbsp;00/00/00</td>
+<td bgcolor="#C0C0C0" width="30"><button type="button" class="btn btn-default btn-sm active">身長歴</button></td>
+<td bgcolor="#C0C0C0" rowspan="5"><button type="button" class="btn btn-default btn-sm active"><br>&nbsp;<br>&nbsp;<br><br>グラフ<br><br>&nbsp;<br><br>&nbsp;<br></button></td>
+<td bgcolor="#C0C0C0" align="right" width="50">血液型&nbsp;</td>
+<td bgcolor="#C0C0C0" align="right" width="70">ＡＢＯ型&nbsp;</td>
+<td bgcolor="#FFFFFF" width="60">&nbsp;<%= @user.bloodtype %>型</td>
+<td bgcolor="#C0C0C0" align="right" width="70">Ｒｈ型&nbsp;</td>
+<td bgcolor="#FFFFFF" width="60">&nbsp;+</td>
+</tr>
+
+<tr>
+<td bgcolor="#C0C0C0" align="right">体重&nbsp;</td>
+<td bgcolor="#FFFFFF">&nbsp;<%= @user.weight %></td>
+<td bgcolor="#C0C0C0">kg&emsp;測定日&nbsp;</td>
+<td bgcolor="#FFFFFF">&nbsp;00/00/00</td>
+<td bgcolor="#C0C0C0"><button type="button" class="btn btn-default btn-sm active">体重歴</button></td>
+<td bgcolor="#C0C0C0" align="right">&nbsp;</td>
+<td bgcolor="#C0C0C0" align="right">亜型&nbsp;</td>
+<td bgcolor="#FFFFFF">&nbsp;</td>
+<td bgcolor="#C0C0C0" align="right">確定情報&nbsp;</td>
+<td bgcolor="#FFFFFF">&nbsp;</td>
+</tr>
+
+<tr>
+<td bgcolor="#C0C0C0" align="right">胸囲&nbsp;</td>
+<td bgcolor="#FFFFFF">&nbsp;</td>
+<td bgcolor="#C0C0C0">cm&emsp;測定日&nbsp;</td>
+<td bgcolor="#FFFFFF">&nbsp;00/00/00</td>
+<td bgcolor="#C0C0C0"><button type="button" class="btn btn-default btn-sm active">胸囲歴</button></td>
+<td bgcolor="#C0C0C0"></td>
+<td bgcolor="#C0C0C0"></td>
+<td bgcolor="#C0C0C0"></td>
+<td bgcolor="#C0C0C0"></td>
+<td bgcolor="#C0C0C0"></td>
+</tr>
+
+<tr>
+<td bgcolor="#C0C0C0" align="right">座高&nbsp;</td>
+<td bgcolor="#FFFFFF">&nbsp;</td>
+<td bgcolor="#C0C0C0">cm&emsp;測定日&nbsp;</td>
+<td bgcolor="#FFFFFF">&nbsp;00/00/00</td>
+<td bgcolor="#C0C0C0"><button type="button" class="btn btn-default btn-sm active">座高歴</button></td>
+<td bgcolor="#C0C0C0"></td>
+<td bgcolor="#C0C0C0"></td>
+<td bgcolor="#C0C0C0"></td>
+<td bgcolor="#C0C0C0"></td>
+<td bgcolor="#C0C0C0"></td>
+</tr>
+
+<tr>
+<td bgcolor="#C0C0C0" align="right">頭囲&nbsp;</td>
+<td bgcolor="#FFFFFF">&nbsp;</td>
+<td bgcolor="#C0C0C0">cm&emsp;測定日&nbsp;</td>
+<td bgcolor="#FFFFFF">&nbsp;00/00/00</td>
+<td bgcolor="#C0C0C0"><button type="button" class="btn btn-default btn-sm active">頭囲歴</button></td>
+<td bgcolor="#C0C0C0"></td>
+<td bgcolor="#C0C0C0"></td>
+<td bgcolor="#C0C0C0"></td>
+<td bgcolor="#C0C0C0"></td>
+<td bgcolor="#C0C0C0"></td>
+</tr>
+<tr>
+<th bgcolor="#C0C0C0" colspan="2"><font color="#0000CD">アレルギーの有無</font></th>
+<td bgcolor="#FFFFFF" colspan="2">
+        <% if @user.id == '3' %>
+          &nbsp;有：青魚禁
+        <% else %>
+          &nbsp;無
+        <% end %>
+</td>
+<td bgcolor="#C0C0C0" colspan="5">※アレルギーの詳細内容は「アレルギー」画面より入力を行ってください</td>
+<td bgcolor="#C0C0C0"></td>
+<td bgcolor="#C0C0C0"></td>
+<td bgcolor="#C0C0C0"></td>
+
+</tr>
+</table>
+</div>
+</div></div>
+
+<!--基本１ -->
+<div role="tabpanel" class="tab-pane" id="prof01"><div class="prof01">
+<div class="space14">
+<table border="3" bordercolor="#C0C0C0" width="455" cellspacing="5">
+<tr>
+<td bgcolor="#C0C0C0" width="100">自宅住所</td>
+<td bgcolor="#FFFFFF"><%= @user.address %></td>
+</tr>
+<tr>
+<td bgcolor="#C0C0C0">郵便番号</td>
+<td bgcolor="#FFFFFF">&#12306;000-0000</td>
+</tr>
+<tr>
+<td bgcolor="#C0C0C0">自宅電話番号</td>
+<td bgcolor="#FFFFFF">000-000-0000</td>
+</tr>
+<tr>
+<td bgcolor="#C0C0C0">緊急連絡先<br>医事課登録</td>
+<td bgcolor="#FFFFFF">000-000-0000</td>
+</tr>
+</table>
+
+<table border="2" bordercolor="#C0C0C0" width="475" cellspacing="5">
+<tr>
+<th bgcolor="#C0C0C0" colspan="4"><font color="#0000CD">緊急連絡</font></th>
+</tr>
+<tr>
+<th bgcolor="#CCCCFF">電話番号</th>
+<th bgcolor="#CCCCFF">携帯電話番号</th>
+<th bgcolor="#CCCCFF">氏名</th>
+<th bgcolor="#CCCCFF">本人との関係</th>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF">000-000-0000</td>
+<td bgcolor="#FFFFFF">000-000-0000</td>
+<td bgcolor="#FFFFff">&nbsp;鍵内一子</td>
+<td bgcolor="#FFFFff">&nbsp;<%= @user.keyp1 %></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF">000-000-0000</td>
+<td bgcolor="#FFFFFF">000-000-0000</td>
+<td bgcolor="#FFFFff">&nbsp;鍵内二子</td>
+<td bgcolor="#FFFFff">&nbsp;<%= @user.keyp3 %></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF">000-000-0000</td>
+<td bgcolor="#FFFFFF">000-000-0000</td>
+<td bgcolor="#FFFFff">&nbsp;鍵内一夫</td>
+<td bgcolor="#FFFFff">&nbsp;<%= @user.keyp3 %></td>
+</tr>
+</table>
+
+</div>
+</div></div>
+
     <div role="tabpanel" class="tab-pane" id="prof02"><div class="prof02"></div></div>
     <div role="tabpanel" class="tab-pane" id="prof03"><div class="prof03"></div></div>
     <div role="tabpanel" class="tab-pane" id="prof04"><div class="prof04"></div></div>
@@ -74,18 +223,193 @@
 <!--家族構成 -->
 <div role="tabpanel" class="tab-pane" id="prof07">
 <div class="prof07">
-<div class="space8"><br>
-&emsp;&emsp;<%= @user.gender %>&emsp;&emsp;&emsp;&emsp;<%= @user.birthday %>&emsp;&emsp;<%= @user.age %>
-</div>
-<div class="space6"><br><br>
-<font size="2">
-&nbsp;&emsp;配偶者&emsp;&emsp;男&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&#10004;<br>
-&nbsp;&emsp;子&emsp;&emsp;&emsp;&emsp;女&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;氏名名前&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;キーパーソン
-</font>
-</div>
-      <div class="space11"><br><br><img border="0" src="../images/fa01.png" alt="系図"></div>
+<div class="space15">
+<table border="2" bordercolor="#C0C0C0" width="900">
+<tr>
+<th bgcolor="#C0C0C0" colspan="8"><font color="#0000CD">本人</font></th>
+</tr>
+<tr>
+<th bgcolor="#CCCCFF" align="center">性別</th>
+<th bgcolor="#CCCCFF" align="center">生年月日</th>
+<th bgcolor="#CCCCFF" align="center">年齢</th>
+<th bgcolor="#CCCCFF" align="center">死亡</th>
+<th bgcolor="#CCCCFF" align="center">死亡年月日</th>
+<th bgcolor="#CCCCFF" align="center">既往歴</th>
+<th bgcolor="#CCCCFF" align="center"></th>
+<th bgcolor="#CCCCFF" align="center">メモ（全角２５文字まで）</th>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" align="center">&nbsp;<%= @user.gender %></td>
+<td bgcolor="#FFFFFF" align="center">&nbsp;<%= @user.birthday %></td>
+<td bgcolor="#FFFFff" align="center">&nbsp;<%= @user.age %></td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff" align="center">&nbsp;</td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="2" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff" align="center"><button type="button" class="btn btn-default btn-xs active">表示</button></td>
+<td bgcolor="#FFFFff" align="center">&nbsp;</td>
+</tr>
+</table>
 
+<table border="2" bordercolor="#C0C0C0" width="900">
+<tr>
+<th bgcolor="#C0C0C0" colspan="5"><font color="#0000CD">家族情報</font></th>
+<th bgcolor="#C0C0C0" colspan="6"><font color="#000000">※未婚欄は配偶者（未婚姻）とその子供に同じ数字を指定してください</font></th>
+</tr>
+<tr>
+<th bgcolor="#CCCCFF" align="center">関連</th>
+<th bgcolor="#CCCCFF" align="center">性別</th>
+<th bgcolor="#CCCCFF" align="center">年齢</th>
+<th bgcolor="#CCCCFF" align="center">死亡</th>
+<th bgcolor="#CCCCFF" align="center">既往歴</th>
+<th bgcolor="#CCCCFF" align="center"></th>
+<th bgcolor="#CCCCFF" align="center">同</th>
+<th bgcolor="#CCCCFF" align="center">氏名</th>
+<th bgcolor="#CCCCFF" align="center">患者ＩＤ</th>
+<th bgcolor="#CCCCFF" align="center">未</th>
+<th bgcolor="#CCCCFF" align="center">コメント（全角２５文字まで）</th>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" align="center">&nbsp;<%= @user.keyp1 %></td>
+<td bgcolor="#FFFFFF" align="center">&nbsp;<%= @user.keyg1 %></td>
+<td bgcolor="#FFFFff" align="center">&nbsp;00</td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff" align="center"><button type="button" class="btn btn-default btn-xs active">選択</button></td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff">&nbsp;鍵内一子</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" align="center">&nbsp;<%= @user.keyp2 %></td>
+<td bgcolor="#FFFFFF" align="center">&nbsp;<%= @user.keyg2 %></td>
+<td bgcolor="#FFFFff" align="center">&nbsp;00</td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff" align="center"><button type="button" class="btn btn-default btn-xs active">選択</button></td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff">&nbsp;鍵内二子</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" align="center">&nbsp;<%= @user.keyp3 %></td>
+<td bgcolor="#FFFFFF" align="center">&nbsp;<%= @user.keyg3 %></td>
+<td bgcolor="#FFFFff" align="center">&nbsp;00</td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff" align="center"><button type="button" class="btn btn-default btn-xs active">選択</button></td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff">&nbsp;鍵内一夫</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+</tr>
 
+<tr>
+<td bgcolor="#FFFFFF" align="center">&nbsp;</td>
+<td bgcolor="#FFFFFF" align="center">&nbsp;</td>
+<td bgcolor="#FFFFff" align="center">&nbsp;</td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff" align="center"><button type="button" class="btn btn-default btn-xs active">選択</button></td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" align="center">&nbsp;</td>
+<td bgcolor="#FFFFFF" align="center">&nbsp;</td>
+<td bgcolor="#FFFFff" align="center">&nbsp;</td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff" align="center"><button type="button" class="btn btn-default btn-xs active">選択</button></td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" align="center">&nbsp;</td>
+<td bgcolor="#FFFFFF" align="center">&nbsp;</td>
+<td bgcolor="#FFFFff" align="center">&nbsp;</td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff" align="center"><button type="button" class="btn btn-default btn-xs active">選択</button></td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" align="center">&nbsp;</td>
+<td bgcolor="#FFFFFF" align="center">&nbsp;</td>
+<td bgcolor="#FFFFff" align="center">&nbsp;</td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff" align="center"><button type="button" class="btn btn-default btn-xs active">選択</button></td>
+<td bgcolor="#FFFFff" align="center">
+<input type="checkbox" name="riyu" value="1" checked="checked">&nbsp;
+</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+<td bgcolor="#FFFFff">&nbsp;</td>
+</tr>
+
+</table>
+</div>
+<div class="space12"><img border="0" src="../images/fa01.png" alt="系図"></div>
 </div></div>
 
 <!--その他 -->

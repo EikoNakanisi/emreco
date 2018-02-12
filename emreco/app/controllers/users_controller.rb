@@ -5,10 +5,13 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @observation = @user.observations.build  # form_for 用
-    @observations = @user.observations.order('created_at DESC').page(params[:page])
     @hensu1 = 10
     @hensu2 = 20
+    @name1 = '北海 梅子'
+    @name3 = '秋田 義男'
+    @name4 = '岩手 智子'
+    @name5 = '福島 武'
+    @name7 = '青森 林檎'
   end
 
   def new
@@ -56,7 +59,8 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :hospitalization, :roomno, :birthday,
     :age, :gender, :bloodtype, :height, :weight, :infection,
-    :aid, :attention, :post)
+    :aid, :attention, :post,
+    :kana,:address,:food,:keyp1,:keyp2,:keyp3,:keyg1,:keyg2,:keyg3)
   end
 
 
