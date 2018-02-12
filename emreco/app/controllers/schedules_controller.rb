@@ -1,8 +1,4 @@
-class ProfilesController < ApplicationController
-  def index
-    @users = User.all
-  end
-
+class SchedulesController < ApplicationController
   def show
     @user = User.find(params[:id])
     @hensu1 = 10
@@ -13,14 +9,4 @@ class ProfilesController < ApplicationController
     @name5 = '福島 武'
     @name7 = '青森 林檎'
   end
-
-
-
-
-  private
-
-  # Strong Parameter
-
-
 end
-

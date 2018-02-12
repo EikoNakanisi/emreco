@@ -38,12 +38,17 @@
 <a href="/profiles/<%= @plan.id %>" class="btn btn-default btn-sm active" role="button" disabled="disabled">病名</a>
           </p></div>
 <div class="headbox05">
-<a href="/" class="btn btn-warning btn-sm active" role="button">カルテ<br>閉じる</a>
+<a href="/toppages" class="btn btn-warning btn-sm active" role="button">カルテ<br>閉じる</a>
 
 </div>
 </div>
 
   <aside id="sidebar">
+<div class="space10">
+<a href="/" class="btn btn-warning active" role="button"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+</div>
+
+
 <div class="space5">
 <a href="/users/1"><font size="2"><%= @name1 %></font></a><br>
 <a href="/users/3"><font size="2"><%= @name3 %></font></a><br>
@@ -54,16 +59,14 @@
 <br>
 <br><br>
 <a href="../users/<%= @plan.id %>">経過表</a><br>
-<a href="../ninstructions/<%= @plan.id %>">看護指示</a><br>
+<a href="../ninstructions/<%= @hensu2 + @plan.id %>">看護指示</a><br>
 <a href="../dinstructions/<%= @plan.id %>">指示簿一覧</a><br>
 <a href="../plans/<%= @plan.id %>">看護計画</a><br>
-患者ｽｹｼﾞｭｰﾙ<br>
-看護プロファイル<br>
-移動食事カレンダ<br>
-入院処置<br>
-<a href="../instructions/<%= @plan.id %>">テンプレート</a><br>
-SOAP&フォーカス<br>
-患者認証業務<br>
+<a href="../schedules/<%= @plan.id %>">患者スケジュール</a><br>
+<a href="../nprofs/<%= @plan.id %>">看護プロファイル</a><br>
+<a href="../toppages/<%= @plan.id %>/foods/<%= @plan.id %>">移動食事カレンダ</a><br>
+<a href="../instructions/<%= @hensu2 + @plan.id %>">テンプレート</a><br>
+<a href="../toppages/<%= @plan.id %>">掲示板</a><br>
 
 
 </div>

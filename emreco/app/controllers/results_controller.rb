@@ -10,6 +10,8 @@ class ResultsController < ApplicationController
     @name4 = '岩手 智子'
     @name5 = '福島 武'
     @name7 = '青森 林檎'
+    @hensu1 = 10
+    @hensu2 = 20
   end
 
   def new

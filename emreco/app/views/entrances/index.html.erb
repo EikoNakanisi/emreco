@@ -1,0 +1,40 @@
+<!-- エントランス画面 -->
+
+
+<% if logged_in? %>
+<div class="jumbotron">
+  <h1>看護情報学の部屋</h1>
+  <p>ここは個人的に運営している看護情報学研究のホームページです。<br>
+  このホームページの内容はフィクションです。登場する人物・団体・名称等は架空であり、実在のものとは関係ありません。<br>
+  </p>
+  <p>ようこそ。ご協力ありがとうございます。<br>
+  ログイン完了ユーザ: <%= current_client.name %>様
+  <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+  <%= link_to 'Logout', logout_path, method: :delete %></p>
+  <p>
+  <a class="btn btn-danger btn-lg active" href="/toppages" role="button">bedmap</a>
+  </p>
+</div>
+
+<% else %>
+<div class="jumbotron">
+  <h1>看護情報学の部屋</h1>
+  <p>ここは個人的に運営している看護情報学研究のホームページです。<br>
+  このホームページの内容はフィクションです。登場する人物・団体・名称等は架空であり、実在のものとは関係ありません。<br>
+  研究協力者に限り、ログインすることが出来ます。<br>
+  ログイン希望の方はご連絡ください。</p>
+  <p>
+  <a class="btn btn-primary btn-lg active" href="/signup" role="button">Signup</a>
+  <a class="btn btn-primary btn-lg active" href="/login" role="button">Login</a>
+  </p>
+</div>
+<% end %>
+
+
+
+<footer>
+  <div class="text-center text-muted">Copyright © 2018 NAKANISI All Rights Reserved.<br>
+  当サイト内の文章・画像等の内容の無断転載及び複製等の行為はご遠慮ください
+  </div>
+</footer>
+

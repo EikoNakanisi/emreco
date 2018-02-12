@@ -1,6 +1,20 @@
-<h3>グラフデータ</h3>
-    <%= link_to '閉じる', user_path, class: 'btn btn-primary btn-lg' %>
-    <%= link_to '編集する', edit_observation_path(@observation) %>
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+      <div class="navbar-header">
+        <p><font size="+1" color="#000000">グラフデータ参照画面</font><br>
+        </p>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+<a href="javascript:history.back()" class="btn btn-default btn-sm active">戻る</a>
+</ul>
+      </div>
+  </div>
+</nav>
+</header>
+
+<br><br><br><br>
 
 
 <table border="1" cellspacing="0" cellpadding="5" bordercolor="#333333">
@@ -61,3 +75,4 @@
 </tr>
 </table>
 
+<%= link_to '編集する', edit_observation_path(@observation) %>

@@ -23,7 +23,7 @@
 <div class="age">
   <%= @user.age %>歳</div>
 </font>
-      <%= link_to '戻る', root_path, class: 'btn btn-default' %>
+<a href="javascript:history.back()" class="btn btn-default btn-sm active">戻る</a>
 
 <div class="space1"></div>
 <div class="space2">
@@ -58,6 +58,10 @@
 
 
 <aside id="sidebar">
+<div class="space10">
+<a href="/" class="btn btn-warning active" role="button"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+</div>
+
 <div class="space5">
 
 <a href="/users/1"><font size="2"><%= @name1 %></font></a><br>
@@ -70,13 +74,14 @@
 <br>
 <br>
 <a href="../users/<%= @user.id %>">経過表</a><br>
-<a href="../ninstructions/<%= @user.id %>">看護指示</a><br>
+<a href="../ninstructions/<%= @hensu2 + @user.id %>">看護指示</a><br>
 <a href="../dinstructions/<%= @user.id %>">指示簿一覧</a><br>
 <a href="../plans/<%= @user.id %>">看護計画</a><br>
-患者ｽｹｼﾞｭｰﾙ<br>
+<a href="../schedules/<%= @user.id %>">患者スケジュール</a><br>
 <a href="../nprofs/<%= @user.id %>">看護プロファイル</a><br>
 <a href="../toppages/<%= @user.id %>/foods/<%= @user.id %>">移動食事カレンダ</a><br>
-<a href="../instructions/<%= @user.id %>">テンプレート</a><br>
+<a href="../instructions/<%= @hensu2 + @user.id %>">テンプレート</a><br>
+<a href="../toppages/<%= @user.id %>">掲示板</a><br>
 
 </div>
   </aside>
