@@ -48,7 +48,10 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: emreco_production
   username: emreco
   password: <%= ENV['EMRECO_DATABASE_PASSWORD'] %>
+
