@@ -1,5 +1,7 @@
 class ObservationsController < ApplicationController
+
   def index
+    @observations = Observation.all
   end
 
   def show
@@ -7,19 +9,18 @@ class ObservationsController < ApplicationController
   end
 
   def new
-    @user = User.find(params[:id])
-    @observation = @user.observations.build #フォーム用の新規Observationインスタンス
+    @observation = Observation.new
   end
 
   def create
-    @user = User.find(params[:follow_id])
-    @observation = @user.observations.build(observation_params)
+    @observation = Observation.new(message_params)
+
     if @observation.save
-      flash[:success] = '観察項目が正常に登録されました'
-      redirect_to @user
+      flash[:success] = '正常に投稿されました'
+      redirect_to @observation
     else
-      flash.now[:danger] = '観察項目が正常に登録されませんでした'
-      redirect_to @user
+      flash.now[:danger] = '投稿されませんでした'
+      render :new
     end
   end
 
@@ -30,11 +31,11 @@ class ObservationsController < ApplicationController
   def update
     @observation = Observation.find(params[:id])
 
-    if @observation.update(observation_params)
-      flash[:success] = '患者data登録は正常に更新されました'
-      render :edit
+    if @observation.update(message_params)
+      flash[:success] = '正常に更新されました'
+      redirect_to @observation
     else
-      flash.now[:danger] = '患者data登録は更新されませんでした'
+      flash.now[:danger] = '更新されませんでした'
       render :edit
     end
   end
@@ -42,14 +43,15 @@ class ObservationsController < ApplicationController
   def destroy
     @observation = Observation.find(params[:id])
     @observation.destroy
-    flash[:success] = 'メッセージを削除しました。'
-    redirect_back(fallback_location: root_path)
+
+    flash[:success] = '正常に削除されました'
+    redirect_to @observation
   end
 
   private
 
   # Strong Parameter
-  def observation_params
+  def message_params
     params.require(:observation).permit(:config_day, :m_bp, :l_bp, :d_bp, :m_kt, :l_kt, :d_kt, 
 :m_p, :l_p, :d_p, :m_r, :l_r, :d_r, :m_o2root, :l_o2root, :d_o2root, 
 :m_o2rate, :l_o2rate, :d_o2rate, :m_meal, :l_meal, :d_meal, 

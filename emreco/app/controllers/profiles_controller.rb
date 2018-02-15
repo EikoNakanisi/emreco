@@ -16,11 +16,5 @@ class ProfilesController < ApplicationController
 
 
 
-
-  private
-
-  # Strong Parameter
-
-
 end
 

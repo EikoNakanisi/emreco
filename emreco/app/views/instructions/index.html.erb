@@ -1,9 +1,29 @@
-<h1>テンプレート一覧</h1>
+<h1>Listing テンプレート</h1>
 
-<ul>
-  <% @instructions.each do |instruction| %>
-    <li><%= link_to instruction.id, instruction %><%= link_to '編集する', edit_instruction_path(instruction) %> :<%= instruction.id %></li>
-  <% end %>
-</ul>
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>テンプレート名</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
 
-    <a href="/" class="btn btn-default">bedmap</a>
+<% @instructions.each do |instruction| %>
+  <tr>
+    <td><%= instruction.id %></td>
+    <td><%= instruction.tna01 %></td>
+    <td><%= link_to 'Show', instruction %></td>
+    <td><%= link_to 'Edit', edit_instruction_path(instruction) %></td>
+<!--     <td><%= link_to 'Destroy', instruction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+ -->
+  </tr>
+<% end %>
+</table>
+
+<br/>
+
+
+<%= link_to 'New instruction', new_instruction_path %>|
+<%= link_to 'Userhome', users_path %>|
+<%= link_to 'home', toppages_path %>

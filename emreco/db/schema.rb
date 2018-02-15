@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180212125820) do
+ActiveRecord::Schema.define(version: 20180212164816) do
 
   create_table "books", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "plan_id"
@@ -704,16 +704,16 @@ ActiveRecord::Schema.define(version: 20180212125820) do
     t.integer  "roomno"
     t.date     "birthday"
     t.integer  "age",             limit: 3
-    t.integer  "gender",                     default: 0
-    t.integer  "bloodtype",                  default: 0
+    t.integer  "gender",                        default: 0
+    t.integer  "bloodtype",                     default: 0
     t.float    "height",          limit: 24
     t.float    "weight",          limit: 24
-    t.integer  "infection",                  default: 0
-    t.integer  "aid",                        default: 0
+    t.integer  "infection",                     default: 0
+    t.integer  "aid",                           default: 0
     t.string   "attention"
     t.string   "post"
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
     t.string   "kana"
     t.string   "address"
     t.string   "food"
@@ -723,6 +723,20 @@ ActiveRecord::Schema.define(version: 20180212125820) do
     t.integer  "keyg1"
     t.integer  "keyg2"
     t.integer  "keyg3"
+    t.text     "ptn01",           limit: 65535
+    t.text     "ptn02",           limit: 65535
+    t.text     "ptn03",           limit: 65535
+    t.text     "ptn04",           limit: 65535
+    t.text     "ptn05",           limit: 65535
+    t.text     "ptn06",           limit: 65535
+    t.text     "ptn07",           limit: 65535
+    t.text     "ptn08",           limit: 65535
+    t.text     "ptn09",           limit: 65535
+    t.text     "ptn10",           limit: 65535
+    t.text     "ptn11",           limit: 65535
+    t.text     "ptn12",           limit: 65535
+    t.text     "ptn13",           limit: 65535
+    t.text     "ptn14",           limit: 65535
   end
 
   add_foreign_key "books", "plans"

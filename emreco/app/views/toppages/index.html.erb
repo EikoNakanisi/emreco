@@ -2,7 +2,15 @@
 
 
 <div class="cover">
-<% (1..15).each do |number| %>
+<%= link_to '患者一覧', users_path %>
+<% (1..2).each do |number| %>
+  <h6>&ensp;</h6>
+<% end %>
+<div class="space10">
+<a href="../users/1"><img src="../images/keika_btn.png" border="0"></a>
+<a href="../schedules"><img src="../images/sch_btn.png" border="0"></a>
+</div>
+<% (1..12).each do |number| %>
   <h6>&ensp;</h6>
 <% end %>
 
@@ -735,32 +743,18 @@
 <br>
 <br>
 <br>
-<a href="#">経過表</a><br>
-<a href="#">看護指示</a><br>
-<a href="#">指示簿一覧</a><br>
-<a href="#">看護計画</a><br>
-<a href="#">患者スケジュール</a><br>
-<a href="#">看護プロファイル</a><br>
-<a href="#">移動食事カレンダ</a><br>
-<a href="#">テンプレート</a><br>
+<font size="3">経過表</font><br>
+<font size="3">看護指示</font><br>
+<font size="3">指示簿一覧</font><br>
+<font size="3">看護計画</font><br>
+<font size="3">患者スケジュール</font><br>
+<font size="3">看護プロファイル</font><br>
+<font size="3">移動食事カレンダ</font><br>
 
 
 
-<a href="/">bedmap</a><br>
-<%= link_to '患者一覧', users_path %><br>
-<%= link_to '新規患者登録', new_user_path %><br>
-<%= link_to '新規医師指示簿の投稿', new_dinstruction_path %><br>
-<%= link_to '新規医師SOAPの投稿', new_dreport_path %><br>
-<%= link_to '新規看護SOAPの投稿', new_nreport_path %><br>
-<%= link_to '新規他職SOAPの投稿', new_ereport_path %><br>
-<%= link_to '新規看護指示の投稿', new_ninstruction_path %><br>
-<%= link_to '新規注射の投稿', new_injection_path %><br>
-<%= link_to '新規処方の投稿', new_prescription_path %><br>
-<%= link_to '新規テンプレートの投稿', new_instruction_path %><br>
-<%= link_to '新規計画の投稿', new_plan_path %><br>
-<%= link_to '新規検査結果の投稿', new_result_path %><br>
-<a href="../results/1">検査結果</a><br>
-<a href="../plans/1/books">看護計画詳細</a><br>
+
+
 </div>
     </aside>
 

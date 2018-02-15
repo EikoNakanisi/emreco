@@ -1,0 +1,29 @@
+<h1>Listing 処方</h1>
+
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>pi01</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @prescriptions.each do |prescription| %>
+  <tr>
+    <td><%= prescription.id %></td>
+    <td><%= prescription.pi01 %></td>
+    <td><%= link_to 'Show', prescription %></td>
+    <td><%= link_to 'Edit', edit_prescription_path(prescription) %></td>
+<!--     <td><%= link_to 'Destroy', prescription, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+ -->
+  </tr>
+<% end %>
+</table>
+
+<br/>
+
+
+<%= link_to 'New prescription', new_prescription_path %>|
+<%= link_to 'Userhome', users_path %>|
+<%= link_to 'home', toppages_path %>

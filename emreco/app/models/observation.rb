@@ -1,7 +1,5 @@
 class Observation < ApplicationRecord
-  belongs_to :user
-  validates :config_day, presence: true
-  validates :user_id, presence: true
+
   validates :m_bp, length: { maximum: 8 }
   validates :l_bp, length: { maximum: 8 }
   validates :d_bp, length: { maximum: 8 }

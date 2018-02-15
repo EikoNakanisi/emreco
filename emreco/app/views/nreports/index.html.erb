@@ -1,0 +1,29 @@
+<h1>Listing 看護soap</h1>
+
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>nro01</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @nreports.each do |nreport| %>
+  <tr>
+    <td><%= nreport.id %></td>
+    <td><%= nreport.nro01 %></td>
+    <td><%= link_to 'Show', nreport %></td>
+    <td><%= link_to 'Edit', edit_nreport_path(nreport) %></td>
+<!--     <td><%= link_to 'Destroy', nreport, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+ -->
+  </tr>
+<% end %>
+</table>
+
+<br/>
+
+
+<%= link_to 'New nreport', new_nreport_path %>|
+<%= link_to 'Userhome', users_path %>|
+<%= link_to 'home', toppages_path %>

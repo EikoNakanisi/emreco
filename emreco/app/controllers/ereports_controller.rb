@@ -1,4 +1,9 @@
 class EreportsController < ApplicationController
+  def index
+    @ereports = Ereport.all
+  end
+
+
   def show
     @ereport = Ereport.find(params[:id])
     @hensu1 = 10

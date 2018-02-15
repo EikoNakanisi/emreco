@@ -22,11 +22,7 @@
 </nav>
 </header>
 
-  <h5><font color="#FFFFFF">0</font></h5><BR>
-<% 1.upto(25) do |num| %>
-<font color="#FFFFFF"><% num = "%02d" % num %></font>
-<%= num %>
-<% end %>
+<BR><BR>
 <BR>
 
 <div class="col-sm-5">
@@ -171,8 +167,7 @@
 <% end %>
 
 
-<%= link_to 'この医師SOAPを編集する', edit_dreport_path(@dreport) %>
-<%= link_to 'この医師SOAPを削除する', @dreport, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
-<%= link_to '新規医師SOAPの投稿', new_dreport_path %>
+<%= link_to 'edit', edit_dreport_path(@dreport) %>|
+<%= link_to 'Index', dreports_path %>
 
 </div>

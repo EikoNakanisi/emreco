@@ -22,11 +22,7 @@
 </nav>
 </header>
 
-  <h5><font color="#FFFFFF">0</font></h5><BR>
-<% 1.upto(25) do |num| %>
-<font color="#FFFFFF"><% num = "%02d" % num %></font>
-<%= num %>
-<% end %>
+<BR><BR>
 <BR>
 
 <div class="col-sm-5">
@@ -106,8 +102,7 @@
 <% end %>
 
 
-<%= link_to 'この多職種記録を編集する', edit_ereport_path(@ereport) %>
-<%= link_to 'この多職種記を削除する', @ereport, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
-<%= link_to '新規多職種記の投稿', new_ereport_path %>
+<%= link_to 'edit', edit_ereport_path(@ereport) %>|
+<%= link_to 'Index', ereports_path %>
 
 </div>

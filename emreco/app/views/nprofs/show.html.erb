@@ -176,9 +176,9 @@
 
 
   <!-- パターン要約 -->
-    <div role="tabpanel" class="tab-pane" id="profile"><div class="cover02">
-<div class="space8">
+    <div role="tabpanel" class="tab-pane" id="profile">
 <div class="row">
+<div class="ao">&ensp;パターン要約</div>
 
 <div class="col-md-4">
   
@@ -191,14 +191,14 @@
 <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
 </label>
   </div>
-  <div class="panel-body"><small></small>
+  <div class="panel-body"><small><%= @user.ptn01 %></small>
 
   </div>
 </div>
 </div>
 <div class="col-md-4">
 <div class="panel panel-default">
-  <div class="panel-heading">領域2＜呼吸＞&emsp;&emsp;問題
+  <div class="panel-heading">領域2＜飲食＞&emsp;&emsp;問題
 <label class="radio-inline">
 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
 </label>
@@ -206,14 +206,14 @@
 <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
 </label>
   </div>
-  <div class="panel-body"><small></small>
+  <div class="panel-body"><small><%= @user.ptn02 %></small>
 
   </div>
 </div>
 </div>
 <div class="col-md-4">
 <div class="panel panel-default">
-  <div class="panel-heading">領域3＜呼吸＞&emsp;&emsp;問題
+  <div class="panel-heading">領域3＜排泄＞&emsp;&emsp;問題
 <label class="radio-inline">
 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
 </label>
@@ -221,14 +221,14 @@
 <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
 </label>
   </div>
-  <div class="panel-body"><small></small>
+  <div class="panel-body"><small><%= @user.ptn03 %></small>
 
   </div>
 </div>
 </div>
 <div class="col-md-4">
 <div class="panel panel-default">
-  <div class="panel-heading">領域4＜呼吸＞&emsp;&emsp;問題
+  <div class="panel-heading">領域4＜姿勢・活動＞&emsp;&emsp;問題
 <label class="radio-inline">
 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
 </label>
@@ -236,14 +236,14 @@
 <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
 </label>
   </div>
-  <div class="panel-body"><small></small>
+  <div class="panel-body"><small><%= @user.ptn04 %></small>
 
   </div>
 </div>
 </div>
 <div class="col-md-4">
 <div class="panel panel-default">
-  <div class="panel-heading">領域5＜呼吸＞&emsp;&emsp;問題
+  <div class="panel-heading">領域5＜睡眠・休息＞&emsp;&emsp;問題
 <label class="radio-inline">
 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
 </label>
@@ -251,14 +251,14 @@
 <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
 </label>
   </div>
-  <div class="panel-body"><small></small>
+  <div class="panel-body"><small><%= @user.ptn05 %></small>
 
   </div>
 </div>
 </div>
 <div class="col-md-4">
 <div class="panel panel-default">
-  <div class="panel-heading">領域6＜呼吸＞&emsp;&emsp;問題
+  <div class="panel-heading">領域6＜衣類＞&emsp;&emsp;問題
 <label class="radio-inline">
 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
 </label>
@@ -266,7 +266,7 @@
 <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
 </label>
   </div>
-  <div class="panel-body"><small></small>
+  <div class="panel-body"><small><%= @user.ptn06 %></small>
 
   </div>
 </div>
@@ -274,7 +274,7 @@
 
 <div class="col-md-4">
 <div class="panel panel-default">
-  <div class="panel-heading">領域7＜呼吸＞&emsp;&emsp;問題
+  <div class="panel-heading">領域7＜体温・循環＞&emsp;&emsp;問題
 <label class="radio-inline">
 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
 </label>
@@ -282,14 +282,14 @@
 <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
 </label>
   </div>
-  <div class="panel-body"><small></small>
+  <div class="panel-body"><small><%= @user.ptn07 %></small>
 
   </div>
 </div>
 </div>
 <div class="col-md-4">
 <div class="panel panel-default">
-  <div class="panel-heading">領域8＜呼吸＞&emsp;&emsp;問題
+  <div class="panel-heading">領域8＜清潔・皮膚保護＞&emsp;&emsp;問題
 <label class="radio-inline">
 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
 </label>
@@ -297,14 +297,14 @@
 <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
 </label>
   </div>
-  <div class="panel-body"><small></small>
+  <div class="panel-body"><small><%= @user.ptn08 %></small>
 
   </div>
 </div>
 </div>
 <div class="col-md-4">
 <div class="panel panel-default">
-  <div class="panel-heading">領域9＜呼吸＞&emsp;&emsp;問題
+  <div class="panel-heading">領域9＜安全・コミュニケーション＞&emsp;&emsp;問題
 <label class="radio-inline">
 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
 </label>
@@ -312,14 +312,14 @@
 <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
 </label>
   </div>
-  <div class="panel-body"><small></small>
+  <div class="panel-body"><small><%= @user.ptn09 %></small>
 
   </div>
 </div>
 </div>
 <div class="col-md-4">
 <div class="panel panel-default">
-  <div class="panel-heading">領域10＜呼吸＞&emsp;&emsp;問題
+  <div class="panel-heading">領域10＜宗教＞&emsp;&emsp;問題
 <label class="radio-inline">
 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
 </label>
@@ -327,14 +327,14 @@
 <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
 </label>
   </div>
-  <div class="panel-body"><small></small>
+  <div class="panel-body"><small><%= @user.ptn10 %></small>
 
   </div>
 </div>
 </div>
 <div class="col-md-4">
 <div class="panel panel-default">
-  <div class="panel-heading">領域11＜呼吸＞&emsp;&emsp;問題
+  <div class="panel-heading">領域11＜職業＞&emsp;&emsp;問題
 <label class="radio-inline">
 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
 </label>
@@ -342,14 +342,14 @@
 <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
 </label>
   </div>
-  <div class="panel-body"><small></small>
+  <div class="panel-body"><small><%= @user.ptn11 %></small>
 
   </div>
 </div>
 </div>
 <div class="col-md-4">
 <div class="panel panel-default">
-  <div class="panel-heading">領域12＜呼吸＞&emsp;&emsp;問題
+  <div class="panel-heading">領域12＜レクリエーション＞&emsp;&emsp;問題
 <label class="radio-inline">
 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
 </label>
@@ -357,7 +357,7 @@
 <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
 </label>
   </div>
-  <div class="panel-body"><small></small>
+  <div class="panel-body"><small><%= @user.ptn12 %></small>
 
   </div>
 </div>
@@ -365,7 +365,7 @@
 
 <div class="col-md-4">
 <div class="panel panel-default">
-  <div class="panel-heading">領域13＜呼吸＞&emsp;&emsp;問題
+  <div class="panel-heading">領域13＜学習＞&emsp;&emsp;問題
 <label class="radio-inline">
 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 無
 </label>
@@ -373,7 +373,7 @@
 <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 有
 </label>
   </div>
-  <div class="panel-body"><small></small>
+  <div class="panel-body"><small><%= @user.ptn13 %></small>
 
   </div>
 </div>
@@ -382,24 +382,16 @@
 <div class="panel panel-default">
   <div class="panel-heading">総合評価&emsp;&emsp;記載日2018/01/15
   </div>
-  <div class="panel-body"><small></small>
-
+  <div class="panel-body"><small><%= @user.ptn14 %></small>
   </div>
 </div>
 </div>
-
-</div></div>
-
-
-
-
-
   </div>
+<a href="../users/<%= @user.id %>/edit">編集</a>
 
 </div>
-
-
-
 
 
 </div></div></div>
+
+

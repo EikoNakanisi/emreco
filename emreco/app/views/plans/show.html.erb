@@ -62,7 +62,7 @@
 <a href="../ninstructions/<%= @hensu2 + @plan.id %>">看護指示</a><br>
 <a href="../dinstructions/<%= @plan.id %>">指示簿一覧</a><br>
 <a href="../plans/<%= @plan.id %>">看護計画</a><br>
-<a href="../schedules/<%= @plan.id %>">患者スケジュール</a><br>
+<a href="../schedules">患者スケジュール</a><br>
 <a href="../nprofs/<%= @plan.id %>">看護プロファイル</a><br>
 <a href="../toppages/<%= @plan.id %>/foods/<%= @plan.id %>">移動食事カレンダ</a><br>
 <a href="../instructions/<%= @hensu2 + @plan.id %>">テンプレート</a><br>
@@ -100,7 +100,7 @@
 <table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <% unless @plan.npn01.blank? %>
 <tr>
-<td bgcolor="gainsboro" width="45"><b><a href="/books/1">#01</a></b></td>
+<td bgcolor="gainsboro" width="45"><b><a href="/plans/1/books/1">#01</a></b></td>
 <td bgcolor="#FFFFFF" width="850"><%= simple_format(@plan.npn01) %></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/15</td>
 <td bgcolor="#FFFFFF" width="120">看護 花子</td>
@@ -122,7 +122,7 @@
 <table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <% unless @plan.npn02.blank? %>
 <tr>
-<td bgcolor="gainsboro" width="45"><b><a href="/books/2">#02</a></b></td>
+<td bgcolor="gainsboro" width="45"><b><a href="/plans/1/books/2">#02</a></b></td>
 <td bgcolor="#FFFFFF" width="850"><%= simple_format(@plan.npn02) %></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/15</td>
 <td bgcolor="#FFFFFF" width="120">看護 花子</td>
@@ -144,7 +144,7 @@
 <table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <% unless @plan.npn03.blank? %>
 <tr>
-<td bgcolor="gainsboro" width="45"><b><a href="/books/3">#03</a></b></td>
+<td bgcolor="gainsboro" width="45"><b><a href="/plans/1/books/3">#03</a></b></td>
 <td bgcolor="#FFFFFF" width="850"><%= simple_format(@plan.npn03) %></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/15</td>
 <td bgcolor="#FFFFFF" width="120">看護 花子</td>
@@ -166,7 +166,7 @@
 <table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <% unless @plan.npn04.blank? %>
 <tr>
-<td bgcolor="gainsboro" width="45"><b><a href="/books/4">#04</a></b></td>
+<td bgcolor="gainsboro" width="45"><b><a href="/plans/1/books/4">#04</a></b></td>
 <td bgcolor="#FFFFFF" width="850"><%= simple_format(@plan.npn04) %></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/15</td>
 <td bgcolor="#FFFFFF" width="120">看護 花子</td>
@@ -188,7 +188,7 @@
 <table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <% unless @plan.npn05.blank? %>
 <tr>
-<td bgcolor="gainsboro" width="45"><b><a href="/books/5">#05</a></b></td>
+<td bgcolor="gainsboro" width="45"><b><a href="/plans/1/books/5">#05</a></b></td>
 <td bgcolor="#FFFFFF" width="850"><%= simple_format(@plan.npn05) %></td>
 <td bgcolor="#FFFFFF" width="120">2018/01/15</td>
 <td bgcolor="#FFFFFF" width="120">看護 花子</td>
@@ -209,7 +209,7 @@
 </table>
 <table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <tr>
-<td bgcolor="gainsboro" width="45"><b><a href="/books/6">#06</a></b></td>
+<td bgcolor="gainsboro" width="45"><b><a href="/plans/1/books/6">#06</a></b></td>
 <td bgcolor="#FFFFFF" width="850">4-2転倒・転落の危険性</td>
 <td bgcolor="#FFFFFF" width="120">2018/01/15</td>
 <td bgcolor="#FFFFFF" width="120">看護 花子</td>
@@ -247,7 +247,7 @@
 </table>
 <table border="1" width="1050" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <tr>
-<td bgcolor="gainsboro" width="45"><b><a href="/books/7">#07</a></b></td>
+<td bgcolor="gainsboro" width="45"><b><a href="/plans/1/books/7">#07</a></b></td>
 <td bgcolor="#FFFFFF" width="850">4-3褥創(瘡)の危険性</td>
 <td bgcolor="#FFFFFF" width="120">2018/01/15</td>
 <td bgcolor="#FFFFFF" width="120">看護 花子</td>
@@ -286,10 +286,9 @@
 
 
 
-<%= link_to 'この看護計画を編集する', edit_plan_path(@plan) %>
-<%= link_to 'この看護計画を削除する', @plan, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
-<%= link_to '新規看護計画の投稿', new_plan_path %>
-<%= link_to 'plan_index', plans_path %>
+<%= link_to 'edit', edit_plan_path(@plan) %>|
+<%= link_to 'Index', plans_path %>
+
 
 </div>
 

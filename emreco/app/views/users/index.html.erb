@@ -11,21 +11,31 @@
     <td><%= user.id %></td>
     <td><%= user.roomno %></td>
     <td><%= user.name %></td>
-    <td><%= link_to '詳細表示', user_path(user), class: 'btn btn-info btn-xs' %>
-    <%= link_to 'この患者情報を編集する', edit_user_path(user), class: 'btn btn-primary btn-xs' %>
-    <%= link_to 'この患者情報を削除する', user, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger btn-xs' %>
-    <%= link_to '新規観察入力', new_observation_path(id: user.id), class: 'btn btn-success btn-xs' %>
-    <%= link_to '指示簿入力', new_instruction_path(id: user.id), class: 'btn btn-success btn-xs' %>
-
-    </td></tr>
+    <td>
+    <%= link_to '編集', edit_user_path(user), class: 'btn btn-primary btn-xs' %>
+    <%= link_to '削除', user, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger btn-xs' %>
+    </td>
+    </tr>
   <% end %>
   </tbody>
   </table>
   <div class="media-body">
-    <a href="/" class="btn btn-default">bedmap</a>
+    <a href="/toppages" class="btn btn-default">bedmap</a>
     <%= link_to '新規患者登録', new_user_path, class: 'btn btn-success btn-xm' %>
   </div>
 
+<%= link_to '新規バイタル', new_observation_path %>|
+<%= link_to '新規医師指示簿', new_dinstruction_path %>|
+<%= link_to '新規看護指示', new_ninstruction_path %>|
+<%= link_to '新規注射', new_injection_path %>|
+<%= link_to '新規処方', new_prescription_path %>|
+<%= link_to '新規検査結果', new_result_path %>|
+
+<%= link_to '新規医師SOAP', new_dreport_path %>|
+<%= link_to '新規看護SOAP', new_nreport_path %>|
+<%= link_to '新規他職SOAP', new_ereport_path %>|
+<%= link_to '新規テンプレート', new_instruction_path %>|
+<%= link_to '新規看護計画', new_plan_path %>|
 
 
 

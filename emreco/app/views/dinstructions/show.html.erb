@@ -1151,6 +1151,5 @@
 
 
 
-<%= link_to 'この医師指示簿を編集する', edit_dinstruction_path(@dinstruction) %>
-<%= link_to 'この医師指示簿を削除する', @dinstruction, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
-<%= link_to '新規医師指示簿の投稿', new_dinstruction_path %>
+<%= link_to 'edit', edit_dinstruction_path(@dinstruction) %>|
+<%= link_to 'Index', dinstructions_path %>

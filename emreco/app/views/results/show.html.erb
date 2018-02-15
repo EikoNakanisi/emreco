@@ -61,7 +61,7 @@
 <a href="../ninstructions/<%= @hensu2 + @result.id %>">看護指示</a><br>
 <a href="../dinstructions/<%= @result.id %>">指示簿一覧</a><br>
 <a href="../plans/<%= @result.id %>">看護計画</a><br>
-<a href="../schedules/<%= @result.id %>">患者スケジュール</a><br>
+<a href="../schedules">患者スケジュール</a><br>
 <a href="../nprofs/<%= @result.id %>">看護プロファイル</a><br>
 <a href="../toppages/<%= @result.id %>/foods/<%= @result.id %>">移動食事カレンダ</a><br>
 <a href="../instructions/<%= @hensu2 + @result.id %>">テンプレート</a><br>
@@ -329,8 +329,7 @@ mg/dL
 </div>
 </div>
 
-<%= link_to 'この検査結果を編集する', edit_result_path(@result) %>
-<%= link_to 'この検査結果を削除する', @result, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
-<%= link_to '新規検査結果の投稿', new_result_path %>
+<%= link_to 'edit', edit_result_path(@result) %>|
+<%= link_to 'Index', results_path %>
 
 

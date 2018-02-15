@@ -1,0 +1,654 @@
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+
+
+<div class="ao">&ensp;患者スケジュール</div>
+<p>
+  &ensp;
+</p>
+<p>
+<button type="button" class="btn btn-default btn-sm">
+  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+</button>
+<button type="button" class="btn btn-default btn-sm">
+  <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+</button>
+<button type="button" class="btn btn-default btn-sm">
+  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+</button>
+<button type="button" class="btn btn-default btn-sm">
+  <span >2018/01/17</span>
+</button>
+
+<input type="radio" name="q1" value="深夜"> 深夜
+<input type="radio" name="q1" value="日勤"> 日勤
+<input type="radio" name="q1" value="準夜"> 準夜
+<input type="radio" name="q1" value="全日"> 全日
+<div class="space10">
+<a href="/toppages" class="btn btn-default btn-sm active">閉じる</a>
+<a href="javascript:history.back()" class="btn btn-default btn-sm active">戻る</a>
+</div>
+</p>
+
+
+<div role="tabpanel">
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination" role="tablist">
+    <li role="presentation" class="page-item active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;時系列一覧&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</a></li>
+    <li role="presentation" class="page-item"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;業務別一覧&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</a></li>
+  </ul>
+</nav>
+
+</div>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+  <!-- 時系列一覧 -->
+    <div role="tabpanel" class="tab-pane active" id="home">
+
+<!-- 外枠 -->
+<div class="y_data_area3">
+    <!-- タイトル -->
+    <table class="y_data_title3">
+                <col style="width: 5%;" />
+                <col style="width: 2%;" />
+                <col style="width: 8%;" />
+                <col style="width: 9%;" />
+                <col style="width: 8%;" />
+                <col style="width: 8%;" />
+                <col style="width: 8%;" />
+                <col style="width: 8%;" />
+                <col style="width: 8%;" />
+                <col style="width: 8%;" />
+                <col style="width: 8%;" />
+                <col style="width: 8%;" />
+                <col style="width: 8%;" />
+        <tr>
+            <th>病室</th>
+            <th>確<br>認</th>
+            <th>氏名</th>
+            <th>非時系列</th>
+            <th>9時</th>
+            <th>10時</th>
+            <th>11時</th>
+            <th>12時</th>
+            <th>13時</th>
+            <th>14時</th>
+            <th>15時</th>
+            <th>16時</th>
+            <th class="r_none">17時</th>
+        </tr>
+    </table>
+    <!-- /タイトル -->
+    <!-- データ -->
+    <div class="y_scroll_box3">
+        <div class="y_hidden3">
+            <table class="y_data3">
+                <col style="width: 5%;" />
+                <col style="width: 2%;" />
+                <col style="width: 8%;" />
+                <col style="width: 9%;" />
+                <col style="width: 8%;" />
+                <col style="width: 8%;" />
+                <col style="width: 8%;" />
+                <col style="width: 8%;" />
+                <col style="width: 8%;" />
+                <col style="width: 8%;" />
+                <col style="width: 8%;" />
+                <col style="width: 8%;" />
+                <col style="width: 8%;" />
+<!-- 1 -->
+<tr>
+<td><p title="">１－１</p></td>
+<td bgcolor="#D3D3D3"><p title="">&ensp;</p></td>
+<td><p title="">&ensp;<%= @name1 %></p></td>
+<td><p title=""><font size="5" color="#0000FF">○</font><a href="../ninstructions/21"><font size="2" color="#0000FF">+臨時リネン</font></a></p></td>
+<td>&nbsp;</td>
+<td><font size="5" color="#0000FF">○</font><a href="../injections/21"><font size="2" color="#0000FF">+入院一般</font></a></td>
+<td>&nbsp;</td>
+<td><font size="5" color="#0000FF">○</font><a href="../ninstructions/21"><font size="2" color="#0000FF">+口腔ケア</font></a></td>
+<td>&nbsp;</td>
+<td><font size="5" color="#0000FF">○</font><a href="../injections/21"><font size="2" color="#0000FF">+入院一般</font></a></td>
+<td>&nbsp;</td>
+<td><font size="5" color="#0000FF">○</font><a href="../ninstructions/21"><font size="2" color="#0000FF">+吸引ビン</font></a></td>
+<td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 2 -->
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:疼痛時</font></a></td>
+<td>&nbsp;</td>
+<td><font size="5" color="#0000FF">○</font><a href="../injections/21"><font size="2" color="#0000FF">+入院一般</font></a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><font size="5" color="#0000FF">○</font><a href="../injections/21"><font size="2" color="#0000FF">+入院一般</font></a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 3 -->
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:発熱時</font></a></td>
+<td>&nbsp;</td>
+<td><font size="5" color="#0000FF">○</font><a href="../injections/21"><font size="2" color="#0000FF">+リネン交</font></a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 4 -->
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:不眠時</font></a></td>
+<td>&nbsp;</td>
+<td><font size="5" color="#0000FF">○</font><a href="../injections/21"><font size="2" color="#0000FF">+体位変換</font></a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 5 -->
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:せん妄</font></a></td>
+<td>&nbsp;</td>
+<td><font size="5" color="#0000FF">○</font><a href="../injections/21"><font size="2" color="#0000FF">+転倒転落</font></a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 6 -->
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:呼吸困</font></a></td>
+<td>&nbsp;</td>
+<td><font size="5" color="#0000FF">○</font><a href="../injections/21"><font size="2" color="#0000FF">+褥瘡リス</font></a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 7 -->
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:便秘時</font></a></td>
+<td>&nbsp;</td>
+<td><font size="5" color="#0000FF">○</font><a href="../injections/21"><font size="2" color="#0000FF">+特浴</font></a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 8 -->
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:下痢時</font></a></td>
+<td>&nbsp;</td>
+<td><font size="5" color="#0000FF">○</font><a href="../injections/21"><font size="2" color="#0000FF">+乾燥部ク</font></a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 9 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:不安時</font></a></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 10 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:去痰困</font></a></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 11 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:喘息発</font></a></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+
+
+
+  <!-- 12 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:嘔気・</font></a></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 13 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:痙攣時</font></a></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 14 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:アカシ</font></a></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+<!-- 15 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:外用薬</font></a></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 16 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:酸素</font></a></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 17 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:食事</font></a></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+<!-- 18 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:安静度</font></a></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 19 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:排泄</font></a></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 20 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:清潔</font></a></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+<!-- 21 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:外出・</font></a></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 22 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:バイタ</font></a></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+            </table>
+        </div>
+    </div>
+    <!-- /データ -->
+</div>
+<!-- /外枠 -->
+
+
+
+    </div><!-- 時系列一覧 -->
+
+  <!-- 業務別一覧 -->
+    <div role="tabpanel" class="tab-pane" id="profile">
+
+<!-- 外枠 -->
+<div class="y_data_area3">
+    <!-- タイトル -->
+    <table class="y_data_title3">
+                <col style="width: 7%;" />
+                <col style="width: 2%;" />
+                <col style="width: 9%;" />
+                <col style="width: 3%;" />
+                <col style="width: 3%;" />
+                <col style="width: 8%;" />
+                <col style="width: 8%;" />
+                <col style="width: 9%;" />
+                <col style="width: 9%;" />
+                <col style="width: 9%;" />
+                <col style="width: 9%;" />
+                <col style="width: 9%;" />
+                <col style="width: 7%;" />
+                <col style="width: 7%;" />
+        <tr>
+            <th>病室</th>
+            <th>確<br>認</th>
+            <th>氏名</th>
+            <th>患者<br>メモ</th>
+            <th>日別<br>メモ</th>
+            <th>移動・食事</th>
+            <th>検査・放射線・内視鏡</th>
+            <th>処方</th>
+            <th>注射・輸血</th>
+            <th>処置・手術</th>
+            <th>指示簿</th>
+            <th>看護指示</th>
+            <th>その他</th>
+            <th class="r_none">削除伝票</th>
+        </tr>
+    </table>
+    <!-- /タイトル -->
+    <!-- データ -->
+    <div class="y_scroll_box3">
+        <div class="y_hidden3">
+            <table class="y_data3">
+                <col style="width: 7%;" />
+                <col style="width: 2%;" />
+                <col style="width: 9%;" />
+                <col style="width: 3%;" />
+                <col style="width: 3%;" />
+                <col style="width: 8%;" />
+                <col style="width: 8%;" />
+                <col style="width: 9%;" />
+                <col style="width: 9%;" />
+                <col style="width: 9%;" />
+                <col style="width: 9%;" />
+                <col style="width: 9%;" />
+                <col style="width: 7%;" />
+                <col style="width: 7%;" />
+<!-- 1 -->
+    <tr>
+      <td><p title="">１－１</p></td>
+      <td bgcolor="#D3D3D3"><p title="">&ensp;</p></td>
+      <td><p title="">&ensp;<%= @name1 %></p></td>
+      <td bgcolor="#D3D3D3"><p title="">&ensp;</p></td>
+      <td bgcolor="#D3D3D3"><p title="">&ensp;</p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="">06<font size="5" color="#FF00FF">●</font><a href="../injections/21"><font size="2" color="#FF00FF">+入院一般</font></a></p></td>
+      <td><p title="">08<font size="5" color="#000000">●</font>会計オー</p></td>
+      <td><p title=""><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">指示:疼痛時</font></a></p></td>
+      <td><p title=""><font size="5" color="#0000FF">○</font><a href="../ninstructions/21"><font size="2" color="#0000FF">+臨時リネン</font></a></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">&ensp;</p></td>
+    </tr>
+  <!-- 2 -->
+    <tr>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="">&ensp;</p></td>
+      <td><p title="">06<font size="5" color="#FF00FF">●</font><a href="../injections/21"><font size="2" color="#FF00FF">+入院一般</font></a></p></td>
+      <td><p title="">08<font size="5" color="#000000">●</font>会計オー</p></td>
+      <td><p title=""><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">指示:発熱時</font></a></p></td>
+      <td><p title="">08<font size="5" color="#FF00FF">●</font><a href="../ninstructions/21"><font size="2" color="#FF00FF">+洗面</font></a></p></td>
+      <td><p title="">&ensp;</p></td>
+      <td class="r_none"><p title="">&ensp;</p></td>
+    </tr>
+  <!-- 3 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td><p title="">10<font size="5" color="#0000FF">○</font><a href="../injections/21"><font size="2" color="#0000FF">+入院一般</font></a></p></td>
+<td>&nbsp;</td>
+<td><p title=""><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">指示:不眠時</font></a></p></td>
+<td><p title="">08<font size="5" color="#FF00FF">●</font><a href="../ninstructions/21"><font size="2" color="#FF00FF">+口腔ケア</font></a></p></td>
+<td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 4 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td><p title="">10<font size="5" color="#0000FF">○</font><a href="../injections/21"><font size="2" color="#0000FF">+入院一般</font></a></p></td>
+<td>&nbsp;</td>
+<td><p title=""><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">指示:せん妄</font></a></p></td>
+<td><p title="">10<font size="5" color="#0000FF">○</font><a href="../ninstructions/21"><font size="2" color="#0000FF">+リネン交</font></a></p></td>
+<td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 5 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td><p title="">14<font size="5" color="#0000FF">○</font><a href="../injections/21"><font size="2" color="#0000FF">+入院一般</font></a></p></td>
+<td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:呼吸困</font></a></td>
+<td><p title="">10<font size="5" color="#0000FF">○</font><a href="../ninstructions/21"><font size="2" color="#0000FF">+体位変換</font></a></p></td>
+<td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 6 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td><p title="">14<font size="5" color="#0000FF">○</font><a href="../injections/21"><font size="2" color="#0000FF">+入院一般</font></a></p></td>
+<td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:便秘時</font></a></td>
+<td><p title="">10<font size="5" color="#0000FF">○</font><a href="../ninstructions/21"><font size="2" color="#0000FF">+転倒転落</font></a></p></td>
+<td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 7 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td><p title="">22<font size="5" color="#0000FF">○</font><a href="../injections/21"><font size="2" color="#0000FF">+入院一般</font></a></p></td>
+<td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:下痢時</font></a></td>
+<td><p title="">10<font size="5" color="#0000FF">○</font><a href="../ninstructions/21"><font size="2" color="#0000FF">+褥瘡リス</font></a></p></td>
+<td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 8 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td><p title="">22<font size="5" color="#0000FF">○</font><a href="../injections/21"><font size="2" color="#0000FF">+入院一般</font></a></p></td>
+<td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:不安時</font></a></td>
+<td><p title="">10<font size="5" color="#0000FF">○</font><a href="../ninstructions/21"><font size="2" color="#0000FF">+特浴</font></a></p></td>
+<td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 9 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:去痰困</font></a></td>
+<td><p title="">10<font size="5" color="#0000FF">○</font><a href="../ninstructions/21"><font size="2" color="#0000FF">+乾燥部ク</font></a></p></td>
+<td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 10 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:喘息発</font></a></td>
+<td><p title="">12<font size="5" color="#0000FF">○</font><a href="../ninstructions/21"><font size="2" color="#0000FF">+口腔ケア</font></a></p></td>
+<td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+
+
+  <!-- 11 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:嘔気・</font></a></td>
+<td><p title="">16<font size="5" color="#0000FF">○</font><a href="../ninstructions/21"><font size="2" color="#0000FF">+吸引ビン</font></a></p></td>
+<td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 12 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:痙攣時</font></a></td>
+<td><p title="">18<font size="5" color="#0000FF">○</font><a href="../ninstructions/21"><font size="2" color="#0000FF">+口腔ケア</font></a></p></td>
+<td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 13 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:アカシ</font></a></td>
+<td><p title="">20<font size="5" color="#0000FF">○</font><a href="../ninstructions/21"><font size="2" color="#0000FF">+体位変換</font></a></p></td>
+<td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 14 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:外用薬</font></a></td>
+<td><p title="">20<font size="5" color="#0000FF">○</font><a href="../ninstructions/21"><font size="2" color="#0000FF">+洗面</font></a></p></td>
+<td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+<!-- 15 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:酸素</font></a></td>
+<td>&nbsp;</td><td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 16 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:食事</font></a></td>
+<td>&nbsp;</td><td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 17 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:安静度</font></a></td>
+<td>&nbsp;</td><td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+<!-- 18 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:排泄</font></a></td>
+<td>&nbsp;</td><td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 19 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:清潔</font></a></td>
+<td>&nbsp;</td><td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+  <!-- 20 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:外出・</font></a></td>
+<td>&nbsp;</td><td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+<!-- 21 -->
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td><font size="5" color="#008000">○</font><a href="../dinstructions/1"><font size="2" color="#008000">+指示:バイタ</font></a></td>
+<td>&nbsp;</td><td>&nbsp;</td><td class="r_none"><p title="">&ensp;</p></td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </table>
+        </div>
+    </div>
+    <!-- /データ -->
+</div>
+<!-- /外枠 -->
+
+    </div><!-- 業務別一覧 -->
+
+  </div><!-- Tab panes -->
+
+
+
+</div></div></div>

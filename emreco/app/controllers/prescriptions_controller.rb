@@ -1,4 +1,8 @@
 class PrescriptionsController < ApplicationController
+  def index
+    @prescriptions = Prescription.all
+  end
+
   def show
     @prescription = Prescription.find(params[:id])
     @hensu1 = 10

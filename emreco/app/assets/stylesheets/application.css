@@ -628,16 +628,7 @@ div.ao {color: #FFFFFF; background-color:royalblue;}
   line-height: 0;
 }
 
-.cover02 {
-  position: fixed;
-  top: 200px;
-  margin: 0px;
-  float: left;
-  width: 1050px;
-  height: 680px;
-  background-image:url("/images/nprof02.png");
-  background-size:100% auto;
-}
+
 
 .kenon02 {
   margin-top: 150px;
@@ -823,6 +814,90 @@ table.y_data2 {
   border-collapse: collapse; /* IE7がborder-spacing: 0;に対応していないので */
 }
 
+
+
+/* 外枠部分 */
+div.y_data_area3 {
+  width: 1100px;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  border-left: 1px solid #CCC;
+}
+ 
+/* タイトル部分 */
+table.y_data_title3 {
+  width: 1100px;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0; /* tableのcellspacing="0"の代わり */
+}
+ 
+table.y_data_title3 th {
+  border-top: 1px solid #CCC;
+  background: #E6E6FA;
+}
+ 
+table.y_data_title3 th,
+table.y_data_title3 td {
+  padding: 0px;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+}
+ 
+table.y_data_title3 th.r_none,
+table.y_data_title3 td.r_none {
+  border-right: none; /* 右ボーダーの重なりを防止 */
+}
+ 
+/* データ部分 */
+div.y_scroll_box3 {
+  width: 1100px;
+  max-height: 650px;
+  height: auto !important; /* IE6 max-height対応 */
+  height: 100px;　/* IE6 max-height対応 */
+  overflow-x: hidden; /* 横スクロール非表示 */
+  overflow-y: scroll; /* 縦スクロール */
+}
+ 
+div.y_hidden3 {
+  overflow: hidden; /* IE系でデータ部分のテーブルをドラッグした際のズレを防止 */
+  padding: 0 0 10px; /* スクロール仕切った際の下ボーダーの重なりを防止 */
+}
+ 
+table.y_data3 {
+  width: 1100px;
+  border-collapse: separate;
+  border-spacing: 0; /* tableのcellspacing="0"の代わり */
+  table-layout: fixed;　/* 内容を固定 */
+}
+ 
+table.y_data3 th,
+table.y_data3 td {
+  padding: 0px;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+}
+ 
+table.y_data3 td {
+/*  overflow: hidden; /* データが幅を超えたとき非表示に */
+/*  white-space: nowrap; /* データの折り返しを防止 */
+}
+ 
+table.y_data3 td p {
+  margin: 0; /* 余分なマージンを消去 */
+}
+ 
+/* IE6 */
+table.y_data_title3,
+table.y_data3 {
+  _border-collapse: collapse; /* IE6がborder-spacing: 0;に対応していないので */
+}
+ 
+/* IE7 */
+*:first-child+html table.y_data_title3,
+*:first-child+html table.y_data3 {
+  border-collapse: collapse; /* IE7がborder-spacing: 0;に対応していないので */
+}
 
 
 

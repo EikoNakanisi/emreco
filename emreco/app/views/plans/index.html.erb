@@ -1,10 +1,35 @@
-<h1>看護計画一覧</h1>
+<h1>Listing plans</h1>
 
-<ul>
-  <% @plans.each do |plan| %>
-    <li><%= link_to plan.id, plan %><%= link_to '編集する', edit_plan_path(plan) %> :<%= plan.id %></li>
-    <li><%= link_to 'Show Books', plan_books_path(plan) %></li>
-  <% end %>
-</ul>
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>npn01</th>
+    <th>npn02</th>
+    <th>npn03</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
 
-    <a href="/" class="btn btn-default">bedmap</a>
+<% @plans.each do |plan| %>
+  <tr>
+    <td><%= plan.id %></td>
+    <td><%= plan.npn01 %></td>
+    <td><%= plan.npn02 %></td>
+    <td><%= plan.npn03 %></td>
+    <!-- added next line -->
+    <td><%= link_to 'Show books', plan_books_path(plan) %></td>
+    <td><%= link_to 'Show', plan %></td>
+    <td><%= link_to 'Edit', edit_plan_path(plan) %></td>
+<!--     <td><%= link_to 'Destroy', plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+ -->
+  </tr>
+<% end %>
+</table>
+
+<br/>
+
+<%= link_to 'New plan', new_plan_path %>|
+<%= link_to 'home', toppages_path %>
+<%= link_to 'Userhome', users_path %>

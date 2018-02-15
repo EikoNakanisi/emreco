@@ -1,23 +1,10 @@
 <h1>Listing books</h1>
 
-<table>
+<table border="1">
   <tr>
-    <th>plan</th>
-    <th>sihyou1</th>
-    <th>sihyou2</th>
-    <th>sihyou3</th>
-    <th>kanren1</th>
-    <th>kanren2</th>
-    <th>kanren3</th>
-    <th>endpoint1</th>
-    <th>endpoint2</th>
-    <th>endpoint3</th>
-    <th>nplan01</th>
-    <th>nplan02</th>
-    <th>nplan03</th>
-    <th>nplan04</th>
-    <th>nplan20</th>
-
+    <th>planID</th>
+    <th>bookID</th>
+    <th>指標1</th>
     <th></th>
     <th></th>
     <th></th>
@@ -26,34 +13,18 @@
 <% @books.each do |book| %>
   <tr>
     <td><%= book.plan %></td>
+    <td><%= book.id %></td>
     <td><%= book.sihyou1 %></td>
-    <td><%= book.sihyou2 %></td>
-    <td><%= book.sihyou3 %></td>
-    <td><%= book.kanren1 %></td>
-    <td><%= book.kanren2 %></td>
-    <td><%= book.kanren3 %></td>
-    <td><%= book.endpoint1 %></td>
-    <td><%= book.endpoint2 %></td>
-    <td><%= book.endpoint3 %></td>
-
-    <td><%= book.nno01 %><%= book.nplan01 %></td>
-    <td><%= book.nno02 %><%= book.nplan02 %></td>
-    <td><%= book.nno03 %><%= book.nplan03 %></td>
-    <td><%= book.nno04 %><%= book.nplan04 %></td>
-    <td><%= book.nno20 %><%= book.nplan20 %></td>
-
-
-
     <td><%= link_to 'Show', plan_book_path(book.plan, book) %></td>
     <td><%= link_to 'Edit', edit_plan_book_path(book.plan, book) %></td>
-    <td><%= link_to 'Destroy', plan_book_path(book.plan, book), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <!--    <td><%= link_to 'Destroy', plan_book_path(book.plan, book), method: :delete, data: { confirm: 'Are you sure?' } %></td>  -->
   </tr>
 <% end %>
 </table>
 
 <br />
 
-
-<%= link_to 'New book', new_plan_book_path %>
-<%= link_to 'home', root_path, class: 'btn btn-default' %>
-
+<%#= link_to 'New book', new_book_path %>
+<%= link_to 'New book', new_plan_book_path %>|
+<%= link_to 'PlanIndex', plans_path %>|
+<%= link_to 'Home', toppages_path %>

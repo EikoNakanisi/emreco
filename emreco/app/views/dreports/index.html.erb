@@ -1,0 +1,29 @@
+<h1>Listing 医師soap</h1>
+
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>dro01</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dreports.each do |dreport| %>
+  <tr>
+    <td><%= dreport.id %></td>
+    <td><%= dreport.dro01 %></td>
+    <td><%= link_to 'Show', dreport %></td>
+    <td><%= link_to 'Edit', edit_dreport_path(dreport) %></td>
+ <!--  <td><%= link_to 'Destroy', dreport, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+ -->
+  </tr>
+<% end %>
+</table>
+
+<br/>
+
+
+<%= link_to 'New dreport', new_dreport_path %>|
+<%= link_to 'Userhome', users_path %>|
+<%= link_to 'home', toppages_path %>

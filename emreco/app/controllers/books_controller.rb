@@ -1,30 +1,35 @@
 class BooksController < ApplicationController
 
   def index
+    #@books = Book.all
     @plan = Plan.find(params[:plan_id])
     @books = @plan.books.all
-    
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @books }
     end
   end
 
-def show
-  @book = Book.find(params[:id])
-  @plan = Plan.find(@book.plan_id) 
+  # GET /Books/1
+  # GET /Books/1.json
+  def show
+    #@book = Book.find(params[:id])
+    @plan = Plan.find(params[:plan_id])
+    @book = @plan.books.find(params[:id])
 
-  respond_to do |format|
-    format.html
-    format.json {render json: @book }
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @book }
+    end
   end
-end
 
   # GET /books/new
   # GET /books/new.json
   def new
-    @book = Book.new
+    #@book = Book.new
     @plan = Plan.find(params[:plan_id])
+    @book = @plan.books.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,37 +39,39 @@ end
 
   # GET /books/1/edit
   def edit
-    @book = Book.find(params[:id])
-    @plan = Plan.find(@book.plan_id)
+    #@book = Book.find(params[:id])
+    @plan = Plan.find(params[:plan_id])
+    @book = @plan.books.find(params[:id])
   end
 
   # POST /books
   # POST /books.json
   def create
     @plan = Plan.find(params[:plan_id])
-    @book = @plan.books.build(message_params)
-
+    @book = @plan.books.new(message_params)
     if @book.save
-      flash[:success] = 'Book が正常に投稿されました'
-      redirect_to root_url
+      flash[:success] = '投稿しました。'
+      redirect_back(fallback_location: root_path)
     else
-      @microposts = @plan.books.order('created_at DESC').page(params[:page])
-      flash.now[:danger] = 'Book が投稿されませんでした'
-      render 'toppages/index'
+      @books = @plan.books.order('created_at DESC').page(params[:page])
+      flash.now[:danger] = '失敗しました。'
+      redirect_back(fallback_location: root_path)
     end
   end
+
 
   # PUT /books/1
   # PUT /books/1.json
   def update
-    @book = Book.find(params[:id])
-    @plan = Plan.find(@book.plan_id)
+    #@book = Book.find(params[:id])
+    @plan = Plan.find(params[:plan_id])
+    @book = @plan.books.find(params[:id])
 
     if @book.update(message_params)
-      flash[:success] = 'Book は正常に更新されました'
-      redirect_to @book
+      flash[:success] = '正常に更新されました'
+      redirect_back(fallback_location: root_path)
     else
-      flash.now[:danger] = 'Book は更新されませんでした'
+      flash.now[:danger] = '更新されませんでした'
       render :edit
     end
   end
@@ -72,12 +79,14 @@ end
   # DELETE /books/1
   # DELETE /books/1.json
   def destroy
-    @book = Book.find(params[:id])
+    #@book = Book.find(params[:id])
+    @plan = Plan.find(params[:plan_id])
+    @book = @plan.books.find(params[:id])
     @book.destroy
-
-    flash[:success] = 'Book は正常に削除されました'
+    flash[:success] = 'メッセージを削除しました。'
     redirect_back(fallback_location: root_path)
   end
+
 
 
   private
@@ -98,11 +107,10 @@ end
     )
   end
 
-  def correct_plan
-    @book = current_plan.books.find_by(id: params[:id])
-    unless @book
-      redirect_to root_url
-    end
+  def current_plan
+    @current_plan ||= Plan.find_by(id: params[:plan_id])
   end
+
+
 
 end

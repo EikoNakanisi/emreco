@@ -22,11 +22,7 @@
 </nav>
 </header>
 
-  <h5><font color="#FFFFFF">0</font></h5><BR>
-<% 1.upto(25) do |num| %>
-<font color="#FFFFFF"><% num = "%02d" % num %></font>
-<%= num %>
-<% end %>
+<BR><BR>
 <BR>
 
 <% unless @injection.ii01.blank? %>
@@ -407,6 +403,5 @@
 
 
 
-<%= link_to 'この注射指示簿を編集する', edit_injection_path(@injection) %>
-<%= link_to 'この注射指示簿を削除する', @injection, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
-<%= link_to '新規注射指示簿の投稿', new_injection_path %>
+<%= link_to 'edit', edit_injection_path(@injection) %>|
+<%= link_to 'Index', injections_path %>

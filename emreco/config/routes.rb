@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   resources :ereports
   resources :instructions
 
-  resources :plans, :shallow => true do
+  resources :plans do
     resources :books
   end
   resources :results
@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   resources :nprofs
   resources :nprofs
   resources :sitemaps, only: [:show]
-  resources :schedules, only: [:show]
+  resources :schedules, only: [:index]
 
 
   end

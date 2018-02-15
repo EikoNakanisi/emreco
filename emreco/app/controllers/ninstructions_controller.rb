@@ -1,4 +1,7 @@
 class NinstructionsController < ApplicationController
+  def index
+    @ninstructions = Ninstruction.all
+  end
 
   def show
     @ninstruction = Ninstruction.find(params[:id])

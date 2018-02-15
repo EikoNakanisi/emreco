@@ -528,7 +528,5 @@
 
 
 
-
-<%= link_to 'この看護指示簿を編集する', edit_ninstruction_path(@ninstruction) %>
-<%= link_to 'この看護指示簿を削除する', @ninstruction, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
-<%= link_to '新規看護指示簿の投稿', new_ninstruction_path %>
+<%= link_to 'edit', edit_ninstruction_path(@ninstruction) %>|
+<%= link_to 'Index', ninstructions_path %>

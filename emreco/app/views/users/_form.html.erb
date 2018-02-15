@@ -114,6 +114,26 @@
     <%= f.label :keyg3, 'キーパーソン3性別' %>
     <%= f.select :keyg3, User.keyg3s.keys, {prompt: '選択してください'}, class: 'form-control btn btn-info' %>
   </div>
+<div class="form-group">
+  <%= f.label :ptn01, '呼吸' %><%= f.text_area :ptn01, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn02, '飲食' %><%= f.text_area :ptn02, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn03, '排泄' %><%= f.text_area :ptn03, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn04, '活動' %><%= f.text_area :ptn04, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn05, '睡眠' %><%= f.text_area :ptn05, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn06, '衣類' %><%= f.text_area :ptn06, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn07, '体温' %><%= f.text_area :ptn07, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn08, '清潔' %><%= f.text_area :ptn08, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn09, '安全' %><%= f.text_area :ptn09, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn10, '宗教' %><%= f.text_area :ptn10, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn11, '職業' %><%= f.text_area :ptn11, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn12, '遊び' %><%= f.text_area :ptn12, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn13, '学習' %><%= f.text_area :ptn13, class: 'form-control', rows: 3 %>
+  <%= f.label :ptn14, '総合' %><%= f.text_area :ptn14, class: 'form-control', rows: 3 %>
+
+
+
+</div>
+
 
 
     <%= f.submit '入力', class: 'btn btn-primary btn-block' %>

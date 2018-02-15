@@ -1,0 +1,135 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+<%= form_for(observation) do |f| %>
+  <%= render 'layouts/error_messages', model: f.object %>
+
+
+  <div class="form-group">
+    <%= f.label :m_bp, '心拍数15日10時' %>
+    <%= f.text_field :m_bp, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :l_bp, '15日19時' %>
+    <%= f.text_field :l_bp, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :d_bp, '16日06時' %>
+    <%= f.text_field :d_bp, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :m_kt, '心拍数16日10時' %>
+    <%= f.text_field :m_kt, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :l_kt, '16日19時' %>
+    <%= f.text_field :l_kt, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :d_kt, '17日06時' %>
+    <%= f.text_field :d_kt, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :m_p, '非観血(収縮期)15日10時' %>
+    <%= f.text_field :m_p, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :l_p, '15日19時' %>
+    <%= f.text_field :l_p, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :d_p, '16日06時' %>
+    <%= f.text_field :d_p, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :m_r, '非観血(収縮期)16日10時' %>
+    <%= f.text_field :m_r, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :l_r, '16日19時' %>
+    <%= f.text_field :l_r, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :d_r, '17日06時' %>
+    <%= f.text_field :d_r, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :m_o2root, '非観血(拡張期)15日10時' %>
+    <%= f.text_field :m_o2root, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :l_o2root, '15日19時' %>
+    <%= f.text_field :l_o2root, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :d_o2root, '16日06時' %>
+    <%= f.text_field :d_o2root, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :m_o2rate, '非観血(拡張期)16日10時' %>
+    <%= f.text_field :m_o2rate, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :l_o2rate, '16日19時' %>
+    <%= f.text_field :l_o2rate, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :d_o2rate, '17日06時' %>
+    <%= f.text_field :d_o2rate, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :m_meal, '体温(表皮)15日10時' %>
+    <%= f.text_field :m_meal, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :l_meal, '15日19時' %>
+    <%= f.text_field :l_meal, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :d_meal, '16日06時' %>
+    <%= f.text_field :d_meal, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :m_snack, '体温(表皮)16日10時' %>
+    <%= f.text_field :m_snack, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :l_snack, '16日19時' %>
+    <%= f.text_field :l_snack, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :d_snack, '17日06時' %>
+    <%= f.text_field :d_snack, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :m_spo2, '呼吸数15日10時' %>
+    <%= f.text_field :m_spo2, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :l_spo2, '15日19時' %>
+    <%= f.text_field :l_spo2, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :d_spo2, '16日06時' %>
+    <%= f.text_field :d_spo2, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :m_bs, '呼吸数16日10時' %>
+    <%= f.text_field :m_bs, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :l_bs, '16日19時' %>
+    <%= f.text_field :l_bs, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :d_bs, '17日06時' %>
+    <%= f.text_field :d_bs, class: 'form-control' %>
+  </div>
+
+
+  <%= f.submit '入力', class: 'btn btn-primary btn-xs' %>
+<% end %>
+
+</div></div>

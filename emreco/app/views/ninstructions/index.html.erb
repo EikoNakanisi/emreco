@@ -1,0 +1,27 @@
+<h1>Listing 看護指示</h1>
+
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>指示１</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ninstructions.each do |ninstruction| %>
+  <tr>
+    <td><%= ninstruction.id %></td>
+    <td><%= ninstruction.ni01 %></td>
+    <td><%= link_to 'Show', ninstruction %></td>
+    <td><%= link_to 'Edit', edit_ninstruction_path(ninstruction) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br/>
+
+
+<%= link_to 'New ninstruction', new_ninstruction_path %>|
+<%= link_to 'Userhome', users_path %>|
+<%= link_to 'home', toppages_path %>

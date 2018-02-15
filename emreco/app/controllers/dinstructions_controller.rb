@@ -1,5 +1,6 @@
 class DinstructionsController < ApplicationController
   def index
+    @dinstructions = Dinstruction.all
   end
 
   def show

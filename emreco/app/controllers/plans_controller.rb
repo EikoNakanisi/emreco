@@ -6,6 +6,8 @@ class PlansController < ApplicationController
     @plans = Plan.all
     @hensu1 = 10
     @hensu2 = 20
+
+    
   end
 
   def show
@@ -66,6 +68,10 @@ class PlansController < ApplicationController
     params.require(:plan).permit(
     :np01,:np02,:np03,:np04,:np05,
     :npn01,:npn02,:npn03,:npn04,:npn05)
+  end
+
+  def current_plan
+    @current_plan ||= Plan.find_by(id: params[:plan_id])
   end
 
 end

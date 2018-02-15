@@ -1,0 +1,29 @@
+<h1>Listing 注射</h1>
+
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>ii01</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @injections.each do |injection| %>
+  <tr>
+    <td><%= injection.id %></td>
+    <td><%= injection.ii01 %></td>
+    <td><%= link_to 'Show', injection %></td>
+    <td><%= link_to 'Edit', edit_injection_path(injection) %></td>
+<!--     <td><%= link_to 'Destroy', injection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+ -->
+  </tr>
+<% end %>
+</table>
+
+<br/>
+
+
+<%= link_to 'New injection', new_injection_path %>|
+<%= link_to 'Userhome', users_path %>|
+<%= link_to 'home', toppages_path %>

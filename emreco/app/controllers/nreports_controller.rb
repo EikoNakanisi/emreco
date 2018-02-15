@@ -1,4 +1,9 @@
 class NreportsController < ApplicationController
+
+  def index
+    @nreports = Nreport.all
+  end
+
   def show
     @nreport = Nreport.find(params[:id])
     @hensu1 = 10

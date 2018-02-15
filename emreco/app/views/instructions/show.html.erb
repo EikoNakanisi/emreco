@@ -135,8 +135,7 @@
 <% end %>
 
 
-<%= link_to 'このテンプレートを編集する', edit_instruction_path(@instruction) %>
-<%= link_to 'このテンプレートを削除する', @instruction, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
-<%= link_to '新規テンプレートの投稿', new_instruction_path %>
+<%= link_to 'edit', edit_instruction_path(@instruction) %>|
+<%= link_to 'Index', instructions_path %>
 </div>
 </div>

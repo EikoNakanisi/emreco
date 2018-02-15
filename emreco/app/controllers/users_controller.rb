@@ -60,7 +60,10 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :hospitalization, :roomno, :birthday,
     :age, :gender, :bloodtype, :height, :weight, :infection,
     :aid, :attention, :post,
-    :kana,:address,:food,:keyp1,:keyp2,:keyp3,:keyg1,:keyg2,:keyg3)
+    :kana,:address,:food,:keyp1,:keyp2,:keyp3,:keyg1,:keyg2,:keyg3,
+    :ptn01,:ptn02,:ptn03,:ptn04,:ptn05,:ptn06,:ptn07,
+    :ptn08,:ptn09,:ptn10,:ptn11,:ptn12,:ptn13,:ptn14
+    )
   end
 
 

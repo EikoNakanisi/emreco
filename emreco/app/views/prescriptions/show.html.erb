@@ -16,7 +16,6 @@
     <a href="../users/<%= @prescription.id %>#a4"><img src="../images/close_btn.png" border="0"></a>
   <% end %>
 
-  <% end %>
 <a href="javascript:history.back()" class="btn btn-default btn-sm active">戻る</a>
         </ul>
       </div>
@@ -24,11 +23,7 @@
 </nav>
 </header>
 
-  <h5><font color="#FFFFFF">0</font></h5><BR>
-<% 1.upto(25) do |num| %>
-<font color="#FFFFFF"><% num = "%02d" % num %></font>
-<%= num %>
-<% end %>
+<BR><BR>
 <BR>
 
 <% unless @prescription.pi01.blank? %>
@@ -409,6 +404,9 @@
 
 
 
-<%= link_to 'この処方指示簿を編集する', edit_prescription_path(@prescription) %>
-<%= link_to 'この処方指示簿を削除する', @prescription, method: :delete, data: { confirm: '本当に削除してよろししですか？' } %>
-<%= link_to '新規処方指示簿の投稿', new_prescription_path %>
+<%= link_to 'edit', edit_prescription_path(@prescription) %>|
+<%= link_to 'Index', prescriptions_path %>
+
+
+
+

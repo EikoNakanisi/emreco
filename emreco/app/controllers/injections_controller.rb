@@ -1,4 +1,9 @@
 class InjectionsController < ApplicationController
+  def index
+    @injections = Injection.all
+  end
+
+
   def show
     @injection = Injection.find(params[:id])
     @hensu1 = 10
